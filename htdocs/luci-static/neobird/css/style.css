@@ -446,16 +446,41 @@ img[src*="/luci-static/resources/icons/ethernet_disabled.png"] {
     padding: 0 0 0 16px;
 }
 
-
-img[src*="/luci-static/resources/icons/loading.gif"] {
-    background-image: url(../images/loading.gif);
-    background-size: 20px 20px;
-    height: 20px;
-    width: 20px;
-    padding: 0 0 0 20px;
+img[src*="/luci-static/resources/icons/wifi.png"] {
+    background-image: url(../images/wifi.png);
+    background-size: 32px 32px;
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0 0 0 32px;
     width: 0;
 }
 
+img[src*="/luci-static/resources/icons/wifi_disabled.png"] {
+    background-image: url(../images/wifi_disabled.png);
+    background-size: 32px 32px;
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0 0 0 32px;
+    width: 0;
+}
+
+img[src*="/luci-static/resources/icons/vlan.png"] {
+    background-image: url(../images/vlan.png);
+    background-size: 32px 32px;
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0 0 0 32px;
+    width: 0;
+}
+
+img[src*="/luci-static/resources/icons/vlan_disabled.png"] {
+    background-image: url(../images/vlan_disabled.png);
+    background-size: 32px 32px;
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0 0 0 32px;
+    width: 0;
+}
 
 img[src*="/luci-static/resources/icons/bridge.png"] {
     background-image: url(../images/bridge.png);
@@ -463,6 +488,24 @@ img[src*="/luci-static/resources/icons/bridge.png"] {
     height: 16px;
     width: 16px;
     padding: 0 0 0 16px;
+    width: 0;
+}
+
+img[src*="/luci-static/resources/icons/tunnel.png"] {
+    background-image: url(../images/tunnel.png);
+    background-size: 32px 32px;
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0 0 0 32px;
+    width: 0;
+}
+
+img[src*="/luci-static/resources/icons/loading.gif"] {
+    background-image: url(../images/loading.gif);
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    padding: 0 0 0 20px;
     width: 0;
 }
 
@@ -1200,60 +1243,6 @@ div#container\.nlbw\.traffic {
 
 td#__status-ifc-signal {
     width: 60px !important;
-}
-
-td#__status-ifc-signal img[src*="/luci-static/resources/icons/bridge.png"] {
-    background-image: url(../images/bridge.png);
-    background-size: 32px 32px;
-    height: 32px !important;
-    width: 32px !important;
-    padding: 0 0 0 32px;
-    width: 0;
-}
-
-td#__status-ifc-signal img[src*="/luci-static/resources/icons/wifi.png"] {
-    background-image: url(../images/wifi.png);
-    background-size: 32px 32px;
-    height: 32px !important;
-    width: 32px !important;
-    padding: 0 0 0 32px;
-    width: 0;
-}
-
-td#__status-ifc-signal img[src*="/luci-static/resources/icons/wifi_disabled.png"] {
-    background-image: url(../images/wifi_disabled.png);
-    background-size: 32px 32px;
-    height: 32px !important;
-    width: 32px !important;
-    padding: 0 0 0 32px;
-    width: 0;
-}
-
-td#__status-ifc-signal img[src*="/luci-static/resources/icons/vlan.png"] {
-    background-image: url(../images/vlan.png);
-    background-size: 32px 32px;
-    height: 32px !important;
-    width: 32px !important;
-    padding: 0 0 0 32px;
-    width: 0;
-}
-
-td#__status-ifc-signal img[src*="/luci-static/resources/icons/vlan_disabled.png"] {
-    background-image: url(../images/vlan_disabled.png);
-    background-size: 32px 32px;
-    height: 32px !important;
-    width: 32px !important;
-    padding: 0 0 0 32px;
-    width: 0;
-}
-
-td#__status-ifc-signal img[src*="/luci-static/resources/icons/tunnel.png"] {
-    background-image: url(../images/tunnel.png);
-    background-size: 32px 32px;
-    height: 32px !important;
-    width: 32px !important;
-    padding: 0 0 0 32px;
-    width: 0;
 }
 
 /* button style */
