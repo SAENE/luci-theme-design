@@ -2691,3 +2691,8 @@ body.lang_pl.node-main-login .cbi-value-title {
         padding-bottom: 10px !important;
     }
 }
+
+/* fix http://192.168.2.1/cgi-bin/luci/admin/nlbw/usage */
+#intervalSelect {
+    height: 40px !important;
+}
