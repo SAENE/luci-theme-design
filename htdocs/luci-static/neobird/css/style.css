@@ -420,21 +420,13 @@ img[src*="/luci-static/resources/icons/ethernet.png"] {
 }
 #cbi-network-lan-ifname_multi img[src*="/luci-static/resources/icons/ethernet.png"],
 #cbi-network-1-_ifname img[src*="/luci-static/resources/icons/ethernet.png"],
-.ifacebadge img[src*="/luci-static/resources/icons/ethernet.png"]
+.ifacebadge li, td, img[src*="/luci-static/resources/icons/ethernet.png"]
  {
     background-size: 16px 16px;
     height: 16px;
     width: 16px;
     padding: 0 0 0 16px;
 }
-li img[src*="/luci-static/resources/icons/ethernet.png"]
- {
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
-    padding: 0 0 0 16px;
-}
-
 
 img[src*="/luci-static/resources/icons/ethernet_disabled.png"] {
     background-image: url(../images/ethernet_disabled.png);
@@ -446,14 +438,7 @@ img[src*="/luci-static/resources/icons/ethernet_disabled.png"] {
 }
 #cbi-network-lan-ifname_multi img[src*="/luci-static/resources/icons/ethernet_disabled.png"],
 #cbi-network-1-_ifname img[src*="/luci-static/resources/icons/ethernet_disabled.png"],
-.ifacebadge img[src*="/luci-static/resources/icons/ethernet_disabled.png"]
- {
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
-    padding: 0 0 0 16px;
-}
-li img[src*="/luci-static/resources/icons/ethernet_disabled.png"]
+.ifacebadge li, td, img[src*="/luci-static/resources/icons/ethernet_disabled.png"]
  {
     background-size: 16px 16px;
     height: 16px;
@@ -471,14 +456,7 @@ img[src*="/luci-static/resources/icons/wifi.png"] {
 }
 #cbi-network-lan-ifname_multi img[src*="/luci-static/resources/icons/wifi.png"],
 #cbi-network-1-_ifname img[src*="/luci-static/resources/icons/wifi.png"],
-.ifacebadge img[src*="/luci-static/resources/icons/wifi.png"]
- {
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
-    padding: 0 0 0 16px;
-}
-li img[src*="/luci-static/resources/icons/wifi.png"]
+.ifacebadge li, td, img[src*="/luci-static/resources/icons/wifi.png"]
  {
     background-size: 16px 16px;
     height: 16px;
@@ -496,14 +474,7 @@ img[src*="/luci-static/resources/icons/wifi_disabled.png"] {
 }
 #cbi-network-lan-ifname_multi img[src*="/luci-static/resources/icons/wifi_disabled.png"],
 #cbi-network-1-_ifname img[src*="/luci-static/resources/icons/wifi_disabled.png"],
-.ifacebadge img[src*="/luci-static/resources/icons/wifi_disabled.png"]
- {
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
-    padding: 0 0 0 16px;
-}
-li img[src*="/luci-static/resources/icons/wifi_disabled.png"]
+.ifacebadge li, td, img[src*="/luci-static/resources/icons/wifi_disabled.png"]
  {
     background-size: 16px 16px;
     height: 16px;
