@@ -1898,12 +1898,12 @@ header > .container > .pull-right > * {
 }
 
 #xhr_poll_status > .label.success {
-    padding: 3px 10px;
+    padding: 10px 10px;
     border-radius: 20px;
 }
 
 #xhr_poll_status_off {
-    padding: 3px 10px;
+    padding: 10px 10px;
     border-radius: 20px;
 }
 
@@ -2452,7 +2452,7 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
 
     fieldset {
     /* overflow-x: auto; */
