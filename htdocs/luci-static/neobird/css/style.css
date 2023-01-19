@@ -735,7 +735,7 @@ padding:0;
 }
 
 header > .container > .brand {
-    font-size: 32px;
+    font-size: 25px;
     /*font-weight:bold;*/
     line-height:60px;
     /*color: white;*/
@@ -2468,7 +2468,7 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 
     header {
-        height: 45px;
+        height: 55px;
     }
 
     h3 {
