@@ -1,5 +1,5 @@
 # luci-theme-neobird
-
+基于原作者修改: https://github.com/thinktip/luci-theme-neobird
 - 修复安装package提示信息背景泛白
 - 优化菜单缩放
 - 优化显示网口down状态显示图标
@@ -7,17 +7,10 @@
 - 优化设备状态图标显示
 - 更换logo显示为字体"OpenWrt"
   
-## 针对移动端优化的Openwrt主题
-
+> 适用于lede
 For Lean's OpenWRT Only
 https://github.com/coolsnowwolf/lede
 
-六年前用OP，随手把luci-theme-material改成了自己喜欢的Advancedtomato样式
-因为用了很短时间便没再用OP了，主题也没再管。
-后来便有了lede固件默认使用material主题的修改版做主题，包括今天的luci-theme-netgear和luci-theme-argon还是我的思路，不过都不是我喜欢的样子。
-还有一些luci-theme-atmaterial之类的都是当时我的样式表改的，还存在于某些固件中。
-
-前几天又用上了OP做旁路，顺手又改了一把，然后随便找了个LOGO(netgear arlo)，起了个名字，编译了一下。
 
 ## 主要特点：
 * 针对移动端优化，特别适合手机端做为webapp使用；
@@ -37,24 +30,12 @@ https://github.com/coolsnowwolf/lede
 * 做为旁路由，安装的插件比较少，接口比较少，部分图片不可见则懒得换，可能未来会主动把图片换掉；
 * 部分插件或页面仅通过样式表很难达到完美，需要修改底层页面结构，这部分内容存在于luci源码中；
 
-## 关于其它
-* 你可以改来自己用，也可以继续优化共享，但如果想改进后共享给他人，请再三确认自己的审美能力，以确保不是丑化我的成果
-* luci插件众多，不规范的插件可能会存在显示问题，不做保证
-
 ## 预览
-![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/SCR-20220223-iw6.png)
-![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/SCR-20220223-iwp.png)
-![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/SCR-20220223-j1l.png)
-![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_6478.PNG)
-![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_6481.PNG)
-![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_6474.PNG)
+
 ## 自行编译：
 
 ```
-cd lede/package/lean  
-rm -rf luci-theme-neobird  
-git clone https://github.com/thinktip/luci-theme-neobird.git  
-cd ~/lede/
-make menuconfig #choose LUCI->Theme->Luci-theme-neobird  
-make -j1 V=s
+git clone https://github.com/thinktip/luci-theme-neobird.git  package/luci-theme-neobird
+make menuconfig # choose LUCI->Theme->Luci-theme-neobird  
+make V=s
 ```
