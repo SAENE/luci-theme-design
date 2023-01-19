@@ -34,7 +34,7 @@ https://github.com/coolsnowwolf/lede
 ## 自行编译：
 
 ```
-git clone https://github.com/thinktip/luci-theme-neobird.git  package/luci-theme-neobird
+git clone https://github.com/gngpp/luci-theme-neobird.git  package/luci-theme-neobird
 make menuconfig # choose LUCI->Theme->Luci-theme-neobird  
 make V=s
 ```
