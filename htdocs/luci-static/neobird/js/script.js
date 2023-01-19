@@ -171,6 +171,7 @@
                 width: "20rem"
             }, "fast");
             $(".main-right").css("overflow-y", "hidden");
+            $(".showSide").css("display", "none");
             showSide = true;
         }
     });
@@ -184,6 +185,7 @@
                 width: "0"
             }, "fast");
             $(".main-right").css("overflow-y", "auto");
+            $(".showSide").css("display", "");
         }
     });
 
