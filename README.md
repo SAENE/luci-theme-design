@@ -35,14 +35,14 @@ For Lean's OpenWRT Only
 
 ## 预览
 
-<img src="./previce/login.png"/>
-<img src="./previce/home.png"/>
-<img src="./previce/home1.png"/>
-<img src="./previce/sidebar.png"/>
-<img src="./previce/iface.png"/>
-<img src="./previce/iface1.png"/>
-<img src="./previce/IMG_8790.png"/>
-<img src="./previce/IMG_8791.png"/>
+<img src="./preview/login.png"/>
+<img src="./preview/home.png"/>
+<img src="./preview/home1.png"/>
+<img src="./preview/sidebar.png"/>
+<img src="./preview/iface.png"/>
+<img src="./preview/iface1.png"/>
+<img src="./preview/IMG_8790.png"/>
+<img src="./preview/IMG_8791.png"/>
 
 ## 自行编译
 
