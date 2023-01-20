@@ -191,6 +191,7 @@
 
     $(window).resize(function () {
         if ($(window).width() > 921) {
+            $(".showSide").css("display", "");
             $(".main-left").css("width", "");
             $(".darkMask").stop(true);
             $(".darkMask").css("display", "none");
