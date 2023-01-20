@@ -26,7 +26,7 @@ jobs:
         with:
           # Repository name with owner. For example, actions/checkout
           # Default: ${{ github.repository }}
-          repository: 'https://github.com/coolsnowwolf/lede'
+          repository: 'coolsnowwolf/lede'
   
       - name: Build
         id: build
