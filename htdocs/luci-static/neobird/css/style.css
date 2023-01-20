@@ -106,6 +106,14 @@
   url('#iconfont') format('svg');
 }
 
+@font-face{
+    font-family: 'Cocon-Regular-Font';
+    src : url('../fonts/Cocon-Regular-Font.otf') format('opentype');
+}
+div{
+    font-family: 'HYk2gj';
+}
+
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -738,6 +746,7 @@ padding:0;
 
 header > .container > .brand {
     font-size: 25px;
+    font-family: "Cocon-Regular-Font";
     /*font-weight:bold;*/
     line-height:60px;
     /*color: white;*/
@@ -746,12 +755,12 @@ header > .container > .brand {
     /*background: #51c291;*/
     display:block;
     width:17rem;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     height:60px;
     text-align:center;
     float:left;
     font-weight:900;
-    letter-spacing:3px;
+    letter-spacing:2px;
 }
 header > .container > a[class="brand"]:after {
     content:"";
@@ -2393,7 +2402,7 @@ body.lang_pl.node-main-login .cbi-value-title {
         position: absolute;
         width: 300px;
         height: 50px;
-        padding: 16px 26px;
+        padding: 17px 27px;
     }
 
     .showSide:before {
@@ -2454,7 +2463,7 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 370px) {
 
     fieldset {
     /* overflow-x: auto; */
@@ -2668,6 +2677,10 @@ body.lang_pl.node-main-login .cbi-value-title {
 
     #cbi-vssr-servers .cbi-page-actions {
         padding-bottom: 10px !important;
+    }
+
+    #maincontent > .container {
+        margin: 20px 20px;
     }
 }
 
