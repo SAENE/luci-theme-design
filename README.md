@@ -42,8 +42,8 @@ For Lean's OpenWRT Only
 <img src="./preview/sidebar.png"/>
 <img src="./preview/iface.png"/>
 <img src="./preview/iface1.png"/>
-<img src="./preview/IMG_8790.png"/>
-<img src="./preview/IMG_8791.png"/>
+<img src="./preview/IMG_8790.PNG"/>
+<img src="./preview/IMG_8791.PNG"/>
 
 ## 自行编译
 
