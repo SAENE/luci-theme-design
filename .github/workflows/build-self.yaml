@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     steps:
 
       - name: Initialization Environment
@@ -20,7 +20,6 @@ jobs:
           [ -f /etc/issue.net ] && cat /etc/issue.net
           [ -f /etc/issue ] && cat /etc/issue
           ulimit -a
-
       - name: Checkout lede
         uses: actions/checkout@v3
         with:
@@ -42,13 +41,11 @@ jobs:
           ipk_path = "find $(pwd)/bin | grep luci-theme-neobird"
           echo "ipk_path=$ipk_path" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
-
       - name: Generate release tag
         id: tag
         run: |
           echo "release_tag=$(date +"%Y.%m.%d")-Lean" >> $GITHUB_OUTPUT
           echo "release_date=$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
-
       - name: Upload to release
         uses: softprops/action-gh-release@v1
         if: steps.build.outputs.status == 'success' && !cancelled()
