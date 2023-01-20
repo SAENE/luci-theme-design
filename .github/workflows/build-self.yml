@@ -1,4 +1,4 @@
-name: Build
+name: Build-self
 
 on:
   workflow_dispatch:
@@ -41,11 +41,13 @@ jobs:
           ipk_path = "find $(pwd)/bin | grep luci-theme-neobird"
           echo "ipk_path=$ipk_path" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
+
       - name: Generate release tag
         id: tag
         run: |
           echo "release_tag=$(date +"%Y.%m.%d")-Lean" >> $GITHUB_OUTPUT
           echo "release_date=$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+
       - name: Upload to release
         uses: softprops/action-gh-release@v1
         if: steps.build.outputs.status == 'success' && !cancelled()
@@ -55,4 +57,4 @@ jobs:
           name: ${{ steps.tag.outputs.release_date }} luci-theme-neobird主题下载
           tag_name: ${{ steps.tag.outputs.release_tag }}
           files: |
-            ${{ steps.show.outputs.ipk_path }}
+            ${{ steps.build.outputs.ipk_path }}
