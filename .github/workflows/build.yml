@@ -33,7 +33,6 @@ jobs:
         run: | 
           git clone https://github.com/gngpp/luci-theme-neobird.git package/luci-theme-neobird
           ./scripts/feeds update -a && ./scripts/feeds install -a
-          rm .config
           echo "CONFIG_PACKAGE_luci-theme-neobird=y" >> .config
           make defconfig
           make download -j8
