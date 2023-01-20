@@ -8,6 +8,7 @@
 - 优化logo显示
 - 优化设备状态图标显示
 - 更换logo显示为字体"OpenWrt"
+- 修复部分插件显示bug
   
 > 适用于lede
 For Lean's OpenWRT Only
