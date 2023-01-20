@@ -359,7 +359,7 @@ p#aliyundrive-webdav_status b {
 
 .node-services-vssr .status-bar {
 	bottom: 50px;
-    display: none;
+    /* display: none; */
 }
 
 .node-services-vssr .ssr-button {
