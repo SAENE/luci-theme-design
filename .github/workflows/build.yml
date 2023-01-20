@@ -40,7 +40,7 @@ jobs:
           make tools/compile -j$(nproc)
           make toolchain/compile -j$(nproc)
           make package/luci-theme-neobird/compile V=s
-          ipk_path = "find /home/gngpp/lede/bin | grep luci-theme-neobird"
+          ipk_path = "find $(pwd)/bin | grep luci-theme-neobird"
           echo "ipk_path=$ipk_path" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
 
