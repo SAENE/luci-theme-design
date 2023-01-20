@@ -12,8 +12,23 @@ jobs:
       - name: Download SDK
         run: wget https://archive.openwrt.org/releases/18.06.9/targets/x86/64/openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64.tar.xz
       
-      - name: Download Decompression
-        run: tar -xf openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64.tar.xz
+      - name: Download SDK Decompression
+        run: | 
+          xz -d openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64.tar.xz
+          tar -xvf openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64.tar
+          mv openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64 sdk
+      - name: config
+        run: | 
+          cd sdk
+          git clone https://github.com/gngpp/luci-theme-neobird.git package/luci-theme-neobird
+          ./scripts/feeds update -a && ./scripts/feeds install -a
+          echo "CONFIG_PACKAGE_luci-theme-neobird=y" >> .config
+          make defconfig
+          make download -j8
+          make tools/compile
+          make toolchain/compile
+          make package/luci-theme-neobird/compile V=s
+
       - name: Store packages
         uses: actions/upload-artifact@v2
         with:
