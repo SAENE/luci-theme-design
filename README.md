@@ -38,6 +38,7 @@ For Lean's OpenWRT Only
 <img src="./preview/login.png"/>
 <img src="./preview/home.png"/>
 <img src="./preview/home1.png"/>
+<img src="./preview/mini.png"/>
 <img src="./preview/sidebar.png"/>
 <img src="./preview/iface.png"/>
 <img src="./preview/iface1.png"/>
