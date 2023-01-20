@@ -6,6 +6,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
+
+    outputs:
+      TARGET: ${{ steps.build.outputs.TARGET }}
+      
     steps:
 
       - name: Initialization Environment
@@ -39,8 +43,9 @@ jobs:
           make tools/compile -j$(nproc)
           make toolchain/compile -j$(nproc)
           make package/luci-theme-neobird/compile V=s
-          ipk_path = "find $(pwd)/bin | grep luci-theme-neobird"
-          echo "ipk_path=$ipk_path" >> $GITHUB_OUTPUT
+          TARGET="$(find $(pwd)/bin | grep luci-theme-neobird)"
+          echo "TARGET=$TARGET"
+          echo "TARGET=$TARGET" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
 
       - name: Generate release tag
@@ -57,5 +62,4 @@ jobs:
         with:
           name: ${{ steps.tag.outputs.release_date }} luci-theme-neobird主题下载
           tag_name: ${{ steps.tag.outputs.release_tag }}
-          files: |
-            ${{ steps.build.outputs.ipk_path }}
+          files: ${{ env.TARGET }}
