@@ -44,8 +44,8 @@ jobs:
           make toolchain/compile -j$(nproc)
           make package/luci-theme-neobird/compile V=s -j$(nproc)
           TARGET="$(find bin/ | grep  luci-theme-neobird)"
-          echo "TARGET=$TARGET"
-          echo "TARGET=$TARGET" >> $GITHUB_OUTPUT
+          echo "TARGET=$(pwd)/$TARGET"
+          echo "TARGET=$(pwd)/$TARGET" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
 
       - name: Generate release tag
