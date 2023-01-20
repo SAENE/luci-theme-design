@@ -466,6 +466,7 @@ li img[src*="/luci-static/resources/icons/ethernet_disabled.png"]
 
 img[src*="/luci-static/resources/icons/wifi.png"] {
     background-image: url(../images/wifi.png);
+    background-repeat: no-repeat;
     background-size: 32px 32px;
     height: 32px;
     width: 32px;
