@@ -2410,6 +2410,10 @@ body.lang_pl.node-main-login .cbi-value-title {
         font-size: 1.7rem;
     }
 
+    #maincontent > .container {
+        margin: 20px 20px;
+    }
+
     .node-main-login .showSide {
         display: none !important;
     }
