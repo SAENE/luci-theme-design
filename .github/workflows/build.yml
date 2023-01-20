@@ -42,8 +42,8 @@ jobs:
           make download -j8
           make tools/compile -j$(nproc)
           make toolchain/compile -j$(nproc)
-          make package/luci-theme-neobird/compile V=s
-          TARGET="$(find $(pwd)/bin | grep luci-theme-neobird)"
+          make package/luci-theme-neobird/compile V=s -j$(nproc)
+          TARGET="$(find bin/ | grep  luci-theme-neobird)"
           echo "TARGET=$TARGET"
           echo "TARGET=$TARGET" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
