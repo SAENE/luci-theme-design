@@ -7,5 +7,4 @@ if [ "$PKG_UPGRADE" != 1 ]; then
 		commit luci
 	EOF
 fi
-
 exit 0
