@@ -1339,19 +1339,16 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
     white-space: nowrap;
 } */
 
-[id*="cbi-network-"],
-[id*="-__status"] table {
+div [id*="cbi-network-"] [id*="-__status"] table {
     width: auto;
 }
 
-[id*="cbi-network-"],
-[id*="-__status"] table td {
+div [id*="cbi-network-"] [id*="-__status"] table td {
     width: 0;
     padding: 0;
 
 }
-[id*="cbi-network-"],
-[id*="-__status"] table td small {
+div [id*="cbi-network-"] [id*="-__status"] table td small {
     width: auto;
 }
 
