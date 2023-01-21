@@ -19,12 +19,10 @@ For Lean's OpenWRT Only
 ## 主要特点
 
 * 针对移动端优化，特别适合手机端做为webapp使用；
-- 修改很多细节，尽量视觉统一（但由于luci插件开发不规范，页面结构有些杂乱，难免有些小问题无法修正）；
-- 极简易用设计，移动端去除繁杂信息，隐藏了提示信息（可能并不适合OP新手，请手机横屏查看提示文本）；
+- 修改很多细节，全新的定制的icon图标，尽量视觉统一
 - 简洁的登录界面，底部导航栏，类App的沉浸式体验；
 - 适配深色模式，适配系统自动切换；
-- 全(tou)新(lai)的APP桌面图标；
-- Retina图片适配。
+- 矢量图片适配。
 
 ## 体验Webapp方法
 
@@ -36,6 +34,14 @@ For Lean's OpenWRT Only
 
 - 资源接口icon未完善，如果有能力画图的欢迎pr，但请确保跟现有icon颜色风格一致
 - 有bug欢迎提issue
+
+## 自行编译
+
+```
+git clone https://github.com/gngpp/luci-theme-neobird.git  package/luci-theme-neobird
+make menuconfig # choose LUCI->Theme->Luci-theme-neobird  
+make V=s
+```
 
 ## 预览
 
@@ -49,11 +55,3 @@ For Lean's OpenWRT Only
 <img src="./preview/iface1.png"/>
 <img src="./preview/IMG_8790.PNG"/>
 <img src="./preview/IMG_8791.PNG"/>
-
-## 自行编译
-
-```
-git clone https://github.com/gngpp/luci-theme-neobird.git  package/luci-theme-neobird
-make menuconfig # choose LUCI->Theme->Luci-theme-neobird  
-make V=s
-```
