@@ -1325,7 +1325,7 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
 
 /* fix node-network-network */
 
-#cbi-network-lan-__status table {
+/* #cbi-network-lan-__status table {
     width: auto;
 }
 
@@ -1337,8 +1337,20 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
 #cbi-network-lan-__status table td small {
     font-size: 11px;
     white-space: nowrap;
+} */
+
+#cbi-network table {
+    width: auto;
 }
 
+#cbi-network table td {
+    width: 0;
+    padding: 0;
+
+}
+#cbi-network table td small {
+    width: auto;
+}
 
 /* fix node-status-routes */
 
