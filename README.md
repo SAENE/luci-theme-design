@@ -1,4 +1,4 @@
-# luci-theme-neobird
+# luci-theme-design
 
 基于原作者修改: <https://github.com/thinktip/luci-theme-neobird>
 
@@ -38,8 +38,8 @@ For Lean's OpenWRT Only
 ## 自行编译
 
 ```
-git clone https://github.com/gngpp/luci-theme-neobird.git  package/luci-theme-neobird
-make menuconfig # choose LUCI->Theme->Luci-theme-neobird  
+git clone https://github.com/gngpp/luci-theme-design.git  package/luci-theme-design
+make menuconfig # choose LUCI->Theme->Luci-theme-design  
 make V=s
 ```
 
