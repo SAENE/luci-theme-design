@@ -1,5 +1,5 @@
 /**
- *  Neobird is a clean HTML5 theme for LuCI. It is based on luci-theme-material
+ *  Design is a clean HTML5 theme for LuCI. It is based on luci-theme-material and luci-theme-neobird
  *
  *  luci-theme-material
  *      Copyright 2015 Lutty Yang <lutty@wcan.in>
@@ -42,8 +42,8 @@
     --progressbarColor: #c8c8c8;
     --progressbar: #51c291;
     --progressbartxtColor: #fff;
-    /* --logo: url('/luci-static/neobird/images/logo.png');
-    --mlogo: url('/luci-static/neobird/images/mlogo.png'); */
+    /* --logo: url('/luci-static/design/images/logo.png');
+    --mlogo: url('/luci-static/design/images/mlogo.png'); */
     --logo_color: #c15181
 }
 
@@ -79,8 +79,8 @@
     --progressbarColor: #6d6d6d;
     --progressbar: #51c291;
     --progressbartxtColor: #fefefe;
-    /* --logo: url('/luci-static/neobird/images/logod.png');
-    --mlogo: url('/luci-static/neobird/images/mlogod.png'); */
+    /* --logo: url('/luci-static/design/images/logod.png');
+    --mlogo: url('/luci-static/design/images/mlogod.png'); */
     --logo_color: #fefefe
   }
 }
@@ -97,7 +97,7 @@
 }
 
 @font-face {
-  font-family: 'neobird';
+  font-family: 'design';
   src: url('');
   src: url('?#iefix') format('embedded-opentype'),
   url('../fonts/iconfont.woff2') format('woff2'),
@@ -681,7 +681,7 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
 
 
 .myIcon{
-    font-family: "neobird" !important;
+    font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
     text-transform: none !important;
@@ -966,7 +966,7 @@ p#shadowsocksr_status {
     left:-10px;
     top: 1px;
     position: relative;
-    font-family: "neobird" !important;
+    font-family: "design" !important;
     font-weight: bold !important;
     text-transform: none !important;
     speak: none;
@@ -1084,7 +1084,7 @@ p#shadowsocksr_status {
     padding: 8px 0px 8px 25px;
 }
 .main > .main-left > .nav > .slide > .slide-menu > li > a:after{
-    font-family: "neobird" !important;
+    font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
     content: "\eb03";
@@ -2029,7 +2029,7 @@ header > .container > .pull-right > * {
 
 #refresh_on, #refresh_off {
     font-size: 1.5rem;
-    font-family: neobird;
+    font-family: design;
 }
 
 #refresh_on {
