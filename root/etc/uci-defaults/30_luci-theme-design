@@ -9,4 +9,3 @@ if [ "$PKG_UPGRADE" != 1 ]; then
 fi
 
 exit 0
-# ↑↑↑ DO NOT EDIT THIS LINE
