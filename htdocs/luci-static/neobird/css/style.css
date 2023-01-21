@@ -539,6 +539,7 @@ img[src*="/luci-static/resources/icons/vlan_disabled.png"] {
     width: 0;
 }
 #__status-ifc-signal img[src*="/luci-static/resources/icons/vlan_disabled.png"],
+.ifacebadge img[src*="/luci-static/resources/icons/vlan_disabled.png"],
 li img[src*="/luci-static/resources/icons/vlan_disabled.png"]
 {
     background-size: 16px 16px;
@@ -547,8 +548,41 @@ li img[src*="/luci-static/resources/icons/vlan_disabled.png"]
     padding: 0 0 0 16px;
 }
 
+#wan4_i img[src*="/luci-static/resources/icons/bridge.png"],
+#wan6_i img[src*="/luci-static/resources/icons/bridge.png"],
 img[src*="/luci-static/resources/icons/bridge.png"] {
     background-image: url(../images/bridge.png);
+    background-size: 32px 32px;
+    height: 32px;
+    width: 32px;
+    padding: 0 0 0 32px;
+    width: 0;
+}
+#__status-ifc-signal img[src*="/luci-static/resources/icons/bridge.png"],
+.ifacebadge img[src*="/luci-static/resources/icons/bridge.png"],
+li img[src*="/luci-static/resources/icons/bridge.png"] {
+    background-image: url(../images/bridge.png);
+    background-size: 16px 16px;
+    height: 16px;
+    width: 16px;
+    padding: 0 0 0 16px;
+    width: 0;
+}
+
+#wan4_i img[src*="/luci-static/resources/icons/bridge_disabled.png"],
+#wan6_i img[src*="/luci-static/resources/icons/bridge_disabled.png"],
+img[src*="/luci-static/resources/icons/bridge_disabled.png"] {
+    background-image: url(../images/bridge_disabled.png);
+    background-size: 32px 32px;
+    height: 32px;
+    width: 32px;
+    padding: 0 0 0 32px;
+    width: 0;
+}
+#__status-ifc-signal img[src*="/luci-static/resources/icons/bridge_disabled.png"],
+.ifacebadge img[src*="/luci-static/resources/icons/bridge_disabled.png"],
+li img[src*="/luci-static/resources/icons/bridge_disabled.png"] {
+    background-image: url(../images/bridge_disabled.png);
     background-size: 16px 16px;
     height: 16px;
     width: 16px;
@@ -566,8 +600,6 @@ img[src*="/luci-static/resources/icons/tunnel.png"] {
     padding: 0 0 0 32px;
     width: 0;
 }
-#cbi-network-lan-ifname_multi img[src*="/luci-static/resources/icons/tunnel.png"],
-#cbi-network-1-_ifname img[src*="/luci-static/resources/icons/tunnel.png"],
 #__status-ifc-signal img[src*="/luci-static/resources/icons/tunnel.png"],
 .ifacebadge img[src*="/luci-static/resources/icons/tunnel.png"],
 li img[src*="/luci-static/resources/icons/tunnel.png"]
@@ -588,9 +620,6 @@ img[src*="/luci-static/resources/icons/tunnel_disabled.png"] {
     padding: 0 0 0 32px;
     width: 0;
 }
-
-#cbi-network-lan-ifname_multi img[src*="/luci-static/resources/icons/tunnel_disabled.png"],
-#cbi-network-1-_ifname img[src*="/luci-static/resources/icons/tunnel_disabled.png"],
 #__status-ifc-signal img[src*="/luci-static/resources/icons/tunnel_disabled.png"],
 .ifacebadge img[src*="/luci-static/resources/icons/tunnel_disabled.png"],
 li img[src*="/luci-static/resources/icons/tunnel_disabled.png"]
