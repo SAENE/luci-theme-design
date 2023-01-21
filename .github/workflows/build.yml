@@ -1,4 +1,4 @@
-name: Build-self
+name: Build
 
 on:
   workflow_dispatch:
