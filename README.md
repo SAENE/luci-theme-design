@@ -10,6 +10,7 @@
 - 更换logo显示为字体"OpenWrt"
 - 修复部分插件显示bug
 - 修复vssr状态bar
+- 修复诸多bug
   
 > 适用于lede
 For Lean's OpenWRT Only
