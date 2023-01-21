@@ -21,23 +21,20 @@ jobs:
           [ -f /etc/issue.net ] && cat /etc/issue.net
           [ -f /etc/issue ] && cat /etc/issue
           ulimit -a
-      - name: Checkout lede
-        uses: actions/checkout@v3
-        with:
-          # Repository name with owner. For example, actions/checkout
-          # Default: ${{ github.repository }}
-          repository: 'coolsnowwolf/lede'
-  
+      - name: Download SDK
+        run: |
+          wget https://archive.openwrt.org/releases/18.06.9/targets/x86/generic/openwrt-sdk-18.06.9-x86-generic_gcc-7.3.0_musl.Linux-x86_64.tar.xz
+          xz -d openwrt-sdk-18.06.9-x86-generic_gcc-7.3.0_musl.Linux-x86_64.tar.xz
+          tar -xf openwrt-sdk-18.06.9-x86-generic_gcc-7.3.0_musl.Linux-x86_64.tar
+          mv openwrt-sdk-18.06.9-x86-generic_gcc-7.3.0_musl.Linux-x86_64 openwrt-sdk
       - name: Build
         id: build
         run: | 
+          cd openwrt-sdk
           git clone https://github.com/gngpp/luci-theme-neobird.git package/luci-theme-neobird
           ./scripts/feeds update -a && ./scripts/feeds install -a
           echo "CONFIG_PACKAGE_luci-theme-neobird=y" >> .config
           make defconfig
-          make download -j8
-          make tools/compile -j$(nproc)
-          make toolchain/compile -j$(nproc)
           make package/luci-theme-neobird/compile V=s -j$(nproc)
           TARGET="$(find bin/ | grep  luci-theme-neobird)"
           echo "TARGET=$(pwd)/$TARGET"
