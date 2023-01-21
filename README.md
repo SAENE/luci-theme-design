@@ -34,7 +34,8 @@ For Lean's OpenWRT Only
 
 ## 目前存在的问题
 
-* 资源接口icon未完善，如果有能力画图的欢迎pr，但请确保跟现有icon颜色风格一致
+- 资源接口icon未完善，如果有能力画图的欢迎pr，但请确保跟现有icon颜色风格一致
+- 有bug欢迎提issue
 
 ## 预览
 
