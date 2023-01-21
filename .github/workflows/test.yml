@@ -1,4 +1,4 @@
-name: Build-self
+name: Build-test
 
 on:
   workflow_dispatch:
