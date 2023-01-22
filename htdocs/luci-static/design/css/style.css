@@ -1357,6 +1357,19 @@ div [id*="cbi-network-"] [id*="-__status"] table td small {
     width: auto;
 }
 
+div [id*="cbi-wireless"] [id*="-__status"] table {
+    width: auto;
+}
+
+div [id*="cbi-wireless"] [id*="-__status"] table td {
+    width: 0;
+    padding: 0;
+
+}
+div [id*="cbi-wireless"] [id*="-__status"] table td small {
+    width: auto;
+}
+
 /* fix node-status-routes */
 
 .node-status-routes .cbi-section-node{
