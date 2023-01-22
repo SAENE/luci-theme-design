@@ -1,4 +1,4 @@
-name: Build-test
+name: Build
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-
+      
     steps:
 
       - name: Initialization Environment
@@ -21,25 +21,22 @@ jobs:
           [ -f /etc/issue.net ] && cat /etc/issue.net
           [ -f /etc/issue ] && cat /etc/issue
           ulimit -a
-      - name: Checkout lede
-        uses: actions/checkout@v3
-        with:
-          # Repository name with owner. For example, actions/checkout
-          # Default: ${{ github.repository }}
-          repository: 'coolsnowwolf/lede'
-
+      - name: Download SDK
+        run: |
+          wget https://archive.openwrt.org/releases/18.06.9/targets/x86/64/openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64.tar.xz
+          xz -d openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64.tar.xz
+          tar -xf openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64.tar
+          mv openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64 openwrt-sdk
       - name: Build
         id: build
         run: | 
-          git clone https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
+          cd openwrt-sdk
+          git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
           ./scripts/feeds update -a && ./scripts/feeds install -a
-          echo "CONFIG_PACKAGE_luci-theme-design=y" >> .config
+          echo "CONFIG_PACKAGE_luci-theme-neobird=y" >> .config
           make defconfig
-          make download -j8
-          make tools/compile -j$(nproc)
-          make toolchain/compile -j$(nproc)
           make package/luci-theme-design/compile V=s -j$(nproc)
-          TARGET="$(find bin/ | grep  luci-theme-design)"
+          TARGET="$(find bin/ | grep  luci-theme-neobird)"
           echo "TARGET=$(pwd)/$TARGET"
           echo "TARGET=$(pwd)/$TARGET" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
@@ -54,6 +51,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} luci-theme-design 主题下载
+          name: ${{ steps.tag.outputs.release_date }} luci-theme-design主题下载
           tag_name: ${{ steps.tag.outputs.release_tag }}
           files: ${{ steps.build.outputs.TARGET }}
