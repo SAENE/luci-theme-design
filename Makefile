@@ -14,10 +14,9 @@ include $(TOPDIR)/feeds/luci/luci.mk
 
 define Package/luci-theme-design/postinst
 #!/bin/sh
-sed -i ":a;$!N;s/tmpl.render.*sysauth_template.*return/local scope = { duser = default_user, fuser = user }\nlocal ok, res = luci.util.copcall\(luci.template.render_string, [[<% include\(\"themes\/\" .. theme .. \"\/sysauth\"\) %>]], scope\)\nif ok then\nreturn res\nend\nreturn luci.template.render\(\"sysauth\", scope\)/;ba" /usr/lib/lua/luci/dispatcher.lua
-sed -i ":a;$!N;s/t.render.*sysauth_template.*return/local scope = { duser = h, fuser = a }\nlocal ok, res = luci.util.copcall\(luci.template.render_string, [[<% include\(\"themes\/\" .. theme .. \"\/sysauth\"\) %>]], scope\)\nif ok then\nreturn res\nend\nreturn luci.template.render\(\"sysauth\", scope\)/;ba" /usr/lib/lua/luci/dispatcher.lua
-rm -Rf /var/luci-modulecache
-rm -Rf /var/luci-indexcache
+if [ -f /etc/uci-defaults/90_luci-theme-design ];then
+  (sh /etc/uci-defaults/90_luci-theme-design) && rm -rf /etc/uci-defaults/90_luci-theme-design
+fi
 exit 0
 endef
 
