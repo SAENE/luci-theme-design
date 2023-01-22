@@ -35,7 +35,7 @@ jobs:
           ./scripts/feeds update -a && ./scripts/feeds install -a
           echo "CONFIG_PACKAGE_luci-theme-neobird=y" >> .config
           make defconfig
-          make package/luci-theme-design/compile V=s -j$(nproc)
+          make package/luci-theme-neobird/compile V=s -j$(nproc)
           TARGET="$(find bin/ | grep  luci-theme-neobird)"
           echo "TARGET=$(pwd)/$TARGET"
           echo "TARGET=$(pwd)/$TARGET" >> $GITHUB_OUTPUT
