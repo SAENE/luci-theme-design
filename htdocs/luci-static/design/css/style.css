@@ -44,7 +44,9 @@
     --progressbartxtColor: #fff;
     /* --logo: url('/luci-static/design/images/logo.png');
     --mlogo: url('/luci-static/design/images/mlogo.png'); */
-    --logo_color: #c15181
+    --logo_color: #c15181;
+    --alertColor: #000000;
+    --alertBackground: rgb(230 230 230);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,7 +83,9 @@
     --progressbartxtColor: #fefefe;
     /* --logo: url('/luci-static/design/images/logod.png');
     --mlogo: url('/luci-static/design/images/mlogod.png'); */
-    --logo_color: #fefefe
+    --logo_color: #fefefe;
+    --alertColor: #ffffff;
+    --alertBackground: rgb(30 30 30);
   }
 }
 
@@ -879,7 +883,8 @@ header > .container > .brand-hostname {
     min-width: inherit;
     overflow: auto;
     border-radius: 10px;
-   background-color: rgba(0,0,0,.05);
+    color: var(--alertColor);
+    background-color: var(--alertBackground);
 }
 
 .errorbox {
