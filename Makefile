@@ -11,11 +11,3 @@ PKG_VERSION:=3.3
 PKG_RELEASE:=20230122
 
 include $(TOPDIR)/feeds/luci/luci.mk
-
-define Package/luci-theme-design/postinst
-#!/bin/sh
-(. /etc/uci-defaults/90_luci-theme-design) && rm -rf /etc/uci-defaults/90_luci-theme-design
-exit 0
-endef
-
-# call BuildPackage - OpenWrt buildroot signature
