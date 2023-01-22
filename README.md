@@ -44,6 +44,7 @@ make V=s
 <img src="./preview/login.png"/>
 <img src="./preview/home.png"/>
 <img src="./preview/home1.png"/>
+<img src="./preview/wifi.png"/>
 <img src="./preview/mini.png"/>
 <img src="./preview/sidebar.png"/>
 <img src="./preview/vssr.png"/>
