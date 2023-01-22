@@ -1,6 +1,6 @@
 # luci-theme-design
 
-基于原作者修改: <https://github.com/thinktip/luci-theme-neobird>
+> **luci-theme-design** 基于[neobird](https://github.com/thinktip/luci-theme-neobird)开发, 适用于lede For Lean's OpenWRT Only <https://github.com/coolsnowwolf/lede>
 
 - 修复安装package提示信息背景泛白
 - 优化菜单缩放
@@ -11,10 +11,6 @@
 - 修复部分插件显示bug
 - 修复vssr状态bar
 - 修复诸多bug
-  
-> 适用于lede
-For Lean's OpenWRT Only
-<https://github.com/coolsnowwolf/lede>
 
 ## 主要特点
 
