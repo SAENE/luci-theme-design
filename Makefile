@@ -14,10 +14,10 @@ include $(TOPDIR)/feeds/luci/luci.mk
 
 define Package/luci-theme-design/postinst
 #!/bin/sh
-if [ -f /etc/uci-defaults/90_luci-theme-design ];then
-  (sh /etc/uci-defaults/90_luci-theme-design) && rm -rf /etc/uci-defaults/90_luci-theme-design
-fi
-exit 0
+[ -n "$IPKG_INSTROOT" ] || {
+  (. /etc/uci-defaults/90_luci-theme-design) && rm -rf /etc/uci-defaults/90_luci-theme-design
+  exit 0
+}
 endef
 
 # call BuildPackage - OpenWrt buildroot signature
