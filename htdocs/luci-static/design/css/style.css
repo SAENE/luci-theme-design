@@ -636,10 +636,11 @@ li img[src*="/luci-static/resources/icons/tunnel_disabled.png"]
 
 img[src*="/luci-static/resources/icons/wifi_big.png"] {
     background-image: url(../images/wifi_big.png);
-    background-size: 32px 32px;
-    height: 32px;
-    padding: 0 0 0 32px;
+    background-size: 64px 64px;
+    height: 64px;
+    padding: 0 0 0 64px;
     width: 0;
+
 }
 
 img[src*="/luci-static/resources/icons/loading.gif"] {
