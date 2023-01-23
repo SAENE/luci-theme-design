@@ -2537,20 +2537,20 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 
     img[src*="/luci-static/resources/cbi/add.gif"] {
-        right: 70px;
+        right: 55px;
         display: block;
         position: absolute;
         margin-top: -34px;
     }
     img[src*="/luci-static/resources/cbi/remove.gif"] {
-        right: 70px;
+        right: 55px;
         display: block;
         position: absolute;
         margin-top: -34px;
     }
 
     img[src*="/luci-static/resources/cbi/reload.gif"] {
-        right: 70px;
+        right: 55px;
         display: block;
         position: absolute;
         margin-top: -34px;
@@ -2633,20 +2633,20 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 
     img[src*="/luci-static/resources/cbi/add.gif"] {
-        right: 70px;
+        right: 45px;
         display: block;
         position: absolute;
         margin-top: -34px;
     }
     img[src*="/luci-static/resources/cbi/remove.gif"] {
-        right: 70px;
+        right: 45px;
         display: block;
         position: absolute;
         margin-top: -34px;
     }
 
     img[src*="/luci-static/resources/cbi/reload.gif"] {
-        right: 70px;
+        right: 45px;
         display: block;
         position: absolute;
         margin-top: -34px;
