@@ -1,4 +1,4 @@
-name: Build
+name: Build-test
 
 on:
   workflow_dispatch:
@@ -31,12 +31,12 @@ jobs:
         id: build
         run: | 
           cd openwrt-sdk
-          git clone https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
+          git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
           ./scripts/feeds update -a && ./scripts/feeds install -a
-          echo "CONFIG_PACKAGE_luci-theme-design=y" >> .config
+          echo "CONFIG_PACKAGE_luci-theme-argon=y" >> .config
           make defconfig
-          make package/luci-theme-design/compile V=s -j$(nproc)
-          TARGET="$(find bin/ | grep  luci-theme-design)"
+          make package/luci-theme-argon/compile V=s -j$(nproc)
+          TARGET="$(find bin/ | grep  luci-theme-argon)"
           echo "TARGET=$(pwd)/$TARGET"
           echo "TARGET=$(pwd)/$TARGET" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
