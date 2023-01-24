@@ -773,48 +773,66 @@ img[src*="/luci-static/resources/icons/signal-75-100.png"]
 {
     background-image: url(../images/signal-75-100.png);
     image-rendering: pixelated;
+    background-size: 24px 24px;
     height: 24px;
     width: 24px;
+    padding: 0 0 0 24px;
+    z-index: 2;
 }
 
 img[src*="/luci-static/resources/icons/signal-50-75.png"]
 {
     background-image: url(../images/signal-50-75.png);
     image-rendering: pixelated;
+    background-size: 24px 24px;
     height: 24px;
     width: 24px;
+    padding: 0 0 0 24px;
+    z-index: 2;
 }
 
 img[src*="/luci-static/resources/icons/signal-25-50.png"]
 {
     background-image: url(../images/signal-25-50.png);
     image-rendering: pixelated;
+    background-size: 24px 24px;
     height: 24px;
     width: 24px;
+    padding: 0 0 0 24px;
+    z-index: 2;
 }
 
 img[src*="/luci-static/resources/icons/signal-0-25.png"]
 {
     background-image: url(../images/signal-0-25.png);
     image-rendering: pixelated;
+    background-size: 24px 24px;
     height: 24px;
     width: 24px;
+    padding: 0 0 0 24px;
+    z-index: 2;
 }
 
 img[src*="/luci-static/resources/icons/signal-0.png"]
 {
     background-image: url(../images/signal-0.png);
     image-rendering: pixelated;
+    background-size: 24px 24px;
     height: 24px;
     width: 24px;
+    padding: 0 0 0 24px;
+    z-index: 2;
 }
 
 img[src*="/luci-static/resources/icons/signal-none.png"]
 {
     background-image: url(../images/signal-none.png);
     image-rendering: pixelated;
+    background-size: 24px 24px;
     height: 24px;
     width: 24px;
+    padding: 0 0 0 24px;
+    z-index: 2;
 }
 
 
