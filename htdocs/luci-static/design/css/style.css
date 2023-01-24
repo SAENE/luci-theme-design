@@ -1289,6 +1289,7 @@ table tr th:empty {
 }
 strong {
     font-weight: bold;
+    padding: 2px;
 }
 
 #lb_load01_cur,
