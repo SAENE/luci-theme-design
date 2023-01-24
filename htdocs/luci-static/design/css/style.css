@@ -2016,6 +2016,7 @@ width:50px !important;
 }
 .ifacebox-body small {
     font-size:0.8rem !important;
+    padding: 5px
 }
 
 .ifacebox-body strong {
