@@ -712,6 +712,14 @@ img[src*="/luci-static/resources/icons/wifi_big.png"] {
     width: 0;
 }
 
+img[src*="/luci-static/resources/icons/wifi_big_disabled.png"] {
+    background-image: url(../images/wifi_big_disabled.png);
+    background-size: 64px 64px;
+    height: 64px;
+    padding: 0 0 0 64px;
+    width: 0;
+}
+
 img[src*="/luci-static/resources/icons/loading.gif"] {
     background-image: url(../images/loading.gif);
     background-size: 20px 20px;
