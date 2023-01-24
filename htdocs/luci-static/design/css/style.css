@@ -920,7 +920,7 @@ header > .container > .brand {
     text-align:center;
     float:left;
     font-weight:900;
-    letter-spacing:2px;
+    letter-spacing:1px;
 }
 header > .container > a[class="brand"]:after {
     content:"";
