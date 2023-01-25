@@ -1999,7 +1999,7 @@ width:50px !important;
     display: block;
     padding: 2px;
     color: black;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .uci-change-list del,
@@ -2011,7 +2011,7 @@ width:50px !important;
     font-style: normal;
     padding: 2px;
     color:black;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .uci-change-list var,
@@ -2023,7 +2023,7 @@ width:50px !important;
     font-style: normal;
     padding: 2px;
     color:black;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .uci-change-list var ins,
@@ -2033,7 +2033,7 @@ width:50px !important;
     font-style: normal;
     padding: 0px;
     color:black;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .uci-change-legend {
