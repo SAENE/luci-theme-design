@@ -1998,6 +1998,8 @@ width:50px !important;
     background-color: #CCFFCC;
     display: block;
     padding: 2px;
+    color: black;
+    border-radius: 5px;
 }
 
 .uci-change-list del,
@@ -2008,6 +2010,8 @@ width:50px !important;
     display: block;
     font-style: normal;
     padding: 2px;
+    color:black;
+    border-radius: 5px;
 }
 
 .uci-change-list var,
@@ -2018,6 +2022,8 @@ width:50px !important;
     display: block;
     font-style: normal;
     padding: 2px;
+    color:black;
+    border-radius: 5px;
 }
 
 .uci-change-list var ins,
@@ -2026,6 +2032,8 @@ width:50px !important;
     white-space: pre;
     font-style: normal;
     padding: 0px;
+    color:black;
+    border-radius: 5px;
 }
 
 .uci-change-legend {
@@ -2197,6 +2205,7 @@ header > .container > .pull-right > * {
     padding: 3px 10px;
     border-radius: 20px;
     z-index: 10;
+    top: 21px;
 }
 
 #refresh_on, #refresh_off {
