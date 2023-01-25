@@ -31,12 +31,12 @@ jobs:
         id: build
         run: | 
           cd openwrt-sdk
-          git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+          git clone -b test https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
           ./scripts/feeds update -a && ./scripts/feeds install -a
-          echo "CONFIG_PACKAGE_luci-theme-argon=y" >> .config
+          echo "CONFIG_PACKAGE_luci-theme-design=y" >> .config
           make defconfig
-          make package/luci-theme-argon/compile V=s -j$(nproc)
-          TARGET="$(find bin/ | grep  luci-theme-argon)"
+          make package/luci-theme-design/compile V=s -j$(nproc)
+          TARGET="$(find bin/ | grep  luci-theme-design)"
           echo "TARGET=$(pwd)/$TARGET"
           echo "TARGET=$(pwd)/$TARGET" >> $GITHUB_OUTPUT
           echo "status=success" >> $GITHUB_OUTPUT
@@ -51,6 +51,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} luci-theme-design主题下载
+          name: ${{ steps.tag.outputs.release_date }} luci-theme-design(test)主题下载
           tag_name: ${{ steps.tag.outputs.release_tag }}
           files: ${{ steps.build.outputs.TARGET }}
