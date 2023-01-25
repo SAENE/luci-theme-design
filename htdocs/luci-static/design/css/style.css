@@ -10,19 +10,23 @@
  *  Licensed to the public under the Apache License 2.0
  */
 
-:root {
-    --bg: #f1f4f5;
+ :root {
+    --bg: #e6e7e8;
     --mainbg: #fff;
     --bgwhite: #fff;
-    --activeColor: #51c291;
+    --activeColor: #202428;
     --activeBottom: #51c291 2px solid;
-    --textColor: rgb(132,119,116);
-    --borderColor: rgba(0,0,0,.15);
-    --navbgColor: rgba(255, 255, 255, .7);
+    --textColor:
+    rgb(50 57 93);
+    --borderColor:
+    rgba(0,0,0,.15);
+    --navbgColor:
+    rgba(255, 255, 255, .8);
     --navBorder: 1px solid #f2f2f2;
     --sectionbgColor: #fff;
     --sectionbgColor2: #fff;
-    --sectionShaddow: 3px 3px 3px rgba(0,0,0,.05);
+    --sectionShaddow: 3px 3px 3px
+    rgba(0,0,0,.05);
     --sectionBorder: none;
     --sectiontabBorder: none;
     --tabmenuBorderLR: none;
@@ -35,18 +39,20 @@
     --inputbgColor: #f8f8f8;
     --inputtextColor: #76838f;
     --inputBorder: 1px solid #e4eaec;
-    --mainleftbgColor: rgb(255,255,255);
+    --mainleftbgColor:
+    rgb(255 255 255);
     --bttextColor: #fff;
     --badgebgColor: #f7f7f7;
     --badgeBorder: #e4eaec 1px solid;
     --progressbarColor: #c8c8c8;
-    --progressbar: #51c291;
+    --progressbar: #3c4464;
     --progressbartxtColor: #fff;
     /* --logo: url('/luci-static/design/images/logo.png');
     --mlogo: url('/luci-static/design/images/mlogo.png'); */
-    --logo_color: #c15181;
+    --logo_color: #000000;
     --alertColor: #000000;
-    --alertBackground: rgb(230 230 230);
+    --alertBackground:
+    rgb(230 230 230);
 }
 
 @media (prefers-color-scheme: dark) {
