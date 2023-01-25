@@ -14,7 +14,7 @@
     --bg: #f1f4f5;
     --mainbg: #fff;
     --bgwhite: #fff;
-    --activeColor: #51c291;
+    --activeColor: #5ea69b;
     --activeBottom: #51c291 2px solid;
     --textColor: rgb(132,119,116);
     --borderColor: rgba(0,0,0,.15);
@@ -40,11 +40,11 @@
     --badgebgColor: #f7f7f7;
     --badgeBorder: #e4eaec 1px solid;
     --progressbarColor: #c8c8c8;
-    --progressbar: #51c291;
+    --progressbar: #5ea69b;
     --progressbartxtColor: #fff;
     /* --logo: url('/luci-static/design/images/logo.png');
     --mlogo: url('/luci-static/design/images/mlogo.png'); */
-    --logo_color: #c15181;
+    --logo_color: #222b36;
     --alertColor: #000000;
     --alertBackground: rgb(230 230 230);
 }
@@ -55,49 +55,6 @@
     --bgwhite: #000;
     --textColor: #fefefe;
     --activeColor: #5ea69b;
-    --activeBottom: #51c291 2px solid;
-    --borderColor: #2C2C3A;
-    --navbgColor:
-    hsla(0, 0%, 7%, .8);
-    --navBorder: 1px solid #1c1c1e;
-    --sectionbgColor: #1c1c1e;
-    --sectionbgColor2: #1c1c1e;
-    --sectionShaddow: 3px 3px 3px
-    rgba(0,0,0,.05);
-    --sectionBorder: none;
-    --sectiontabBorder: none;
-    --sectionnodeBorder: #3d3d41 1px solid;
-    --cbilineColor: #2d2d2d 1px solid;
-    --tabbgColor: #1c1c1e;
-    --tabmenuBorderLR: none;
-    --tabmenubgColor: none;
-    --tabmenuBottom: #2d2d2d 1px solid;
-    --tabmenuRadius: 6px 6px 0 0;
-    --inputbgColor: #2f2f2f;
-    --inputtextColor: #fefefe;
-    --inputBorder: 1px solid #4d4d4d;
-    --mainleftbgColor: #000;
-    --bttextColor: #fefefe;
-    --badgebgColor: #fefefe;
-    --badgeBorder: #3d3d40 1px solid;
-    --progressbarColor: #6d6d6d;
-    --progressbar: #5ea69b;
-    --progressbartxtColor: #fefefe;
-    /* --logo: url('/luci-static/design/images/logod.png');
-    --mlogo: url('/luci-static/design/images/mlogod.png'); */
-    --logo_color: #fefefe;
-    --alertColor: #ffffff;
-    --alertBackground:
-    rgb(30 30 30);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #000;
-    --bgwhite: #000;
-    --textColor: #fefefe;
-    --activeColor: #51c291;
     --activeBottom: #51c291 2px solid;
     --borderColor: #2C2C3A;
     --navbgColor: hsla(0, 0%, 7%, .8);
