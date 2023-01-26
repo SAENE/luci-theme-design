@@ -2968,3 +2968,8 @@ body.lang_pl.node-main-login .cbi-value-title {
 .commandbox div {
     position: unset !important;
 }    
+
+/* fix luci-app-netspeedtest */
+#cbi-netspeedtest-homebox- {
+    display: unset !important;
+}
