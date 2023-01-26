@@ -2963,3 +2963,8 @@ body.lang_pl.node-main-login .cbi-value-title {
 #intervalSelect {
     height: 40px !important;
 }
+
+/* fix luci-app-commands */
+.commandbox div {
+    position: unset !important;
+}    
