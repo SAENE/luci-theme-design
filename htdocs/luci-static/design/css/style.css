@@ -2973,3 +2973,9 @@ body.lang_pl.node-main-login .cbi-value-title {
 #cbi-netspeedtest-homebox- {
     display: unset !important;
 }
+
+/* fix luci-app-nl */
+#detail-bubble.in {
+    color: #000;
+    padding-bottom: 60px;
+}
