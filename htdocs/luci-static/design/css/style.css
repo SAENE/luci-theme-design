@@ -348,10 +348,10 @@ svg {
 
 /* fix p#aliyundrive-webdav_status b */
 
-p#aliyundrive-webdav_status b {
+/* p#aliyundrive-webdav_status b {
     color: #ff6666 !important;
     text-transform:capitalize;
-}
+} */
 
 /* fix .cbi-section .cbi-section */
 
