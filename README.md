@@ -44,6 +44,7 @@ make V=s
 ## 预览(ps: 下面PC端普通字体为苹果浏览器字体，只有手机端是正常显示的)
 
 <img src="./preview/login.png"/>
+<img src="./preview/light.png"/> 
 <img src="./preview/home.png"/>
 <img src="./preview/home1.png"/>
 <img src="./preview/wifi.png"/>
