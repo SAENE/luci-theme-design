@@ -12,6 +12,7 @@
 - 修复vssr状态bar
 - 修复诸多bug
 - 修复兼容部分插件样式
+- 修复aliyundrive-webdav样式
 
 ## 主要特点
 
