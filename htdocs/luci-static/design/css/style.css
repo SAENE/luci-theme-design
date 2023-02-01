@@ -365,7 +365,6 @@ svg {
     bottom:calc(50px + constant(safe-area-inset-bottom));
     bottom:calc(50px + env(safe-area-inset-bottom));
     /* display: none; */
-    /* display: none; */
 }
 
 .node-services-vssr .ssr-button {
