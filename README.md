@@ -41,17 +41,23 @@ make menuconfig # choose LUCI->Theme->Luci-theme-design
 make V=s
 ```
 
-## 预览(ps: 下面PC端普通字体为苹果浏览器字体，只有手机端是正常显示的)
+## 预览(ps: 下面PC端普通字体为苹果浏览器字体，只有移动端是正常显示的)
 
 <img src="./preview/login.png"/>
 <img src="./preview/light.png"/> 
 <img src="./preview/home.png"/>
 <img src="./preview/home1.png"/>
 <img src="./preview/wifi.png"/>
-<img src="./preview/mini.png"/>
 <img src="./preview/sidebar.png"/>
-<img src="./preview/vssr.png"/>
 <img src="./preview/iface.png"/>
 <img src="./preview/iface1.png"/>
-<img src="./preview/IMG_8790.PNG"/>
-<img src="./preview/IMG_8791.PNG"/>
+
+<details> <summary>iOS</summary>
+<img src="./preview/webapp_home.PNG"/>
+<img src="./preview/webapp_vssr.PNG"/>
+</details>
+
+<details> <summary>iPadOS</summary>
+<img src="./preview/IMG_0328.PNG"/>
+<img src="./preview/IMG_0329.PNG"/>
+</details>
