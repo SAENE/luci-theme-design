@@ -13,6 +13,8 @@
 - 修复诸多bug
 - 修复兼容部分插件样式
 - 修复aliyundrive-webdav样式
+- 修复vssr在iOS/iPadOS WebApp模式下显示异常
+- 修复openclash插件在iOS/iPadOS WebApp 模式下env(safe-area-inset-bottom) = 0
 
 ## 主要特点
 
