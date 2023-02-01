@@ -362,7 +362,9 @@ svg {
 /* fix node-services-vssr */
 
 .node-services-vssr .status-bar {
-	bottom: 50px;
+    bottom:calc(50px + constant(safe-area-inset-bottom));
+    bottom:calc(50px + env(safe-area-inset-bottom));
+    /* display: none; */
     /* display: none; */
 }
 
@@ -2979,3 +2981,6 @@ body.lang_pl.node-main-login .cbi-value-title {
     color: #000;
     padding-bottom: 60px;
 }
+
+/* fix luci-openclash */
+/* <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"> */
