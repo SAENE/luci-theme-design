@@ -43,6 +43,7 @@ make V=s
 
 ## 预览(ps: 下面PC端普通字体为苹果浏览器字体，只有移动端是正常显示的)
 
+<details> <summary>PC</summary>
 <img src="./preview/login.png"/>
 <img src="./preview/light.png"/> 
 <img src="./preview/home.png"/>
@@ -51,6 +52,7 @@ make V=s
 <img src="./preview/sidebar.png"/>
 <img src="./preview/iface.png"/>
 <img src="./preview/iface1.png"/>
+</details>
 
 <details> <summary>iOS</summary>
 <img src="./preview/webapp_home.PNG"/>
