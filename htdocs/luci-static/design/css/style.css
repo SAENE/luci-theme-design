@@ -1445,14 +1445,17 @@ p#shadowsocksr_status {
     margin: 0.1rem 0.5rem 0.1rem 0.5rem;
     padding: 0.675rem 0 0.675rem 2.5rem;
 }
-.main > .main-left > .nav > .slide > .slide-menu > li > a:after{
+.main .main-left .nav li.slide .slide-menu .active a {
+    color: #000;
+  }
+/* .main > .main-left > .nav > .slide > .slide-menu > li > a:after{
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
     content: "\eb03";
     float: right;
     padding-right: 5px;
-}
+} */
 
 .main > .main-left > .nav > .slide > .slide-menu > li > a:hover {
     color:white;
