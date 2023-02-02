@@ -266,8 +266,8 @@ header, .main {
 
 header {
     background-color: var(--bgwhite);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    transition: box-shadow .2s;
+    box-shadow: 17rem 2px 4px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s;
     height: 55px;
     float: left;
     position: fixed;
