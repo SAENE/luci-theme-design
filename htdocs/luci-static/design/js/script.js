@@ -178,7 +178,7 @@
         } else {
             $(".darkMask").stop(true).fadeIn("fast");
             $(".main-left").stop(true).animate({
-                width: "20rem"
+                width: "17rem"
             }, "fast");
             $(".main-right").css("overflow-y", "hidden");
             $(".showSide").css("display", "none");
