@@ -1,8 +1,17 @@
 name: Build
 
 on:
+  repository_dispatch:
   workflow_dispatch:
-
+    inputs:
+      choich_branch:
+        description: 'branch'
+        required: true
+        default: 'main' 
+        type: choice
+        options:
+        - main
+        - test
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -31,7 +40,7 @@ jobs:
         id: build
         run: | 
           cd openwrt-sdk
-          git clone https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
+          git clone -b "${{ inputs.choich_branch }}" https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
           ./scripts/feeds update -a && ./scripts/feeds install -a
           echo "CONFIG_PACKAGE_luci-theme-design=y" >> .config
           make defconfig
@@ -51,6 +60,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} luci-theme-design主题下载
+          name: ${{ steps.tag.outputs.release_date }} luci-theme-design 主题下载-${{ inputs.choich_branch }}
           tag_name: ${{ steps.tag.outputs.release_tag }}
           files: ${{ steps.build.outputs.TARGET }}
