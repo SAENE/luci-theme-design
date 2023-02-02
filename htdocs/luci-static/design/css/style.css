@@ -2219,6 +2219,7 @@ width:50px !important;
     padding: 2px;
     color: black;
     /* border-radius: 5px; */
+    overflow-x: auto;
 }
 
 .uci-change-list del,
@@ -2231,6 +2232,7 @@ width:50px !important;
     padding: 2px;
     color:black;
     /* border-radius: 5px; */
+    overflow-x: auto;
 }
 
 .uci-change-list var,
@@ -2243,6 +2245,7 @@ width:50px !important;
     padding: 2px;
     color:black;
     /* border-radius: 5px; */
+    overflow-x: auto;
 }
 
 .uci-change-list var ins,
@@ -2253,6 +2256,7 @@ width:50px !important;
     padding: 0px;
     color:black;
     /* border-radius: 5px; */
+    overflow-x: auto;
 }
 
 .uci-change-legend {
