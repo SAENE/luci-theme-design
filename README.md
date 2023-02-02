@@ -16,6 +16,9 @@
 - 修复vssr在iOS/iPadOS WebApp模式下显示异常
 - 修复openclash插件在iOS/iPadOS WebApp 模式下env(safe-area-inset-bottom) = 0
 - 优化菜单hover action状态分辨
+- 支持luci-app-wizard向导菜单
+- Update header box-shadow style
+- Update uci-change overflow
 
 ## 主要特点
 
