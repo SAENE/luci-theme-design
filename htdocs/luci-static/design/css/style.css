@@ -1378,6 +1378,10 @@ p#shadowsocksr_status {
     -webkit-font-smoothing: antialiased;
     transition: all 0.3s;
 }
+.main > .main-left > .nav > li > a[data-title="Inital Setup"]:before {
+    content: "\e67e";
+}
+
 
 .main > .main-left > .nav > li > a[data-title="Logout"] {
     padding: 0.675rem 0 0.675rem 2.5rem;
@@ -1406,6 +1410,12 @@ p#shadowsocksr_status {
     cursor: pointer;;
 }
 
+.main > .main-left > .nav > .slide > .menu2 {
+    display: block;
+    padding: 0.675rem 0 0.675rem 2.5rem;
+    text-decoration: none;
+    cursor: pointer;;
+}
 .main > .main-left > .nav > li:hover,
 .main > .main-left > .nav > .slide > .menu:hover {
     background: var(--activeColor);
