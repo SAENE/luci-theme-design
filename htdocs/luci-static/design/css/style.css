@@ -1379,6 +1379,10 @@ p#shadowsocksr_status {
     transition: all 0.3s;
 }
 
+.main .main-left .nav li.slide .menu[data-title="Initial Setup"]:before {
+  content: "\e67e";
+}
+
 .main > .main-left > .nav > li > a[data-title="Logout"] {
     padding: 0.675rem 0 0.675rem 2.5rem;
 }
