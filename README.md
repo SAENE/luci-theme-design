@@ -19,7 +19,7 @@
 - 支持luci-app-wizard向导菜单
 - Update header box-shadow style
 - Update uci-change overflow
-- Fix nlwn component
+- Fix nlbw component
 
 ## 主要特点
 
