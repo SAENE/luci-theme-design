@@ -3201,7 +3201,11 @@ body.lang_pl.node-main-login .cbi-value-title {
     display: unset !important;
 }
 
-/* fix nlwn component */
+/* fix nlbw component */
+#detail-bubble {
+    left: unset !important;
+    width: calc(100vw)!important;
+}
 #detail-bubble.in {
     color: #000;
     padding-bottom: calc(60px +  env(safe-area-inset-bottom));
