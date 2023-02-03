@@ -2809,6 +2809,26 @@ body.lang_pl.node-main-login .cbi-value-title {
     width: 12rem;
 }
 
+/* fix nlbw component */
+#detail-bubble {
+    /* left: unset !important; */
+    width: unset!important;
+}
+#detail-bubble.in {
+    color: #000;
+    padding-bottom: calc(60px +  env(safe-area-inset-bottom));
+    left: 19rem !important;
+    width: calc(100vw - 21rem)!important;
+}
+#detail-bubble .head {
+    display: block;
+    overflow: auto;
+}
+#detail-bubble #bubble-table {
+    display: inline-table;
+    overflow: auto;
+}
+
 @media screen and (max-width: 1280px) {
     header {
         /*height: 3.5rem;*/
@@ -2866,6 +2886,29 @@ body.lang_pl.node-main-login .cbi-value-title {
         display: block;
         position: absolute;
         margin-top: -34px;
+    }
+    /* fix nlbw component */
+    #detail-bubble {
+        /* left: unset !important; */
+        width: unset!important;
+    }
+    #detail-bubble.in {
+        color: #000;
+        padding-bottom: calc(60px +  env(safe-area-inset-bottom));
+        left: 19rem !important;
+        width: calc(100vw - 21rem)!important;
+    }
+    #detail-bubble .head {
+        display: block;
+        overflow: auto;
+    }
+    #detail-bubble #bubble-table {
+        display: inline-table;
+        overflow: auto;
+    }
+    .node-nlbw-usage table {
+        display: block;
+        overflow: auto;
     }
 }
 
@@ -2962,6 +3005,26 @@ body.lang_pl.node-main-login .cbi-value-title {
         display: block;
         position: absolute;
         margin-top: -34px;
+    }
+    /*  fix nlbw component */
+    #detail-bubble {
+        left: unset !important;
+        width: unset!important;
+    }
+    #detail-bubble.in {
+        color: #000;
+        padding-bottom: calc(60px +  env(safe-area-inset-bottom));
+        left: unset !important;
+        width: calc(100vw)!important;
+    }
+    #detail-bubble .head {
+        display: block;
+        overflow: auto;
+        /* text-align: unset !important; */
+    }
+    #detail-bubble #bubble-table {
+        display: inline-table;
+        overflow: auto;
     }
 }
 
@@ -3152,6 +3215,26 @@ body.lang_pl.node-main-login .cbi-value-title {
      #cbi-samba-cfg010f89-_tmpl .cbi-value-field{
         width: 95%;        
     }
+    /*  fix nlbw component */
+    #detail-bubble {
+        left: unset !important;
+        width: unset!important;
+    }
+    #detail-bubble.in {
+        color: #000;
+        padding-bottom: calc(60px +  env(safe-area-inset-bottom));
+        left: unset !important;
+        width: calc(100vw)!important;
+    }
+    #detail-bubble .head {
+        display: block;
+        overflow: auto;
+        /* text-align: unset !important; */
+    }
+    #detail-bubble #bubble-table {
+        display: block;
+        overflow: auto;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -3184,6 +3267,26 @@ body.lang_pl.node-main-login .cbi-value-title {
     #maincontent > .container {
         margin: 20px 20px;
     }
+    /*  fix nlbw component */
+    #detail-bubble {
+        left: unset !important;
+        width: unset!important;
+    }
+    #detail-bubble.in {
+        color: #000;
+        padding-bottom: calc(60px +  env(safe-area-inset-bottom));
+        left: unset !important;
+        width: calc(100vw)!important;
+    }
+    #detail-bubble .head {
+        display: block;
+        overflow: auto;
+        /* text-align: unset !important; */
+    }
+    #detail-bubble #bubble-table {
+        display: block;
+        overflow: auto;
+    }
 }
 
 /* fix http://192.168.2.1/cgi-bin/luci/admin/nlbw/usage */
@@ -3201,26 +3304,8 @@ body.lang_pl.node-main-login .cbi-value-title {
     display: unset !important;
 }
 
-/* fix nlbw component */
-#detail-bubble {
-    left: unset !important;
-    width: calc(100vw)!important;
-}
-#detail-bubble.in {
-    color: #000;
-    padding-bottom: calc(60px +  env(safe-area-inset-bottom));
-    left: unset !important;
-    width: calc(100vw)!important;
-}
-#detail-bubble .head {
-    display: block;
-    overflow: auto;
-}
-#detail-bubble #bubble-table {
-    display: block;
-    overflow: auto;
-}
 .node-nlbw-usage table {
     display: block;
     overflow: auto;
 }
+/* document.getElementById("container.nlbw.traffic").offsetWidth */
