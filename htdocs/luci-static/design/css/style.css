@@ -1771,6 +1771,10 @@ td > table > tbody > tr > td {
 }
 
 div#container\.nlbw\.traffic {
+    /* overflow: auto; */
+}
+div#container\.nlbw\.traffic #host-data {
+    display: block;
     overflow: auto;
 }
 
@@ -3197,8 +3201,22 @@ body.lang_pl.node-main-login .cbi-value-title {
     display: unset !important;
 }
 
-/* fix luci-app-nl */
+/* fix nlwn component */
 #detail-bubble.in {
     color: #000;
     padding-bottom: calc(60px +  env(safe-area-inset-bottom));
+    left: unset !important;
+    width: calc(100vw)!important;
+}
+#detail-bubble .head {
+    display: block;
+    overflow: auto;
+}
+#detail-bubble #bubble-table {
+    display: block;
+    overflow: auto;
+}
+.node-nlbw-usage table {
+    display: block;
+    overflow: auto;
 }
