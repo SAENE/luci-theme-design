@@ -3200,5 +3200,5 @@ body.lang_pl.node-main-login .cbi-value-title {
 /* fix luci-app-nl */
 #detail-bubble.in {
     color: #000;
-    padding-bottom: 60px;
+    padding-bottom: calc(60px +  env(safe-area-inset-bottom));
 }
