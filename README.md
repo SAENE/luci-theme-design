@@ -50,17 +50,6 @@ make V=s
 
 ## 预览(ps: 下面PC端普通字体为苹果浏览器字体，只有移动端是正常显示的)
 
-<details> <summary>PC</summary>
-<img src="./preview/login.png"/>
-<img src="./preview/light.png"/> 
-<img src="./preview/home.png"/>
-<img src="./preview/home1.png"/>
-<img src="./preview/wifi.png"/>
-<img src="./preview/sidebar.png"/>
-<img src="./preview/iface.png"/>
-<img src="./preview/iface1.png"/>
-</details>
-
 <details> <summary>iOS</summary>
 <img src="./preview/webapp_home.PNG"/>
 <img src="./preview/webapp_vssr.PNG"/>
@@ -70,3 +59,13 @@ make V=s
 <img src="./preview/IMG_0328.PNG"/>
 <img src="./preview/IMG_0329.PNG"/>
 </details>
+
+<img src="./preview/login.png"/>
+<img src="./preview/light.png"/> 
+<img src="./preview/home.png"/>
+<img src="./preview/home1.png"/>
+<img src="./preview/wifi.png"/>
+<img src="./preview/sidebar.png"/>
+<img src="./preview/iface.png"/>
+<img src="./preview/iface1.png"/>
+
