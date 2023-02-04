@@ -47,6 +47,7 @@
     --logo_color: #222b36;
     --alertColor: #000000;
     --alertBackground: rgb(230 230 230);
+    --scrollbarColor:#d0d0d0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,6 +87,7 @@
     --logo_color: #fefefe;
     --alertColor: #ffffff;
     --alertBackground: rgb(30 30 30);
+    --scrollbarColor:#222;
   }
 }
 
@@ -116,6 +118,14 @@
 }
 div{
     font-family: 'HYk2gj';
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbarColor) ;
+    border-radius: 2px;
 }
 
 
@@ -949,6 +959,7 @@ img[src*="/luci-static/resources/icons/signal-none.png"]
     height: calc(100% - 3.5rem);
     position: fixed;
     padding-top: 15px;
+    box-shadow: 0 0px 4px rgb(0 0 0 / 8%);
 }
 
 .main-right {
