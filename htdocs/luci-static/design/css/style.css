@@ -98,6 +98,7 @@
     url('../fonts/font.ttf') format('truetype'),
     url('../fonts/font.woff') format('woff'),
     url('../fonts/font.svg') format('svg');
+    url('../fonts/design.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -1149,7 +1150,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Status"]:before {
-    content: "\e6b8";
+    content: "\e906";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Status"]:after {
@@ -1193,7 +1194,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
-    content: "\e6cb";
+    content: "\e909";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Services"]:after {
@@ -1215,7 +1216,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Docker"]:before {
-    content: "\e676";
+    content: "\e911";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Docker"]:after {
@@ -1237,7 +1238,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="NAS"]:before {
-    content: "\eb04";
+    content: "\e90c";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="NAS"]:after {
@@ -1259,7 +1260,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="VPN"]:before {
-    content: "\e6fa";
+    content: "\e90b";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="VPN"]:after {
@@ -1281,7 +1282,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Network"]:before {
-    content: "\e8f8";
+    content: "\e908";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Network"]:after {
