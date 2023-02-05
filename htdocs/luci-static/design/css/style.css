@@ -1158,7 +1158,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1180,7 +1180,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1202,7 +1202,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1224,7 +1224,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1246,7 +1246,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1268,7 +1268,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1290,7 +1290,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1312,7 +1312,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1334,7 +1334,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1356,7 +1356,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1378,7 +1378,7 @@ p#shadowsocksr_status {
     font-family: "design" !important;
     font-style: normal !important;
     font-variant: normal !important;
-    content: "\eb03";
+    content: "\72";
     float: right;
     padding-right: 5px;
     line-height: 1.6;
@@ -1469,14 +1469,6 @@ p#shadowsocksr_status {
 .main .main-left .nav li.slide .slide-menu .active a {
     color: #000;
   }
-/* .main > .main-left > .nav > .slide > .slide-menu > li > a:after{
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-} */
 
 .main > .main-left > .nav > .slide > .slide-menu > li > a:hover {
     color:white;
