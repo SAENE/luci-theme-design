@@ -20,6 +20,7 @@
 - Update header box-shadow style
 - Update uci-change overflow
 - Fix nlbw component
+- Added QSDK/QWRT and iStore menu icon fonts
 
 ## 主要特点
 
