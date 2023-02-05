@@ -52,8 +52,9 @@ jobs:
       - name: Generate release tag
         id: tag
         run: |
-          echo "release_tag=$(date +"%Y.%m.%d")-Lean" >> $GITHUB_OUTPUT
-          echo "release_date=$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+          cd package/luci-theme-design
+          echo "release_tag=$(cat Makefile | grep PKG_VERSION | sed 's/PKG_VERSION:=//')" >> $GITHUB_OUTPUT
+          echo "release_date=$(cat Makefile | grep PKG_RELEASE | sed 's/PKG_RELEASE:=//')" >> $GITHUB_OUTPUT
       - name: Upload to release
         uses: softprops/action-gh-release@v1
         if: steps.build.outputs.status == 'success' && !cancelled()
