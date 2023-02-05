@@ -1281,7 +1281,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Network"]:before {
-    content: "\e8f8";
+    content: "\72";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Network"]:after {
