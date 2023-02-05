@@ -2830,7 +2830,7 @@ body.lang_pl.node-main-login .cbi-value-title {
     color: #000;
     padding-bottom: calc(60px +  env(safe-area-inset-bottom));
     left: 19rem !important;
-    width: calc(100vw - 21rem)!important;
+    width: calc(100vw - 21.25rem)!important;
 }
 #detail-bubble .head {
     display: block;
@@ -2908,7 +2908,7 @@ body.lang_pl.node-main-login .cbi-value-title {
         color: #000;
         padding-bottom: calc(60px +  env(safe-area-inset-bottom));
         left: 19rem !important;
-        width: calc(100vw - 21rem)!important;
+        width: calc(100vw - 21.25rem)!important;
     }
     #detail-bubble .head {
         display: block;
