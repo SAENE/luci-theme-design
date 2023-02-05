@@ -1389,8 +1389,17 @@ p#shadowsocksr_status {
     -webkit-font-smoothing: antialiased;
     transition: all 0.3s;
 }
+
 .main > .main-left > .nav > li > a[data-title="Inital Setup"]:before {
     content: "\e67e";
+}
+
+.main > .main-left > .nav > li > a[href="/cgi-bin/luci//admin/wizard"]:before {
+    content: "\e67e";
+}
+
+.main > .main-left > .nav > li > a[data-title="iStore"]:before {
+    content: "\e676";
 }
 
 
