@@ -68,5 +68,4 @@ make V=s
 <img src="./preview/wifi.png"/>
 <img src="./preview/sidebar.png"/>
 <img src="./preview/iface.png"/>
-<img src="./preview/iface1.png"/>
 
