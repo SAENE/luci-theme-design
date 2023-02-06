@@ -1,3 +1,4 @@
+<img src="./preview/light.png"/> 
 # luci-theme-design
 
 **luci-theme-design**基于[luci-theme-neobird](https://github.com/thinktip/luci-theme-neobird)二次开发, 适用于lede For Lean's OpenWRT Only [lede](https://github.com/coolsnowwolf/lede)
@@ -62,10 +63,8 @@ make V=s
 </details>
 
 <img src="./preview/login.png"/>
-<img src="./preview/light.png"/> 
 <img src="./preview/home.png"/>
 <img src="./preview/home1.png"/>
 <img src="./preview/wifi.png"/>
-<img src="./preview/sidebar.png"/>
 <img src="./preview/iface.png"/>
 
