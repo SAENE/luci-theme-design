@@ -35,113 +35,46 @@
 <!DOCTYPE html>
 <html lang="<%=luci.i18n.context.lang%>">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
-    <link rel="manifest" href="<%=media%>/manifest.json">
-    <title><%=striptags( (boardinfo.hostname or "?") .. ( (node and node.title) and ' - ' .. translate(node.title) or '')) %> - LuCI</title>
-    <meta name="format-detection" content="telephone=no, email=no"/>
-    <meta name="x5-fullscreen" content="true">
-    <meta name="full-screen" content="yes">
-    <meta name="x5-page-mode" content="app">
-    <meta name="browsermode" content="application">
-    <meta name="msapplication-tap-highlight" content="no">
-	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-	<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
-	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
-    <meta name="application-name" content="<%=striptags( (boardinfo.hostname or "?") ) %>">
-    <meta name="apple-mobile-web-app-title" content="<%=striptags( (boardinfo.hostname or "?") ) %>">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#09c">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="msapplication-TileColor" content="#09c">
+<meta name="application-name" content="<%=striptags( (boardinfo.hostname or "?") ) %> - LuCI">
+<meta name="apple-mobile-web-app-title" content="<%=striptags( (boardinfo.hostname or "?") ) %> - LuCI">
     <meta name="msapplication-TileImage" content="<%=media%>/images/icon.png"/>
     <link rel="icon" href="<%=media%>/images/icon.png" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="192x192" href="<%=media%>/images/icon.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes" /> 
-
-    <link rel="stylesheet" href="<%=media%>/css/style.css?v=<%= ver.luciversion %>">
-	<script src="<%=url('admin/translations', luci.i18n.context.lang)%><%# ?v=PKG_VERSION %>"></script>
+	<link rel="apple-touch-icon" sizes="192x192" href="<%=media%>/images/icon.png">
+<link rel="stylesheet" href="<%=media%>/css/style.css?v=<%= ver.luciversion %>">
+<link rel="shortcut icon" href="<%=media%>/favicon.ico">
+<% if node and node.css then %>
+<link rel="stylesheet" href="<%=resource%>/<%=node.css%>">
+<% end -%>
+<script src="<%=url('admin/translations', luci.i18n.context.lang)%><%# ?v=PKG_VERSION %>"></script>
 <script src="<%=resource%>/cbi.js"></script>
-    <link rel="shortcut icon" href="<%=media%>/favicon.ico">
-    <% if node and node.css then %>
-    	<link rel="stylesheet" href="<%=resource%>/<%=node.css%>">
-    <% end -%>
-    <% if css then %>
-        <style title="text/css">
-            <%-= css %>
-        </style>
-    <% end -%>
-    <script src="<%=resource%>/xhr.js?<%= ver.luciversion %>"></script>
+<title><%=striptags( (boardinfo.hostname or "?") .. ( (node and node.title) and ' - ' .. translate(node.title) or '')) %> - LuCI</title>
+<% if css then %><style title="text/css">
+<%= css %>
+</style>
+<% end -%>
 </head>
-
 <body class="lang_<%=luci.i18n.context.lang%> <% if luci.dispatcher.context.authsession then %>logged-in<% end %> <% if not (path == "") then %>node-<%= path %><% else %>node-main-login<% end %>" data-page="<%= pcdata(path) %>">
-
 <header>
-
-<div class="navbar">
-  <a href="/cgi-bin/luci/admin/status/overview"><img src="<%=media%>/images/home.png" /></a>
-  <a href="/cgi-bin/luci/admin/services/openclash"><img src="<%=media%>/images/openclash.png" /></a>
-  <a href="/cgi-bin/luci/admin/network/network"><img src="<%=media%>/images/link.png" /></a>
-  <a href="/cgi-bin/luci/admin/status/realtime"><img src="<%=media%>/images/rank.png" /></a>
-  <a href="/cgi-bin/luci/admin/system/admin"><img src="<%=media%>/images/user.png" /></a>
-</div>
-
-<div class="container">
-	<span class="showSide"></span>
-	<a class="brand" href="#"><%=boardinfo.hostname or "OpenWrt"%></a>
-	<span class="status" id="indicators"></span>
+	<div class="fill">
+		<div class="container">
+			<span class="showSide"></span>
+			<a id="logo" href="<% if luci.dispatcher.context.authsession then %><%=url('admin/status/overview')%><% else %>#<% end %>"><img src="<%=media%>/brand.png" alt="OpenWrt"></a>
+			<a class="brand" href="#"><%=striptags(boardinfo.hostname or "?")%></a>
+			<span class="status" id="indicators"></span>
+		</div>
+	</div>
 </header>
-
- <div class="main">
+<div class="main">
 	<div style="" class="loading"><span><div class="loading-img"></div><%:Collecting data...%></span></div>
-	 <div class="main-left" id="mainmenu" style="display:none"></div><div class="main-left">
-		 <ul class="nav">
-			 <%-
-			 local function submenu(prefix, node)
-			 local childs = disp.node_childs(node)
-			 if #childs > 0 then
-			 %>
-			 <ul class="slide-menu">
-				 <%-
-				 for i, r in ipairs(childs) do
-				 local nnode = node.nodes[r]
-				 local href  = controller .. "" .. prefix .. r ..
-				 (nnode.query and http.build_querystring(nnode.query) or "")
-				 %>
-				 <li><a data-title="<%=pcdata(striptags(nnode.title))%>" href="<%=pcdata(href)%>"><%=pcdata(striptags(translate(nnode.title)))%></a></li>
-				 <%-
-				 end
-				 %>
-			 </ul>
-			 <%-
-			 end
-			 end
-
-			 childs = disp.node_childs(cattree)
-
-			 if #childs > 0 then
-			 for i, r in ipairs(childs) do
-			 local nnode = cattree.nodes[r]
-			 local href  = controller .. "/" .. category .. "/" .. r ..
-			 (nnode.query and http.build_querystring(k.query) or "")
-			 local grandchildren = disp.node_childs(nnode)
-
-			 if #grandchildren > 0 then
-			 %>
-			 <li class="slide">
-				 <a class="menu" data-title="<%=pcdata(striptags(nnode.title))%>" href="#"><%=pcdata(striptags(translate(nnode.title)))%></a>
-				 <%- submenu("" .. category .. "/" .. r .. "/", nnode) %>
-			 </li>
-			 <%          else %>
-			 <li class="slide">
-				 <a class="menu2" data-title="<%=pcdata(striptags(nnode.title))%>" href="<%=pcdata(href)%>"><%=pcdata(striptags(translate(nnode.title)))%></a>
-			 </li>
-			 <%
-			 end
-			 end
-			 end
-			 %>
-		 </ul>
-	 </div>
-	 <div class="main-right">
+	<div class="main-left" id="mainmenu" style="display:none"></div>
+	<div class="main-right">
 		<div class="modemenu-buttons" style="display:none">
 			<ul id="modemenu"></ul>
 		</div>
