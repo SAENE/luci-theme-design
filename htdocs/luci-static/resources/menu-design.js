@@ -179,15 +179,4 @@ return baseclass.extend({
 
 		mainRight.style['overflow-y'] = open ? 'visible' : 'hidden';
 	}
-});'use strict';
-'require baseclass';
-'require ui';
-
-return baseclass.extend({
-
-    __init__: function() {
-		ui.menu.load().then(L.bind(this.render, this));
-	},
-
-
-})
+});
