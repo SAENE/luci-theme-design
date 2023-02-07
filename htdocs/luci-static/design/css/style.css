@@ -2554,8 +2554,12 @@ header > .container > .pull-right > * {
     display: inline-block !important;
 }
 
-.node-main-login > .main .cbi-input-user,
+/* .node-main-login > .main .cbi-input-user,
 .node-main-login > .main .cbi-input-password {
+    min-width: 15rem;
+} */
+
+.node-main-login > .main .cbi-input-text {
     min-width: 15rem;
 }
 
