@@ -2503,7 +2503,7 @@ header > .container > .pull-right > * {
     overflow: hidden;
 }
 
-.node-main-login > .main fieldset .cbi-value-title {
+.node-main-login > .main label.cbi-value-title {
     display: none !important;
 }
 
