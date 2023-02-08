@@ -32,7 +32,7 @@ return baseclass.extend({
 		document.querySelector(".main > .loading").style.opacity = '0';
 		document.querySelector(".main > .loading").style.visibility = 'hidden';
 
-		if (window.innerWidth <= 1152)
+		if (window.innerWidth <= 921)
 			document.querySelector('.main-left').style.width = '0';
 
 		window.addEventListener('resize', this.handleSidebarToggle, true);
@@ -164,13 +164,13 @@ return baseclass.extend({
 		    mainLeft = document.querySelector('.main-left'),
 		    open = mainLeft.style.width == '';
 
-		if (width > 1152 || ev.type == 'resize')
+		if (width > 921 || ev.type == 'resize')
 			open = true;
 		
 		darkMask.style.visibility = open ? '' : 'visible';
 		darkMask.style.opacity = open ? '': 1;
 
-		if (width <= 1152)
+		if (width <= 921)
 			mainLeft.style.width = open ? '0' : '';
 		else
 			mainLeft.style.width = ''
