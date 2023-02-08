@@ -461,7 +461,7 @@ small {
 	height: 1.25rem;
 	margin-right: 1rem;
 	animation: anim-rotate 2s infinite linear;
-	background: url(./icons/spinner.svg) no-repeat center;
+	/* background: url(./icons/spinner.svg) no-repeat center; */
 }
 
 @keyframes anim-rotate {
@@ -599,6 +599,8 @@ header > .fill > .container > .status {
 	top: 25%;
 	right: 1em;
 	float: right;
+	font-size: 1.5rem;
+    font-family: 'design';
 }
 
 header > .fill > .container > .status > * {
@@ -673,7 +675,12 @@ header > .fill > .container > .status > * {
 
 .notice,
 [data-indicator]:not([data-style="inactive"]) {
-	background-color: #002B49 !important;
+	color: var(--progressbarColor);
+}
+
+.notice,
+[data-indicator]:not([data-style="active"]) {
+	color: var(--activeColor);
 }
 
 .error {
@@ -779,7 +786,7 @@ header > .fill > .container > .status > * {
 	width: 16px;
 	height: 16px;
 	content: "";
-	background: url(./icons/arrow.svg) no-repeat;
+	/* background: url(./icons/arrow.svg) no-repeat; */
 }
 
 .main > .main-left > .nav > .slide > .menu.active::before {
@@ -803,7 +810,7 @@ body[class*="node-"] > .main > .main-left > .nav > .slide > .menu.active::before
 	left: 14px;
 	width: 24px;
 	height: 24px;
-	content: url(./icons/logout.svg);
+	/* content: url(./icons/logout.svg); */
 }
 
 .main > .main-left > .nav > li:hover,
@@ -2305,15 +2312,15 @@ span[data-tooltip] .label {
 
 .label,
 [data-indicator] {
-	font-size: .8rem;
+	/* font-size: .8rem; */
 	font-weight: bold;
 	padding: .3rem .8rem;
 	white-space: nowrap;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #fff !important;
+	/* color: #fff !important; */
 	border-radius: 3px;
-	background-color: #bfbfbf;
+    background-color: var(--bgwhite);
 	text-shadow: none;
 }
 
