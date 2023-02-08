@@ -182,6 +182,7 @@
             }, "fast");
             $(".main-right").css("overflow-y", "hidden");
             $(".showSide").css("display", "none");
+            $("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
             showSide = true;
         }
     });
@@ -196,10 +197,12 @@
             }, "fast");
             $(".main-right").css("overflow-y", "auto");
             $(".showSide").css("display", "");
+            $("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
         }
     });
 
     $(window).resize(function () {
+        $("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
         if ($(window).width() > 921) {
             $(".showSide").css("display", "");
             $(".main-left").css("width", "");
