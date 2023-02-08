@@ -960,6 +960,7 @@ img[src*="/luci-static/resources/icons/signal-none.png"]
     position: fixed;
     padding-top: 15px;
     box-shadow: 0 0px 4px rgb(0 0 0 / 8%);
+    transition: visibility 150ms, width 150ms;
 }
 
 .main-right {
