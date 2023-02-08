@@ -10,6 +10,6 @@
     }
 
     // replace indicators font
-    document.getElementById("indicators").lastElementChild.textContent = eval("'\ue6b9'")
+    // document.getElementById("indicators").lastElementChild.textContent = eval("'\ue6b9'")
 
 })(jQuery);

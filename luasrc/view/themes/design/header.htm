@@ -59,7 +59,6 @@
 	<meta name="msapplication-TileColor" content="#09c">
 	<link rel="stylesheet" href="<%=media%>/css/style.css?v=<%= ver.luciversion %>">
 	<script src="<%=media%>/js/jquery.min.js?v=3.5.1"></script>
-	<script src="<%=media%>/js/style.js?v=<%=ver.luciversion%>"></script>
 	<link rel="shortcut icon" href="<%=media%>/favicon.ico">
 	<% if node and node.css then %>
 	<link rel="stylesheet" href="<%=resource%>/<%=node.css%>">
@@ -80,10 +79,11 @@
 		<div class="container">
 			<span class="showSide"></span>
 			<a class="brand" href="#"><%=striptags(boardinfo.hostname or "OpenWrt")%></a>
-			<span class="status" id="indicators"></span>
+			<div class="status" id="indicators"></div>
 		</div>
 	</div>
 </header>
+<script src="<%=media%>/js/style.js?v=<%=ver.luciversion%>"></script>
 
 <div class="navbar">
   <a href="/cgi-bin/luci/admin/status/overview"><img src="<%=media%>/images/home.png" /></a>

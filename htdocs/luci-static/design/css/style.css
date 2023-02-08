@@ -675,12 +675,12 @@ header > .fill > .container > .status > * {
 
 .notice,
 [data-indicator]:not([data-style="inactive"]) {
-	color: var(--progressbarColor);
+	color: var(--activeColor);
 }
 
 .notice,
 [data-indicator]:not([data-style="active"]) {
-	color: var(--activeColor);
+	color: var(--progressbarColor);
 }
 
 .error {

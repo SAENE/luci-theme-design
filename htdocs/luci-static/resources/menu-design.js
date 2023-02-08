@@ -36,7 +36,13 @@ return baseclass.extend({
 			document.querySelector('.main-left').style.width = '0';
 
 		window.addEventListener('resize', this.handleSidebarToggle, true);
-		
+		var container = document.getElementById("indicators")
+		container.addEventListener('DOMSubtreeModified', function () {
+    		// do sth
+			console.log("fuck indicators");
+			var child = document.getElementById("indicators");
+    		child.lastElementChild.textContent = eval("'\ue6b9'")
+		}, false);
 	},
 
 	handleMenuExpand: function(ev) {
@@ -178,5 +184,6 @@ return baseclass.extend({
 		mainLeft.style.visibility = open ? '' : 'visible';
 
 		mainRight.style['overflow-y'] = open ? 'visible' : 'hidden';
-	}
+	},
 });
+
