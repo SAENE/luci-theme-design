@@ -59,6 +59,7 @@
 	<meta name="msapplication-TileColor" content="#09c">
 	<link rel="stylesheet" href="<%=media%>/css/style.css?v=<%= ver.luciversion %>">
 	<script src="<%=media%>/js/jquery.min.js?v=3.5.1"></script>
+	<script src="<%=media%>/js/style.js?v=<%=ver.luciversion%>"></script>
 	<link rel="shortcut icon" href="<%=media%>/favicon.ico">
 	<% if node and node.css then %>
 	<link rel="stylesheet" href="<%=resource%>/<%=node.css%>">
@@ -67,7 +68,7 @@
 	<script src="<%=url('admin/translations', luci.i18n.context.lang)%><%# ?v=PKG_VERSION %>"></script>
 	<script src="<%=resource%>/cbi.js"></script>
 	<script src="<%=resource%>/luci.js?v=<%=ver.luciversion%>"></script>
-	<script src="<%=resource%>/js/style.js?v=<%=ver.luciversion%>"></script>
+	<script src="<%=media%>/js/style.js?v=<%=ver.luciversion%>"></script>
 	<% if css then %>
 	<style title="text/css">
 		<%= css %>
