@@ -889,6 +889,15 @@ body[class*="node-"] > .main > .main-left > .nav > .slide > .menu.active::before
 	opacity: .2;
 }
 
+img[src*="/luci-static/resources/icons/loading.gif"] {
+    background-image: url(../images/loading.gif);
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    padding: 0 0 0 20px;
+    width: 0;
+}
+
 #maincontent > .container {
     margin:30px 30px 50px 30px;
 }
