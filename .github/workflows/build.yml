@@ -61,6 +61,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_tag }}-${{ steps.tag.outputs.release_date }} luci-theme-design 主题下载-${{ inputs.choich_branch }}
-          tag_name: ${{ steps.tag.outputs.release_tag }}-${{ steps.tag.outputs.release_date }}
+          name: ${{ steps.tag.outputs.release_tag }}-${{ steps.tag.outputs.release_date }} luci-theme-design 主题下载
+          tag_name: ${{ steps.tag.outputs.release_tag }}-${{ steps.tag.outputs.release_date }}-${{ inputs.choich_branch }}
           files: ${{ steps.build.outputs.TARGET }}
