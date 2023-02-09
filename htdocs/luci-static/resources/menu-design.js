@@ -34,11 +34,12 @@ return baseclass.extend({
 
 		if (window.innerWidth <= 921)
 			document.querySelector('.main-left').style.width = '0';
-
+		
+		document.querySelector('.main-right').style.overflow = 'auto';
 		window.addEventListener('resize', this.handleSidebarToggle, true);
 		document.getElementById("indicators").addEventListener('DOMSubtreeModified', function () {
 			var child = document.getElementById("indicators");
-    		child.lastElementChild.textContent = eval("'\ue6b9'")
+    		child.firstElementChild.textContent = eval("'\ue6b9'")
 		}, false);
 	},
 
@@ -182,8 +183,12 @@ return baseclass.extend({
 		    mainLeft = document.querySelector('.main-left'),
 		    open = mainLeft.style.width == '';
 
-		if (width > 921 || ev.type == 'resize')
-			open = true;
+			if (width > 921 || ev.type == 'resize')
+				open = true;
+				
+			if (width > 921 && ev.type == 'resize') {
+				$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
+			}
 		
 		darkMask.style.visibility = open ? '' : 'visible';
 		darkMask.style.opacity = open ? '': 1;
@@ -195,7 +200,13 @@ return baseclass.extend({
 
 		mainLeft.style.visibility = open ? '' : 'visible';
 
-		mainRight.style['overflow-y'] = open ? 'visible' : 'hidden';
+		mainRight.style['overflow-y'] = open ? 'auto' : 'visible';
+
+		if (open) {
+			$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
+		} else {
+			$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
+		}
 	},
 });
 

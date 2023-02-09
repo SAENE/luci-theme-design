@@ -1,8 +1,3 @@
-var container = document.getElementById("indicators")
-container.addEventListener('DOMSubtreeModified', function () {
-    var child = document.getElementById("indicators");
-    child.lastElementChild.textContent = eval("'\ue6b9'")
-}, false);
 (function ($) {
 
     // 修复某些插件导致在https下env(safe-area-inset-bottom)为0的情况
@@ -14,7 +9,21 @@ container.addEventListener('DOMSubtreeModified', function () {
         document.getElementsByTagName('head')[0].appendChild(oMeta);
     }
 
-    // replace indicators font
-    // document.getElementById("indicators").lastElementChild.textContent = eval("'\ue6b9'")
+    var showSide = false;
+    $(".showSide").click(function () {
+        if (!showSide) {
+            $("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
+            showSide = true;
+        }
+    });
 
+    $(".darkMask").click(function () {
+        if (showSide) {
+            $("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
+        }
+    });
+
+    $(window).resize(function () {
+        $("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
+    });
 })(jQuery);
