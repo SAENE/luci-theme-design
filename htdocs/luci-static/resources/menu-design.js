@@ -32,8 +32,10 @@ return baseclass.extend({
 		document.querySelector(".main > .loading").style.opacity = '0';
 		document.querySelector(".main > .loading").style.visibility = 'hidden';
 
-		if (window.innerWidth <= 921)
+		if (window.innerWidth <= 921) {
 			document.querySelector('.main-left').style.width = '0';
+			$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
+		}
 		
 		document.querySelector('.main-right').style.overflow = 'auto';
 		window.addEventListener('resize', this.handleSidebarToggle, true);
@@ -41,6 +43,14 @@ return baseclass.extend({
 			var child = document.getElementById("indicators");
     		child.firstElementChild.textContent = eval("'\ue6b9'")
 		}, false);
+
+		window.onresize=function(){  
+			var offsetWid = document.documentElement.clientWidth;
+			if (window.innerWidth <= 992) {
+				$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
+			}
+			console.log(offsetWid)
+        } 
 	},
 
 	handleMenuExpand: function(ev) {
@@ -186,10 +196,6 @@ return baseclass.extend({
 			if (width > 921 || ev.type == 'resize')
 				open = true;
 				
-			if (width > 921 && ev.type == 'resize') {
-				$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
-			}
-		
 		darkMask.style.visibility = open ? '' : 'visible';
 		darkMask.style.opacity = open ? '': 1;
 
