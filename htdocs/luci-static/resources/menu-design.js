@@ -32,11 +32,12 @@ return baseclass.extend({
 		document.querySelector(".main > .loading").style.opacity = '0';
 		document.querySelector(".main > .loading").style.visibility = 'hidden';
 
-		if (window.innerWidth <= 921) {
-			document.querySelector('.main-left').style.width = '0';
-			$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
-		}
-		
+			if (window.innerWidth <= 992) {
+				document.querySelector('.main-left').style.width = '0';
+				$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
+			} else {
+				$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
+			}
 		document.querySelector('.main-right').style.overflow = 'auto';
 		window.addEventListener('resize', this.handleSidebarToggle, true);
 		document.getElementById("indicators").addEventListener('DOMSubtreeModified', function () {
@@ -48,6 +49,8 @@ return baseclass.extend({
 			var offsetWid = document.documentElement.clientWidth;
 			if (window.innerWidth <= 992) {
 				$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
+			} else {
+				$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
 			}
 			console.log(offsetWid)
         } 
@@ -193,13 +196,13 @@ return baseclass.extend({
 		    mainLeft = document.querySelector('.main-left'),
 		    open = mainLeft.style.width == '';
 
-			if (width > 921 || ev.type == 'resize')
+			if (width > 992 || ev.type == 'resize')
 				open = true;
 				
 		darkMask.style.visibility = open ? '' : 'visible';
 		darkMask.style.opacity = open ? '': 1;
 
-		if (width <= 921)
+		if (width <= 992)
 			mainLeft.style.width = open ? '0' : '';
 		else
 			mainLeft.style.width = ''
