@@ -202,13 +202,15 @@
     });
 
     $(window).resize(function () {
-        $("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
-        if ($(window).width() > 921) {
+        if ($(window).width() > 992) {
             $(".showSide").css("display", "");
             $(".main-left").css("width", "");
             $(".darkMask").stop(true);
             $(".darkMask").css("display", "none");
             showSide = false;
+            $("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
+        } else {
+            $("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
         }
     });
 
