@@ -46,13 +46,11 @@ return baseclass.extend({
 		}, false);
 
 		window.onresize=function(){  
-			var offsetWid = document.documentElement.clientWidth;
 			if (window.innerWidth <= 992) {
 				$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
 			} else {
 				$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
 			}
-			console.log(offsetWid)
         } 
 	},
 
@@ -153,10 +151,10 @@ return baseclass.extend({
 
 	renderTabMenu: function(tree, url, level) {
 		var container = document.querySelector('#tabmenu'),
-			    l = (level || 0) + 1,
-			    ul = E('ul', { 'class': 'tabs' }),
-			    children = ui.menu.getChildren(tree),
-			    activeNode = null;
+			l = (level || 0) + 1,
+			ul = E('ul', { 'class': 'tabs' }),
+			children = ui.menu.getChildren(tree),
+			activeNode = null;
 
 		if (children.length == 0)
 			return E([]);
@@ -166,14 +164,8 @@ return baseclass.extend({
 				activeClass = isActive ? ' active' : '',
 				className = 'tabmenu-item-%s %s'.format(children[i].name, activeClass);
 
-			ul.appendChild(E('li', { 'class': slideClass }, [
-				E('a', {
-					'href': L.url(url, children[i].name),
-					'click': (l == 1) ? ui.createHandlerFn(this, 'handleMenuExpand') : null,
-					'class': menuClass,
-					'data-title': hasChildren ? children[i].title.replace(" ", "_") : children[i].title.replace(" ", "_"),
-				}, [_(children[i].title)]),
-				submenu
+			ul.appendChild(E('li', { 'class': className }, [
+				E('a', { 'href': L.url(url, children[i].name) }, [_(children[i].title)])
 			]));
 
 			if (isActive)
