@@ -770,6 +770,20 @@ header > .fill > .container > .status > * {
     transition: all 0.3s;
 }
 
+.main > .main-left > .nav > .slide > a:before,
+.main > .main-left > .nav > li > a:before {
+    display: inline-block;
+    left:-10px;
+    top: 1px;
+    position: relative;
+    font-family: "design" !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+    speak: none;
+    font-size: 1.2rem !important;
+    -webkit-font-smoothing: antialiased;
+}
+
 .main > .main-left > .nav > .slide > a[data-title="Status"]:before {
     content: "\e6b8";
 }
@@ -780,6 +794,65 @@ header > .fill > .container > .status > * {
 
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
     content: "\e6cb";
+}
+
+.main > .main-left > .nav > .slide > a[data-title="Docker"]:before {
+    content: "\44";
+}
+
+.main > .main-left > .nav > .slide > a[data-title="NAS"]:before {
+    content: "\eb04";
+}
+
+.main > .main-left > .nav > .slide > a[data-title="VPN"]:before {
+    content: "\56";
+}
+
+.main > .main-left > .nav > .slide > a[data-title="Network"]:before {
+    content: "\72";
+}
+
+.main > .main-left > .nav > .slide > a[data-title="Bandwidth Monitor"]:before {
+    content: "\e764";
+}
+
+.main .main-left .nav li.slide .menu[data-title="Statistics"]:before {
+	content: "\e604";
+}
+
+.main .main-left .nav li.slide .menu[data-title="Control"]:before {
+  content: "\e67a";
+}
+
+.main .main-left .nav li.slide .menu[data-title="Asterisk"]:before {
+	content: "\e7dd";
+}
+
+.main > .main-left > .nav > li > a[data-title="Inital Setup"]:before {
+    content: "\e67e";
+}
+
+.main > .main-left > .nav > li > a[href="/cgi-bin/luci//admin/wizard"]:before {
+    content: "\e67e";
+}
+
+.main > .main-left > .nav > li > a[data-title="iStore"]:before {
+    content: "\e676";
+}
+
+.main > .main-left > .nav > li > a[data-title="Logout"] {
+    padding: 0.675rem 0 0.675rem 2.5rem;
+}
+
+.main > .main-left > .nav > li > a[data-title="Logout"]:before {
+    content: "\e641";
+}
+
+.main > .main-left > .nav > li > a[data-title="Reboot"] {
+    padding: 6px 25px;
+}
+.main > .main-left > .nav > li > a[data-title="Reboot"]:before {
+    content: "\e004";
 }
 
 .main > .main-left > .nav > .slide > .menu.active::after {
