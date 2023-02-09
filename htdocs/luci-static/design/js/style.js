@@ -1,3 +1,8 @@
+var container = document.getElementById("indicators")
+container.addEventListener('DOMSubtreeModified', function () {
+    var child = document.getElementById("indicators");
+    child.lastElementChild.textContent = eval("'\ue6b9'")
+}, false);
 (function ($) {
 
     // 修复某些插件导致在https下env(safe-area-inset-bottom)为0的情况

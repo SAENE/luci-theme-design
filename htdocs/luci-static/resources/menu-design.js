@@ -36,8 +36,7 @@ return baseclass.extend({
 			document.querySelector('.main-left').style.width = '0';
 
 		window.addEventListener('resize', this.handleSidebarToggle, true);
-		var container = document.getElementById("indicators")
-		container.addEventListener('DOMSubtreeModified', function () {
+		document.getElementById("indicators").addEventListener('DOMSubtreeModified', function () {
 			var child = document.getElementById("indicators");
     		child.lastElementChild.textContent = eval("'\ue6b9'")
 		}, false);
@@ -77,19 +76,25 @@ return baseclass.extend({
 
 		if (children.length == 0 || l > 2)
 			return E([]);
-
 		for (var i = 0; i < children.length; i++) {
-			var isActive = (L.env.dispatchpath[l] == children[i].name),
-			    submenu = this.renderMainMenu(children[i], url + '/' + children[i].name, l),
-			    hasChildren = submenu.children.length;
+			var isActive = ((L.env.dispatchpath[l] == children[i].name) && (L.env.dispatchpath[l - 1] == tree.name)),
+				submenu = this.renderMainMenu(children[i], url + '/' + children[i].name, l),
+				hasChildren = submenu.children.length,
+				slideClass = hasChildren ? 'slide' : null,
+				menuClass = hasChildren ? 'menu' : null;
+			if (isActive) {
+				ul.classList.add('active');
+				slideClass += " active";
+				menuClass += " active";
+			}
 
-			ul.appendChild(E('li', { 'class': (hasChildren ? 'slide' + (isActive ? ' active' : '') : (isActive ? ' active' : ''))}, [
+			ul.appendChild(E('li', { 'class': slideClass }, [
 				E('a', {
-					'href': hasChildren ? '#' : L.url(url, children[i].name),
-					'class': hasChildren ? 'menu' + (isActive ? ' active' : '') : null,
-					'click': hasChildren ? ui.createHandlerFn(this, 'handleMenuExpand') : null,
-					'data-title': hasChildren ? null : _(children[i].title),
-				}, [ _(children[i].title) ]),
+					'href': L.url(url, children[i].name),
+					'click': (l == 1) ? ui.createHandlerFn(this, 'handleMenuExpand') : null,
+					'class': menuClass,
+					'data-title': hasChildren ? children[i].title.replace(" ", "_") : children[i].title.replace(" ", "_"),
+				}, [_(children[i].title)]),
 				submenu
 			]));
 		}
@@ -144,8 +149,14 @@ return baseclass.extend({
 				activeClass = isActive ? ' active' : '',
 				className = 'tabmenu-item-%s %s'.format(children[i].name, activeClass);
 
-			ul.appendChild(E('li', { 'class': className }, [
-				E('a', { 'href': L.url(url, children[i].name) }, [ _(children[i].title) ] )
+			ul.appendChild(E('li', { 'class': slideClass }, [
+				E('a', {
+					'href': L.url(url, children[i].name),
+					'click': (l == 1) ? ui.createHandlerFn(this, 'handleMenuExpand') : null,
+					'class': menuClass,
+					'data-title': hasChildren ? children[i].title.replace(" ", "_") : children[i].title.replace(" ", "_"),
+				}, [_(children[i].title)]),
+				submenu
 			]));
 
 			if (isActive)

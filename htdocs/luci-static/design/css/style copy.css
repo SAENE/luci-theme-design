@@ -1437,6 +1437,7 @@ p#shadowsocksr_status {
     cursor: pointer;;
 }
 .main > .main-left > .nav > li:hover,
+.main > .main-left > .nav > li:last-child:hover
 .main > .main-left > .nav > .slide > .menu:hover {
     background: var(--activeColor);
     color:white;
@@ -1451,7 +1452,7 @@ p#shadowsocksr_status {
 }
 .slide-menu {
     overflow:hidden;
-    }
+}
 .main > .main-left > .nav > .slide > .slide-menu > li {
     margin-top: 8px;
     border-radius: 6px;
@@ -1477,7 +1478,7 @@ p#shadowsocksr_status {
 }
 .main .main-left .nav li.slide .slide-menu .active a {
     color: #000;
-  }
+}
 
 .main > .main-left > .nav > .slide > .slide-menu > li > a:hover {
     color:white;
