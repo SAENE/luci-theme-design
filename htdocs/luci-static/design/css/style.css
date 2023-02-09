@@ -1145,6 +1145,24 @@ p#shadowsocksr_status {
     -webkit-font-smoothing: antialiased;
 }
 
+.main > .main-left > .nav > .slide > .menu::after {
+    right: 0.5rem;
+    top: 0.8rem;
+    font-family: "design" !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    content: "\eb03";
+    float: right;
+    padding-right: 5px;
+    line-height: 1.6;
+    /* Better Font Rendering =========== */
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.15s ease;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.3s;
+}
+
 .main .main-left .nav li.slide .menu.active::after {
   transform: rotate(90deg);
 }
@@ -1153,242 +1171,43 @@ p#shadowsocksr_status {
     content: "\e6b8";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Status"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
-}
-
 .main > .main-left > .nav > .slide > a[data-title="System"]:before {
     content: "\e645";
-}
-
-.main > .main-left > .nav > .slide > a[data-title="System"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
     content: "\e6cb";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Services"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
-}
-
 .main > .main-left > .nav > .slide > a[data-title="Docker"]:before {
     content: "\44";
-}
-
-.main > .main-left > .nav > .slide > a[data-title="Docker"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
 }
 
 .main > .main-left > .nav > .slide > a[data-title="NAS"]:before {
     content: "\eb04";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="NAS"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
-}
-
 .main > .main-left > .nav > .slide > a[data-title="VPN"]:before {
     content: "\56";
-}
-
-.main > .main-left > .nav > .slide > a[data-title="VPN"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Network"]:before {
     content: "\72";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Network"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
-}
-
 .main > .main-left > .nav > .slide > a[data-title="Bandwidth Monitor"]:before {
     content: "\e764";
 }
-
-.main > .main-left > .nav > .slide > a[data-title="Bandwidth Monitor"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
-}
-
 .main .main-left .nav li.slide .menu[data-title="Statistics"]:before {
   content: "\e604";
-}
-
-.main > .main-left > .nav > .slide > a[data-title="Statistics"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
 }
 
 .main .main-left .nav li.slide .menu[data-title="Control"]:before {
   content: "\e67a";
 }
 
-.main > .main-left > .nav > .slide > a[data-title="Control"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
-}
-
 .main .main-left .nav li.slide .menu[data-title="Asterisk"]:before {
   content: "\e7dd";
-}
-
-.main > .main-left > .nav > .slide > a[data-title="Asterisk"]:after {
-    right: 0.5rem;
-    top: 0.8rem;
-    font-family: "design" !important;
-    font-style: normal !important;
-    font-variant: normal !important;
-    content: "\eb03";
-    float: right;
-    padding-right: 5px;
-    line-height: 1.6;
-    /* Better Font Rendering =========== */
-    -moz-osx-font-smoothing: grayscale;
-    transition: all 0.15s ease;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
 }
 
 .main > .main-left > .nav > li > a[data-title="Inital Setup"]:before {
