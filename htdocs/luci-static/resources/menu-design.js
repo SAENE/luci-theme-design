@@ -32,17 +32,15 @@ return baseclass.extend({
 		document.querySelector(".main > .loading").style.opacity = '0';
 		document.querySelector(".main > .loading").style.visibility = 'hidden';
 
-			if (window.innerWidth <= 992) {
+			if (window.innerWidth <= 992)
 				document.querySelector('.main-left').style.width = '0';
-				$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
-			} else {
-				$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
-			}
 		document.querySelector('.main-right').style.overflow = 'auto';
 		window.addEventListener('resize', this.handleSidebarToggle, true);
 		document.getElementById("indicators").addEventListener('DOMSubtreeModified', function () {
 			var child = document.getElementById("indicators");
-    		child.firstElementChild.textContent = eval("'\ue6b9'")
+			if (child.firstElementChild.getAttribute("data-indicator") != "uci-changes") {
+				child.firstElementChild.textContent = eval("'\ue6b9'")
+			}
 		}, false);
 
 		window.onresize=function(){  

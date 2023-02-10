@@ -120,13 +120,13 @@ div{
     font-family: 'HYk2gj';
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 4px;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbarColor) ;
     border-radius: 2px;
-}
+} */
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -176,6 +176,7 @@ body div {
 
 .th {
 	font-weight: bold;
+    white-space: nowrap;
 }
 
 .tr.placeholder {
@@ -291,8 +292,10 @@ select,
 select:not([multiple="multiple"]):focus,
 input:not(.cbi-button):focus,
 .cbi-dropdown:focus {
-	border-color: #09c;
-	border-color: var(--main-color);
+    border-color: #948FE1;
+    box-shadow:0 0 6px #948FE1;
+    -webkit-box-shadow:0 0 6px #948FE1;
+    -moz-box-shadow:0 0 6px #948FE1;
 }
 
 .cbi-dropdown,
@@ -901,33 +904,6 @@ body[class*="node-"] > .main > .main-left > .nav > .slide > .menu.active::before
     cursor: pointer;;
 }
 
-/* .main > .main-left > .nav > .slide > .menu::after,
-.main > .main-left > .nav > .slide > .slide-menu > li::after,
-.main > .main-left > .nav > li:last-child::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	content: "";
-	transition: transform .5s, opacity 1s;
-	transform: scale(10, 10);
-	pointer-events: none;
-	opacity: 0;
-	background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
-	background-repeat: no-repeat;
-	background-position: 50%;
-}
-
-.main > .main-left > .nav > .slide > .menu:active::after,
-.main > .main-left > .nav > .slide > .slide-menu > li:active::after,
-.main > .main-left > .nav > li:last-child:active::after {
-	transition: 0s;
-	transform: scale(0, 0);
-	opacity: .2;
-} */
-
 img[src*="/luci-static/resources/icons/loading.gif"] {
     background-image: url(../images/loading.gif);
     background-size: 20px 20px;
@@ -986,7 +962,7 @@ h4 {
 #cbi-wireless > .cbi-section-node,
 #cbi-wireless > #wifi_assoclist_table,
 [data-tab-title],
-[data-page^="admin-system-admin"]:not(.node-main-login) .cbi-map:not(#cbi-dropbear),
+/* [data-page^="admin-system-admin"]:not(.node-main-login) .cbi-map:not(#cbi-dropbear), */
 [data-page="admin-system-opkg"] #maincontent > .container {
    /* margin: 10px 0 0 0; */
    padding: 10px;
@@ -1450,7 +1426,7 @@ form.inline + form.inline,
 
 .cbi-section[id] .cbi-section-remove:nth-of-type(4n+3),
 .cbi-section[id] .cbi-section-node:nth-of-type(4n+4) {
-	background-color: #f9f9f9;
+	/* background-color: #f9f9f9; */
 }
 
 .cbi-section-node-tabbed {
@@ -1462,13 +1438,16 @@ form.inline + form.inline,
 }
 
 .cbi-tabcontainer > .cbi-value:nth-of-type(2n) {
-	background-color: #f9f9f9;
+	/* background-color: #f9f9f9; */
+}
+
+.cbi-value-field {
+    width: 65%;
 }
 
 .cbi-value-field,
 .cbi-value-description {
-	line-height: 1.25;
-	display: table-cell;
+    display: table-cell;
 }
 
 .cbi-value-description {
@@ -1505,7 +1484,7 @@ form.inline + form.inline,
 .cbi-value-field .cbi-input-select,
 .cbi-value input[type="text"],
 .cbi-value input[type="password"] {
-	min-width: 25rem;
+	width: 100%;
 }
 
 #cbi-firewall-zone .cbi-input-select,
@@ -1759,6 +1738,10 @@ form.inline + form.inline,
 	border-left: thin solid #ccc;
 }
 
+.cbi-dropdown > ul > li[data-value*="1"] {
+	padding-left: 15px !important;
+}
+
 .cbi-dropdown[empty] > ul {
 	max-width: 1px;
 }
@@ -1789,13 +1772,12 @@ form.inline + form.inline,
 	z-index: 1100;
 	display: block;
 	width: auto;
-	min-width: 100%;
-	max-width: none;
 	max-height: 200px !important;
-	border: thin solid #918e8c;
-	background: #f6f6f6;
-	box-shadow: 0 0 4px #918e8c;
-	color: var(--main-menu-color);
+	/* border: thin solid #918e8c; */
+	background: var(--activeColor);
+	/* box-shadow: 0 0 4px #918e8c; */
+	/* color: var(--main-menu-color); */
+	text-align: center;
 }
 
 .cbi-dropdown > ul > li[display],
@@ -1824,12 +1806,12 @@ form.inline + form.inline,
 	display: initial;
 }
 
-.cbi-dropdown[open] > ul.dropdown > li {
+/* .cbi-dropdown[open] > ul.dropdown > li {
 	border-bottom: thin solid #ccc;
-}
+} */
 
 .cbi-dropdown[open] > ul.dropdown > li[selected] {
-	background: #b0d0f0;
+	background: var(--activeColor);
 }
 
 .cbi-dropdown[open] > ul.dropdown > li.focus {
@@ -1839,6 +1821,7 @@ form.inline + form.inline,
 .cbi-dropdown[open] > ul.dropdown > li:last-child {
 	margin-bottom: 0;
 	border-bottom: 0;
+    background: #627486;
 }
 
 .cbi-dropdown[open] > ul.dropdown > li[unselectable] {
@@ -1916,18 +1899,18 @@ form.inline + form.inline,
 }
 
 .modal {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	width: 90%;
-	min-width: 270px;
-	max-width: 600px;
-	min-height: 32px;
-	margin: 5em auto;
-	padding: 1em;
-	border-radius: 3px !important;
-	background: #fff;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    min-width: 270px;
+    max-width: 600px;
+    min-height: 32px;
+    margin: 5em auto;
+    padding: 1em;
+    border-radius: 10px !important;
+    background: var(--alertBackground);
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 2px 0 rgb(0 0 0 / 12%);
 }
 
 .modal > * {
@@ -2035,10 +2018,10 @@ body.modal-overlay-active #modal_overlay {
     margin: 0;
 }
 
-/* .right,
+.right,
 .right::before {
 	text-align: right !important;
-} */
+}
 
 .center,
 .center::before {
@@ -2047,7 +2030,7 @@ body.modal-overlay-active #modal_overlay {
 
 .top {
 	align-self: flex-start !important;
-	vertical-align: top !important;
+	/* vertical-align: top !important; */
 }
 
 .bottom {
@@ -2086,7 +2069,9 @@ body.modal-overlay-active #modal_overlay {
 td > .ifacebadge,
 .td > .ifacebadge {
 	font-size: .8rem;
-	background-color: #f0f0f0;
+	background-color: var(--activeColor);
+	color: black;
+	border-radius: 5px;
 }
 
 .ifacebadge > em,
@@ -2140,6 +2125,7 @@ td > .ifacebadge,
 }
 
 
+/*textarea*/
 .cbi-input-textarea, textarea {
     color: var(--inputtextColor);
     padding: 10px;
@@ -2173,44 +2159,56 @@ td > .ifacebadge,
 
 /* config changes */
 .uci-change-list {
-	font-family: monospace;
+    font-family: monospace;
 }
 
 .uci-change-list ins,
 .uci-change-legend-label ins {
-	display: block;
-	padding: 2px;
-	text-decoration: none;
-	border: thin solid #0f0;
-	background-color: #cfc;
+    text-decoration: none;
+    border: 1px solid #00FF00;
+    background-color: #CCFFCC;
+    display: block;
+    padding: 2px;
+    color: black;
+    /* border-radius: 5px; */
+    overflow-x: auto;
 }
 
 .uci-change-list del,
 .uci-change-legend-label del {
-	font-style: normal;
-	display: block;
-	padding: 2px;
-	text-decoration: none;
-	border: thin solid #f00;
-	background-color: #fcc;
+    text-decoration: none;
+    border: 1px solid #FF0000;
+    background-color: #FFCCCC;
+    display: block;
+    font-style: normal;
+    padding: 2px;
+    color:black;
+    /* border-radius: 5px; */
+    overflow-x: auto;
 }
 
 .uci-change-list var,
 .uci-change-legend-label var {
-	font-style: normal;
-	display: block;
-	padding: 2px;
-	text-decoration: none;
-	border: thin solid #ccc;
-	background-color: #eee;
+    text-decoration: none;
+    border: 1px solid #CCCCCC;
+    background-color: #EEEEEE;
+    display: block;
+    font-style: normal;
+    padding: 2px;
+    color:black;
+    /* border-radius: 5px; */
+    overflow-x: auto;
 }
 
 .uci-change-list var ins,
 .uci-change-list var del {
-	font-style: normal;
-	padding: 0;
-	white-space: pre;
-	border: 0;
+    border: none;
+    white-space: pre;
+    font-style: normal;
+    padding: 0px;
+    color:black;
+    /* border-radius: 5px; */
+    overflow-x: auto;
 }
 
 .uci-change-legend {
@@ -2241,7 +2239,7 @@ td > .ifacebadge,
 .uci-change-list var,
 .uci-change-list del,
 .uci-change-list ins {
-	padding: .5rem;
+    padding: 0.5rem;
 }
 
 /* other fix */
@@ -2701,9 +2699,9 @@ input[name="nslookup"] {
 }
 
 .control-group {
-	display: flex;
+	/* display: flex; */
 	flex-wrap: wrap;
-	gap: 2px;
+	gap: 8px;
 }
 
 [data-page="admin-system-opkg"] div.btn {
@@ -2711,16 +2709,17 @@ input[name="nslookup"] {
 	display: inline;
 	padding: .3rem .6rem;
 }
-
+/* 
 [data-page^="admin-system-admin"]:not(.node-main-login) .cbi-map:not(#cbi-dropbear),
 [data-page="admin-system-opkg"] #maincontent > .container {
 	margin-top: 2rem;
 	padding-top: .1rem;
-}
+} */
 
 [data-page="admin-system-opkg"] #maincontent > .container {
 	margin: 2rem;
 	margin-bottom: 1rem;
+    border-radius: 10px;
 }
 
 .td.version,
@@ -3174,6 +3173,11 @@ input[name="nslookup"] {
         display: block;
         overflow: auto;
     }
+    .node-admin-status-routes #view table,
+	.node-admin-status-processes #view table,
+	.node-admin-status-realtime-connections #view table[id*=connections] {
+	    display: block;
+	}
 }
 
 @media screen and (max-width: 370px) {
@@ -3383,6 +3387,11 @@ input[name="nslookup"] {
         display: block;
         overflow: auto;
     }
+    .node-admin-status-routes #view table,
+	.node-admin-status-processes #view table,
+	.node-admin-status-realtime-connections #view table[id*=connections] {
+	    display: block;
+	}
 }
 
 
@@ -3416,6 +3425,7 @@ input[name="nslookup"] {
 
   .cbi-input-apply,
   .cbi-button-apply,
+  .cbi-button.cbi-button-positive,
   .cbi-button-edit {
 	  color: #fff !important;
 	  background-color: var(--activeColor);
@@ -3438,7 +3448,7 @@ td.cbi-button, .cbi-button-apply,
     padding: 12px;
     border-radius: 10px;
     box-shadow: 3px 3px 3px rgb(0 0 0 / 5%);
-    background-color: var(--bgwhite);
+    /* background-color: var(--bgwhite); */
 }
 
 .node-admin-status-iptables h3 {
@@ -3491,6 +3501,10 @@ td.cbi-button, .cbi-button-apply,
     /* display: block; */
 }
 
+.node-admin-status-realtime-connections #view table[id*=connections] {
+    display: inherit !important;   
+}
+
 /* fix node-admin-status-processe */
 .node-admin-status-processe, button.btn.cbi-button-action {
     color: var(--bttextColor);
@@ -3513,8 +3527,32 @@ td.cbi-button, .cbi-button-apply,
 }
 
 /* fix  */
-.cbi-dropdown.btn.cbi-button.cbi-button-apply.important {
+.cbi-dropdown.btn.cbi-button.cbi-button-apply.important,
+.cbi-dropdown.btn.cbi-button.cbi-button-negative.important {
     line-height: unset;
     min-width: 105px;
     padding-left: 5px;
+}
+
+.node-admin-system-ttyd-ttyd iframe {
+    border-radius: 5px !important;
+}
+
+/* fix node-admin-status-realtime-load */
+.node-admin-status-realtime-load table {
+    table-layout: auto !important;
+}
+.node-admin-status-realtime-load table > tr > td {
+    text-align: left !important;
+    padding: 10px 3px 10px 3px;
+    white-space: nowrap;
+}
+/* fix node-admin-status-realtime-bandwidth */
+.node-admin-status-realtime-bandwidth table {
+    table-layout: auto !important;
+}
+.node-admin-status-realtime-bandwidth table > tr > td {
+    text-align: left !important;
+    padding: 10px 3px 10px 3px;
+    white-space: nowrap;
 }
