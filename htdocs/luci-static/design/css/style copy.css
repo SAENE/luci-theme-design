@@ -1538,7 +1538,8 @@ label {
     display: inline-block;
     vertical-align: middle;
 }
-div.cbi-section {
+div.cbi-section,
+.node-admin-status-routes #view {
    /* margin: 10px 0 0 0; */
     padding: 10px;
     border: 1px;

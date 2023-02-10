@@ -989,6 +989,7 @@ li {
 	list-style-type: none;
 }
 
+
 h1 {
     color: var(--activeColor);
     font-size: 20px;
@@ -1002,7 +1003,17 @@ h2 {
     text-transform: capitalize;
 }
 
- 
+h3 {
+    font-size: 1.2rem;
+    color: var(--activeColor);
+    font-weight:bold;
+    padding: 0 12px 10px 12px;
+}
+
+h4 {
+
+}
+
  div.cbi-section{
 	 border: var(--sectionBorder);
 	 margin-bottom: 20px;
@@ -1242,7 +1253,7 @@ td > table > tbody > tr > td,
 
 /* button style */
 
-.cbi-button {
+.cbi-button, .btn {
     -webkit-appearance: none;
     text-transform: uppercase;
     color: #fff;
@@ -1266,6 +1277,7 @@ td > table > tbody > tr > td,
     max-width: 160px;
     height: 35px;
     line-height: 35px;
+    border-radius: 10px;
 }
 
 
@@ -1345,8 +1357,17 @@ form.inline + form.inline,
     background-color: var(--activeColor);
 }
 
+[data-page="admin-status-iptables"] .right {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+.cbi-button:not(select) {
+    -webkit-appearance: none !important;
+}
+
 .cbi-input-reset,
-.cbi-button-remove {
+.cbi-button-remove,
+.cbi-button-neutral.down{
     color: #fff !important;
     background: #617486;
 }
@@ -1371,9 +1392,8 @@ form.inline + form.inline,
 }
 
 .tabs {
-	margin: 0 -2rem;
-	padding-left: .5rem;
-	background-color: #fff;
+    margin: 15px 0;
+    overflow-x: auto;
 }
 
 .tabs > li,
@@ -1388,44 +1408,71 @@ form.inline + form.inline,
 	border-bottom: .2rem solid transparent;
 }
 
-.tabs > li[class~="active"],
-.tabs > li:hover {
-	border-bottom-color: #09c;
-	border-bottom-color: var(--main-color);
-}
-
 .tabs > li:hover {
 	cursor: pointer;
 	border-bottom-color: #c9c9c9;
 }
 
-.tabs > li > a,
+.tabs > li > a {
+    text-decoration: none;
+    padding: 0 6px 0 6px;
+    float: left;
+    display: block;
+    white-space: nowrap;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.92rem;
+}
+
 .cbi-tabmenu > li > a {
-	padding: .6rem .9rem;
-	text-decoration: none;
-	color: #404040;
+    text-decoration: none;
+    float: left;
+    display: block;
+    white-space: nowrap;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.92rem;
+    margin: 0 10px;
+}
+
+.cbi-tabmenu > li {
+    border-radius: var(--tabmenuRadius);
+}
+
+.cbi-tabmenu > li, .tabs > li {
+    display: table-cell;
 }
 
 .tabs > li[class~="active"] > a {
-	color: #09c;
-	color: var(--main-color);
+    color: var(--activeColor) !important;
+    padding-bottom: 8px;
+    border-bottom: var(--activeColor) 2px solid;
+}
+
+.tabs > li[class~="active"],
+.tabs > li:hover{
+    cursor: pointer;
 }
 
 .cbi-tabmenu {
-	border: thin solid #d4d4d4;
-	border-bottom: 0;
+    border-top: var(--sectiontabBorder);
+    border-left: var(--tabmenuBorderLR);
+    border-right: var(--tabmenuBorderLR);
+    border-bottom: var(--tabmenuBottom);
+    background-color: var(--tabmenubgColor);
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .cbi-tabmenu > li:hover {
 	background-color: #f1f1f1;
 }
 
-.cbi-tabmenu > li[class~="cbi-tab"] {
-	background-color: #fff;
-}
-
-.cbi-tabmenu {
-	background-color: #d4d4d4;
+.cbi-tabmenu > li[class~="cbi-tab"] a {
+    color: var(--activeColor);
+    border-bottom: 2px solid var(--activeColor);
 }
 
 .cbi-section .cbi-section-remove:nth-of-type(2n),
@@ -1442,11 +1489,16 @@ form.inline + form.inline,
 }
 
 [data-tab-active="true"] {
-	overflow: visible;
-	height: auto;
-	opacity: 1;
-	transition: opacity .25s ease-in;
-	margin: inherit !important;
+    overflow: auto;
+    height: auto;
+    opacity: 1;
+    transition: opacity .25s ease-in;
+    margin: inherit !important;
+    display: block;
+    /* padding: 12px; */
+    border-radius: 10px;
+    /* box-shadow: 3px 3px 3px rgb(0 0 0 / 5%); */
+    background-color: var(--bgwhite);
 }
 
 .cbi-section[id] .cbi-section-remove:nth-of-type(4n+3),
@@ -2037,17 +2089,16 @@ body.modal-overlay-active #modal_overlay {
 }
 
 .right .cbi-button {
-    height: 20px;
+    /* height: 20px; */
     line-height: 20px;
-    min-width: 60px;
-    padding: 0;
+/*     min-width: 100px; */
     margin: 0;
 }
 
-.right,
+/* .right,
 .right::before {
 	text-align: right !important;
-}
+} */
 
 .center,
 .center::before {
@@ -2140,26 +2191,40 @@ td > .ifacebadge,
 }
 
 /* textarea */
-.cbi-input-textarea {
-	font-family: monospace;
-	width: 100%;
-	min-height: 14rem;
-	padding: .8rem;
-	color: #000;
+#content_syslog {
+    padding: 5px;
+    margin-top:10px;
+    border-radius: 10px;
+    background-color: var(--sectionbgColor);
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 5%);
+}
+
+
+.cbi-input-textarea, textarea {
+    color: var(--inputtextColor);
+    padding: 10px;
+    line-height: normal;
+    border: var(--sectionBorder);
+    background-color: var(--inputbgColor);
+    transition: color 150ms ease, border-color 150ms ease, opacity 150ms ease;
+    -webkit-transition: color 150ms ease, border-color 150ms ease, opacity 150ms ease;
+    outline-style: none;
+    vertical-align: baseline;
+    border-radius: 10px;
+    font-family: Menlo, Mono;
+    font-size: 0.9rem;
+    white-space: pre;
+    margin-bottom: 5px;
 }
 
 #syslog {
-	font-size: small;
-	overflow-y: hidden;
-	width: 100%;
-	min-height: 15rem;
-	padding: 1rem;
-	resize: none;
-	color: #eee;
-	border: 0;
-	border-radius: 0;
-	background-color: #101010;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
+    width: 100%;
+    min-height: 15rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    background-color: var(--sectionbgColor);
+    border: none;
 }
 
 #syslog:focus {
@@ -3416,7 +3481,8 @@ input[name="nslookup"] {
 	  background-color: var(--activeColor);
   }
 
-  td.cbi-button, .cbi-button-apply {
+td.cbi-button, .cbi-button-apply,
+.right .cbi-button {
     font-size: 0.92rem;
     font-family: -apple-system, 'Microsoft Yahei', sans-serif, Helvetica, Arial, sans-serif;
     border: var(--inputBorder);
@@ -3426,4 +3492,81 @@ input[name="nslookup"] {
     vertical-align: middle;
     border-radius: 8px;
     max-width: 550px;
+}
+/* fix iptables */
+.node-admin-status-iptables .right {
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 5%);
+    background-color: var(--bgwhite);
+}
+
+.node-admin-status-iptables h3 {
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* fix routes */
+.node-admin-status-routes #view p {
+    padding: 5px 5px 5px 12px;
+}
+
+.node-admin-status-routes #view h3 {
+	font-size: 1.1rem;
+	line-height: 1;
+	display: block;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 0;
+	padding: 0.8755rem 1.25rem;
+	color: var(--gray-dark);
+	border-radius: 0.375rem;
+    padding-bottom: unset;
+	font-weight: bold;
+}
+
+/* fix tables */
+.node-admin-status-routes #view table,
+.node-admin-status-processes #view table {
+   /* margin: 10px 0 0 0; */
+    padding: 10px;
+    border: 1px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    font-family: inherit;
+    text-align: left;
+    min-width: inherit;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: var(--sectionbgColor);
+    /* box-shadow: var(--sectionShaddow); */
+    -webkit-overflow-scrolling: touch;
+
+	border: var(--sectionBorder);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* fix node-admin-status-processe */
+.node-admin-status-processe, button.btn.cbi-button-action {
+    color: var(--bttextColor);
+    background-color: rgb(0,171,232) !important;
+    border-color: rgb(0,171,232) !important;
+}
+
+.node-admin-status-processe, button.btn.cbi-button-negative {
+    color: #fff !important;
+    background-color: #617486 !important;
+}
+
+/* fix node-admin-status-realtime-load */
+.node-admin-status-realtime-load #view div,
+.node-admin-status-realtime-bandwidth #view svg {
+    border: var(--sectionBorder) !important;
+    font-family: -apple-system;
+    background: none !important;
 }
