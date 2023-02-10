@@ -153,9 +153,6 @@ body div {
 	display: table;
 }
 
-.tr {
-	display: table-row;
-}
 .thead {
 	display: table-header-group;
 }
@@ -210,46 +207,6 @@ body div {
 .th[width="100%"],
 .td[width="100%"] {
 	width: 100%;
-}
-
-.col-1 {
-	flex: 1 1 30px !important;
-}
-
-.col-2 {
-	flex: 2 2 60px !important;
-}
-
-.col-3 {
-	flex: 3 3 90px !important;
-}
-
-.col-4 {
-	flex: 4 4 120px !important;
-}
-
-.col-5 {
-	flex: 5 5 150px !important;
-}
-
-.col-6 {
-	flex: 6 6 180px !important;
-}
-
-.col-7 {
-	flex: 7 7 210px !important;
-}
-
-.col-8 {
-	flex: 8 8 240px !important;
-}
-
-.col-9 {
-	flex: 9 9 270px !important;
-}
-
-.col-10 {
-	flex: 10 10 300px !important;
 }
 
 * {
@@ -1186,14 +1143,6 @@ table > tr {
 table > tr:last-child {
     border-bottom: none !important;
 }
-/* tr > td,
-tr > th,
-.tr > .td,
-.tr > .th,
-.cbi-section-table-row::before,
-#cbi-wireless > #wifi_assoclist_table > .tr:nth-child(2) {
-	border-bottom: var(--cbilineColor) !important;
-} */
 
 #cbi-wireless .td,
 #cbi-network .tr:first-child > .td,
@@ -1209,9 +1158,7 @@ tr > th,
 }
 
 .cbi-section-table-row {
-	margin-bottom: 1rem;
-	text-align: center !important;
-	background: #f4f4f4;
+    text-align: center;
 }
 
 .cbi-section-table-row:last-child {
@@ -1467,7 +1414,7 @@ form.inline + form.inline,
 }
 
 .cbi-tabmenu > li:hover {
-	background-color: #f1f1f1;
+    background-color: none;
 }
 
 .cbi-tabmenu > li[class~="cbi-tab"] a {
@@ -1498,7 +1445,7 @@ form.inline + form.inline,
     /* padding: 12px; */
     border-radius: 10px;
     /* box-shadow: 3px 3px 3px rgb(0 0 0 / 5%); */
-    background-color: var(--bgwhite);
+    /* background-color: var(--bgwhite); */
 }
 
 .cbi-section[id] .cbi-section-remove:nth-of-type(4n+3),
@@ -1507,10 +1454,11 @@ form.inline + form.inline,
 }
 
 .cbi-section-node-tabbed {
-	margin-top: 0;
-	padding: 0;
-	border: thin solid #d4d4d4;
-	border-top: 0;
+    margin-top: 0;
+    border-bottom: var(--sectiontabBorder);
+    border-left: var(--sectiontabBorder);
+    border-right: var(--sectiontabBorder);
+    border-radius: 0 0;
 }
 
 .cbi-tabcontainer > .cbi-value:nth-of-type(2n) {
@@ -1530,13 +1478,11 @@ form.inline + form.inline,
 }
 
 .cbi-value-title {
-	display: table-cell;
-	float: left;
-	width: 23rem;
-	padding-top: .35rem;
-	padding-right: 2rem;
-	text-align: right;
-	word-wrap: break-word;
+    word-wrap: break-word;
+    display: table-cell;
+    width: 35%;
+    float: left; 
+    padding: 13px 10px 5px 3px;
 }
 
 .cbi-value {
@@ -1622,19 +1568,13 @@ form.inline + form.inline,
 	word-wrap: break-word;
 }
 
-/* .cbi-rowstyle-1 {
-	background-color: #f9f9f9;
-}
-
 .cbi-rowstyle-2 {
-	background-color: #eee;
+    background-color: var(--sectionbgColor2);
 }
 
 .cbi-rowstyle-2 .cbi-button-up,
-.cbi-rowstyle-2 .cbi-button-down,
-body:not(.Interfaces) .cbi-rowstyle-2:first-child {
-	background-color: #fff !important;
-} */
+.cbi-rowstyle-2 .cbi-button-down{
+}
 
 .cbi-section-table .cbi-section-table-titles .cbi-section-table-cell {
 	width: auto !important;
@@ -3528,8 +3468,9 @@ td.cbi-button, .cbi-button-apply,
 
 /* fix tables */
 .node-admin-status-routes #view table,
-.node-admin-status-processes #view table {
-   /* margin: 10px 0 0 0; */
+.node-admin-status-processes #view table,
+.node-admin-status-realtime-connections #view table[id*=connections] {
+    /* margin: 10px 0 0 0; */
     padding: 10px;
     border: 1px;
     font-weight: normal;
@@ -3543,12 +3484,11 @@ td.cbi-button, .cbi-button-apply,
     background-color: var(--sectionbgColor);
     /* box-shadow: var(--sectionShaddow); */
     -webkit-overflow-scrolling: touch;
-
 	border: var(--sectionBorder);
     margin-bottom: 20px;
     border-radius: 10px;
     margin-top: 5px;
-    display: block;
+    /* display: block; */
 }
 
 /* fix node-admin-status-processe */
@@ -3565,8 +3505,16 @@ td.cbi-button, .cbi-button-apply,
 
 /* fix node-admin-status-realtime-load */
 .node-admin-status-realtime-load #view div,
-.node-admin-status-realtime-bandwidth #view svg {
+.node-admin-status-realtime-bandwidth #view div,
+.node-admin-status-realtime-connections #view div{
     border: var(--sectionBorder) !important;
     font-family: -apple-system;
     background: none !important;
+}
+
+/* fix  */
+.cbi-dropdown.btn.cbi-button.cbi-button-apply.important {
+    line-height: unset;
+    min-width: 105px;
+    padding-left: 5px;
 }
