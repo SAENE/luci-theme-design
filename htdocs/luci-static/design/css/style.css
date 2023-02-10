@@ -3167,4 +3167,9 @@ body.lang_pl.node-main-login .cbi-value-title {
     display: block;
     overflow: auto;
 }
+
+/* fix node-status-realtime */
+.node-status-realtime .container {
+    overflow:auto
+}
 /* document.getElementById("container.nlbw.traffic").offsetWidth */
