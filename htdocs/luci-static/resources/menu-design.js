@@ -32,24 +32,11 @@ return baseclass.extend({
 		document.querySelector(".main > .loading").style.opacity = '0';
 		document.querySelector(".main > .loading").style.visibility = 'hidden';
 
-			if (window.innerWidth <= 992)
-				document.querySelector('.main-left').style.width = '0';
+		if (window.innerWidth <= 992)
+			document.querySelector('.main-left').style.width = '0';
+
 		document.querySelector('.main-right').style.overflow = 'auto';
 		window.addEventListener('resize', this.handleSidebarToggle, true);
-		document.getElementById("indicators").addEventListener('DOMSubtreeModified', function () {
-			var child = document.getElementById("indicators");
-			if (child.firstElementChild.getAttribute("data-indicator") != "uci-changes") {
-				child.firstElementChild.textContent = eval("'\ue6b9'")
-			}
-		}, false);
-
-		window.onresize=function(){  
-			if (window.innerWidth <= 992) {
-				$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
-			} else {
-				$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
-			}
-        } 
 	},
 
 	handleMenuExpand: function(ev) {
@@ -197,6 +184,7 @@ return baseclass.extend({
 		else
 			mainLeft.style.width = ''
 
+		// 初始化设置，css后置设置导致刷新会闪现。
 		mainLeft.style.transition = 'visibility 2000ms, width 200ms';
 		mainLeft.style.visibility = open ? '' : 'visible';
 

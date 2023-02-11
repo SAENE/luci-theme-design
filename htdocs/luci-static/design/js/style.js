@@ -9,21 +9,20 @@
         document.getElementsByTagName('head')[0].appendChild(oMeta);
     }
 
-    var showSide = false;
-    $(".showSide").click(function () {
-        if (!showSide) {
-            $("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
-            showSide = true;
-        }
-    });
+		// 设置indicators图标，(放在menu script执行之前passwall某些代码错误中断导致失败)
+		document.getElementById("indicators").addEventListener('DOMSubtreeModified', function () {
+			var child = document.getElementById("indicators");
+			if (child.firstElementChild.getAttribute("data-indicator") != "uci-changes") {
+				child.firstElementChild.textContent = eval("'\ue6b9'")
+			}
+		}, false);
 
-    $(".darkMask").click(function () {
-        if (showSide) {
-            $("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
-        }
-    });
-
-    $(window).resize(function () {
-        $("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
-    });
+		// 监听窗口大小，动态设置header box阴影长度
+        $(window).resize( function  () {
+			if (window.innerWidth <= 992) {
+				$("header").css("box-shadow",   "0 2px 4px rgb(0 0 0 / 8%)")
+			} else {
+				$("header").css("box-shadow",   "17rem 2px 4px rgb(0 0 0 / 8%)")
+			}
+        });
 })(jQuery);
