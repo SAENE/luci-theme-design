@@ -180,6 +180,7 @@ body div {
 	padding: .5em;
 	text-align: center;
 	vertical-align: middle;
+    white-space: nowrap;
 }
 
 .th {
@@ -3197,6 +3198,9 @@ input[name="nslookup"] {
 	    display: block;
         white-space: nowrap;
 	}
+    .node-admin-status-overview .cbi-section.fade-in:first-child table:first-child td:first-child {
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 370px) {
@@ -3411,6 +3415,9 @@ input[name="nslookup"] {
 	.node-admin-status-realtime-connections #view table[id*=connections] {
 	    display: block;
 	}
+    .node-admin-status-overview .cbi-section.fade-in:first-child table:first-child td:first-child {
+        width: 43%;
+    }
 }
 
 
@@ -3591,4 +3598,8 @@ td.cbi-button, .cbi-button-apply,
 /* fix node-admin-status-overview color */
 .node-admin-status-overview h3 {
     color: unset !important;
+}
+/* fix node-admin-status-overview */
+.node-admin-status-overview > .main #view td:nth-child(2) {
+    white-space: normal;
 }
