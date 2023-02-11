@@ -3198,6 +3198,11 @@ input[name="nslookup"] {
 	    display: block;
         white-space: nowrap;
 	}
+
+}
+
+
+@media screen and (max-width: 400px) {
     .node-admin-status-overview .cbi-section.fade-in:first-child table:first-child td:first-child {
         width: 40%;
     }
