@@ -2,7 +2,9 @@
 
 # luci-theme-design
 
-**luci-theme-design**基于[luci-theme-neobird](https://github.com/thinktip/luci-theme-neobird)二次开发, 适用于lede For Lean's OpenWRT Only [lede](https://github.com/coolsnowwolf/lede)
+**luci-theme-design**基于[luci-theme-neobird](https://github.com/thinktip/luci-theme-neobird)二次开发, 适用于[lede](https://github.com/coolsnowwolf/lede) / [OpenWrt](https://github.com/openwrt/openwrt)
+
+> 默认分支只支持lede源码的lua版本，若使用openwrt 21/22版本请拉取[js](https://github.com/gngpp/luci-theme-design/tree/js)分支
 
 - 修复安装package提示信息背景泛白
 - 优化菜单缩放
