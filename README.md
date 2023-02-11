@@ -1,4 +1,4 @@
-<img src="./preview/light.png"/> 
+<img src="./preview/page.png"/> 
 
 # luci-theme-design
 
@@ -67,6 +67,7 @@ make V=s
 
 <img src="./preview/login.png"/>
 <img src="./preview/home.png"/>
+<img src="./preview/light.png"/> 
 <img src="./preview/home1.png"/>
 <img src="./preview/wifi.png"/>
 <img src="./preview/iface.png"/>
