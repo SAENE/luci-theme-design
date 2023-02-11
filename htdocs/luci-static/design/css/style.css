@@ -2620,10 +2620,13 @@ header > .container > .pull-right > * {
 }
 
 /** fix node-status-realtime **/
-
 .node-status-realtime table > tbody > tr > td {
     text-align: left !important;
     padding: 10px 3px 10px 3px;
+}
+.node-status-realtime table[id=connections] > tbody > tr > td {
+    padding: 10px 3px 10px 3px;
+    text-align: center !important;
 }
 
 .node-status-realtime table  {
@@ -2936,6 +2939,11 @@ body.lang_pl.node-main-login .cbi-value-title {
         display: block;
         overflow: auto;
     }
+    /* fix node-status-realtime table */
+    .main-right > #maincontent {
+        overflow: auto;
+    }
+
 }
 
 @media screen and (max-width: 370px) {
