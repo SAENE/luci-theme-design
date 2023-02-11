@@ -1040,15 +1040,16 @@ header > .container > .brand-hostname {
 
 .errorbox,
 .alert-message {
-    margin: 0 0 10px 0;
-    padding: 20px;
-    line-height: 1.5;
-    font-family: inherit;
-    min-width: inherit;
-    overflow: auto;
-    border-radius: 10px;
-    color: var(--alertColor);
-    background-color: var(--alertBackground);
+	font-weight: bold;
+	margin-bottom: 1em;
+	padding: 1rem;
+	border: 0;
+	border-radius: 3px !important;
+	color: var(--alertColor);
+	background-color: #5c5c5c;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
+	text-shadow: 1px 1px rgba(0, 0, 0, .1);
+	background-color: var(--alertBackground);
 }
 
 .errorbox {

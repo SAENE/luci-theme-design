@@ -197,6 +197,7 @@ return baseclass.extend({
 		else
 			mainLeft.style.width = ''
 
+		mainLeft.style.transition = 'visibility 2000ms, width 200ms';
 		mainLeft.style.visibility = open ? '' : 'visible';
 
 		mainRight.style['overflow-y'] = open ? 'auto' : 'visible';
