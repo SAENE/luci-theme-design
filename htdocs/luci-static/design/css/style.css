@@ -1474,6 +1474,7 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
     width: 100% !important;
     border-color: var(--progressbarColor) !important;
     background-color:var(--progressbarColor) !important;
+    border-radius: 3px;
 }
 
 #swaptotal > div > div,
