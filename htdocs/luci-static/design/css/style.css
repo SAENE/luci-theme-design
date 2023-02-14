@@ -3192,3 +3192,13 @@ body.lang_pl.node-main-login .cbi-value-title {
 .node-network-network div[onclick*="document.getElementById('cbid.network."] {
     background-color: unset !important;
 }
+
+/* fix wireless_join list button */
+input.cbi-button.cbi-button-reset {
+    height: 25px;
+    min-width: 80px;
+}
+input.cbi-button.cbi-input-find {
+    height: 25px;
+    min-width: 70px;
+}
