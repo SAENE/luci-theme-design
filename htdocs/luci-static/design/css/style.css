@@ -3194,11 +3194,12 @@ body.lang_pl.node-main-login .cbi-value-title {
 }
 
 /* fix wireless_join list button */
-input.cbi-button.cbi-button-reset {
+form[action="/cgi-bin/luci/admin/network/wireless"] input[class="cbi-button cbi-button-reset"] {
     height: 25px;
     min-width: 80px;
 }
-input.cbi-button.cbi-input-find {
+    
+form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button cbi-input-find"]  {
     height: 25px;
     min-width: 70px;
 }
