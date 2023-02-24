@@ -122,15 +122,6 @@ div{
     font-family: 'HYk2gj';
 }
 
-::-webkit-scrollbar {
-    width: 4px;
-}
-::-webkit-scrollbar-thumb {
-    background: var(--scrollbarColor) ;
-    border-radius: 2px;
-}
-
-
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
