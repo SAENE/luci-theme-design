@@ -2,6 +2,9 @@ name: Release
 
 on:
   push:
+    branches:
+      - main
+      - js
     tags:
       - 'v*'
   repository_dispatch:
@@ -45,10 +48,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Get version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-
       - name: Download SDK
         run: |
           wget https://archive.openwrt.org/releases/18.06.9/targets/x86/64/openwrt-sdk-18.06.9-x86-64_gcc-7.3.0_musl.Linux-x86_64.tar.xz
@@ -60,7 +59,7 @@ jobs:
         id: build
         run: | 
           cd openwrt-sdk
-          git clone -b main https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
+          git clone -b "${{ github.ref_name }}" https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
           ./scripts/feeds update -a && ./scripts/feeds install -a
           echo "CONFIG_PACKAGE_luci-theme-design=y" >> .config
           make defconfig
