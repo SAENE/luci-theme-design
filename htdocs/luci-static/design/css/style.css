@@ -1481,6 +1481,7 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
 #memtotal > div > div {
     background-color: var(--progressbar) !important;
     color: var(--progressbartxtColor) !important;
+    border-radius: 3px;
 }
 
 #swaptotal div div,
@@ -2455,12 +2456,12 @@ header > .container > .pull-right > * {
 
 .node-system-packages .cbi-section-node .cbi-value-last > div  {
     border: none !important;
+    border-radius: 3px;
 }
-
-
 
 .node-system-packages .cbi-section-node .cbi-value-last > div > div  {
     border: none !important;
+    border-radius: 3px;
 }
 
 .node-system-packages .cbi-section-node .cbi-value-last:nth-last-child(1)  {
