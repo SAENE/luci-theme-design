@@ -18,6 +18,7 @@
 <br>
 
 <br>简体中文 | [English](README.md)
+
 # luci-theme-design
 
 luci-theme-design 是一个针对移动端和PC端的沉浸式WebApp体验和优化的OpenWrt LuCI主题
@@ -44,6 +45,7 @@ luci-theme-design 是一个针对移动端和PC端的沉浸式WebApp体验和优
 - 如果不使用SSL证书，基于安全原因，iOS/iPadOS 在打开新的页面后，将会显示浏览器顶部菜单栏。
 
 ### 优化
+
 - 修复安装package提示信息背景泛白
 - 优化菜单折叠和缩放
 - 优化显示网口down状态显示图标
@@ -92,9 +94,9 @@ make V=s
 </details>
 
 <img src="./preview/login.png"/>
-<img src="./preview/page.png"/> 
+<img src="./preview/page.png"/>
 <img src="./preview/home.png"/>
-<img src="./preview/light.png"/> 
+<img src="./preview/light.png"/>
 <img src="./preview/home1.png"/>
 <img src="./preview/wifi.png"/>
 <img src="./preview/iface.png"/>
