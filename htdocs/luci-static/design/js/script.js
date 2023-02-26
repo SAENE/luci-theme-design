@@ -47,7 +47,11 @@
 
     // Fixed scrollbar styles for browsers on different platforms
     settingGlobalScroll();
-    
+
+    $(document).ready(function() {
+        settingGlobalScroll();
+    })
+
     $(window).resize(function () {
         settingGlobalScroll();
     });
