@@ -48,7 +48,8 @@
     --alertColor: #000000;
     --alertBackground: rgb(230 230 230);
     --scrollbarColor:#d0d0d0;
-    --ifaceboxBorderColor: #b8b8b8bd
+    --ifaceboxBorderColor: #b8b8b8bd;
+    --ifaceboxFontColor: #1a1a1a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -89,7 +90,8 @@
     --alertColor: #ffffff;
     --alertBackground: rgb(30 30 30);
     --scrollbarColor:#222;
-    --ifaceboxBorderColor: #636363bd
+    --ifaceboxBorderColor: #636363bd;
+    --ifaceboxFontColor: #1a1a1a;
   }
 }
 
@@ -118,6 +120,15 @@
     font-family: 'Cocon-Regular-Font';
     src : url('../fonts/Cocon-Regular-Font.otf') format('opentype');
 }
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbarColor) ;
+    border-radius: 2px;
+}
+
 div{
     font-family: 'HYk2gj';
 }
@@ -741,14 +752,14 @@ img[src*="/luci-static/resources/icons/loading.gif"] {
 }
 
 .ifacebox-body img {
-    background-size: 22px 22px;
-    padding: 0 0 0 22px;
-    width:22px !important;
-    height:22px !important;
-    padding: 0 0 0 22px !important;
+    background-size: 20px 20px;
+    padding: 0 0 0 20px;
+    width:20px !important;
+    height:20px !important;
+    padding: 0 0 0 20px !important;
 }
 .ifacebox-head {
-    background-color: #337ab7 !important;
+    /* background-color: #337ab7 !important; */
     border-radius: 4px 4px 0 0;
 }
 
@@ -3241,4 +3252,7 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
     white-space:nowrap;
 }
 
-.node-services-vssr 
+.node-network-network .ifacebox strong{
+    color: var(--ifaceboxFontColor);
+    padding: 5px;
+}
