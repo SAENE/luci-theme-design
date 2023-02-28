@@ -3251,14 +3251,17 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
 }
 .node-system-commands .commandbox {
     width: auto;
+    display: inline-block;
+    float: unset;
 }
 .node-system-commands .commandbox p {
     word-break:keep-all;
     white-space:nowrap;
 }
 .node-system-commands fieldset.cbi-section {
-    text-align: center;
     align-items: center;
+    text-align: center;
+    margin:auto;
 }
 
 .node-network-network .ifacebox strong{
