@@ -325,9 +325,14 @@ text, line {
     -moz-osx-font-smoothing: grayscale;
 }
 
-input.cbi-button.cbi-button-add {
-    /* margin-left: 10px; */
+/* fix luci-app-passwall2 button style */
+.node-services-passwall2 #cbi-passwall2 {
+    text-align: center;
 }
+.node-services-passwall2 input.cbi-button.cbi-button {
+    max-width: unset;
+}
+
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: -apple-system, 'Microsoft Yahei';
