@@ -38,9 +38,6 @@ jobs:
         run: | 
           cd openwrt-sdk
           git clone  --depth=1 -b "${{ github.ref_name }}" https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
-          sudo apt update && sudo apt install minify -y 
-          echo "$(minify package/luci-theme-design/htdocs/luci-static/design/css/style.css)" > package/luci-theme-design/htdocs/luci-static/design/css/style.css
-          echo "$(minify package/luci-theme-design/htdocs/luci-static/design/js/script.js)" > package/luci-theme-design/htdocs/luci-static/design/js/script.js
           ./scripts/feeds update -a && ./scripts/feeds install -a
           echo "CONFIG_PACKAGE_luci-theme-design=y" >> .config
           make defconfig
