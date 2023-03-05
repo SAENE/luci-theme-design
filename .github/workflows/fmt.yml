@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
+  workflow_dispatch:
 
 jobs:
   php-cs-fixer:
