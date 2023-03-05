@@ -3300,3 +3300,8 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
 .node-services-openclash .cbi-input-remove {
     max-width: unset !important;
 }
+
+/* fix qBittorrent status style*/
+.node-nas-qbittorrent p#qBittorrent_status input {
+    line-height: unset;
+}
