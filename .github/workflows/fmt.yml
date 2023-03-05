@@ -29,4 +29,4 @@ jobs:
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Compress JS, CSS
+        commit_message: "style: format and compress js and css resources"
