@@ -19,7 +19,7 @@
  */
 (function ($) {
 
-    // 修复某些插件导致在https下env(safe-area-inset-bottom)为0的情况
+    // Fixed openclash plugin causing env(safe-area-inset-bottom) to be 0 under https
     var url = self.location.href; 
     if ((/(iPhone|iPad|iPod|iOS|Mac|Macintosh)/i.test(navigator.userAgent)) && url.indexOf("openclash") != -1 ) {
         var oMeta = document.createElement('meta');
