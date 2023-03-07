@@ -50,6 +50,8 @@
     --ifaceboxBorderColor: #b8b8b8bd;
     --ifaceboxFontColor: #1a1a1a;
     --liSelectedColor: #c5c5c5;
+    --vssrStatusColor: #525f7f;
+    --vssrBoxShadow: 0 0 2rem 0 rgb(136 152 170 / 30%);
 }
 
 [data-theme='dark'] {
@@ -92,6 +94,8 @@
     --ifaceboxBorderColor: #636363bd;
     --ifaceboxFontColor: #1a1a1a;
     --liSelectedColor: #2f2f2f;
+    --vssrStatusColor: rgb(204, 204, 204);
+    --vssrBoxShadow: 0 0 1rem 0 rgb(0 0 0 / 30%);
 }
 
 @font-face {
@@ -385,6 +389,8 @@ svg {
     bottom:calc(var(--vssrBottom) + constant(safe-area-inset-bottom));
     bottom:calc(var(--vssrBottom) + env(safe-area-inset-bottom));
     background-color: var(--navbgColor);
+    box-shadow: var(--vssrBoxShadow) !important;
+    color: var(--vssrStatusColor) !important;
 }
 .node-services-vssr .container {
     padding-bottom:calc(var(--vssrBottom) + constant(safe-area-inset-bottom));
