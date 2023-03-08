@@ -1405,7 +1405,7 @@ form.inline + form.inline,
 
 .cbi-section .cbi-section-remove:nth-of-type(2n),
 .container > .cbi-section .cbi-section-node:nth-of-type(2n) {
-	background-color: #f9f9f9;
+	background-color: var(--cbilineColor);
 }
 
 [data-tab-title] {
