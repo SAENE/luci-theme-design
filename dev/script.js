@@ -29,18 +29,17 @@
     }
 
     function settingGlobalScroll() {
-        let global = $('head #global-scroll');
-        let isMobile = /phone|pad|pod|iPhone|iPod|ios|iOS|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i.test(navigator.userAgent);
-        if (isMobile) {
-            if (global.length > 0) {
-                global.remove();
-            }
-        } else if (global.length == 0 ) {
-            var style = document.createElement('style');
-            style.type = 'text/css';
-            style.id = "global-scroll";
-            style.innerHTML="::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-thumb { background: var(--scrollbarColor); border-radius: 2px;}"
-            $("head").append(style)
+        const global = $('head #global-scroll');
+        const isMobile = /phone|pad|pod|iPhone|iPod|ios|iOS|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i.test(navigator.userAgent);
+        
+        if (!isMobile && global.length === 0) {
+          const style = document.createElement('style');
+          style.type = 'text/css';
+          style.id = 'global-scroll';
+          style.textContent = '::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-thumb { background: var(--scrollbarColor); border-radius: 2px; }';
+          $('head').append(style);
+        } else if (isMobile && global.length > 0) {
+          global.remove();
         }
     }
 
