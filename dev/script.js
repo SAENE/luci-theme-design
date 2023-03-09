@@ -20,13 +20,15 @@
 (function ($) {
 
     // Fixed openclash plugin causing env(safe-area-inset-bottom) to be 0 under https
+    const appleUserAgentRegex = /(iPhone|iPad|iPod|iOS|Mac|Macintosh)/i;
     var url = self.location.href; 
-    if ((/(iPhone|iPad|iPod|iOS|Mac|Macintosh)/i.test(navigator.userAgent)) && url.indexOf("openclash") != -1 ) {
+    if (navigator.userAgent.match(appleUserAgentRegex) && url.indexOf("openclash") != -1 ) {
         var oMeta = document.createElement('meta');
         oMeta.content = 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover';
         oMeta.name = 'viewport';
-        document.getElementsByTagName('head')[0].appendChild(oMeta);
+        document.querySelector('head').appendChild(oMeta);
     }
+    
 
     function settingGlobalScroll() {
         const global = $('head #global-scroll');
