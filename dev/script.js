@@ -50,13 +50,20 @@
         // .node-status-realtime embed[src="/luci-static/resources/bandwidth.svg"] + div + br + table
         // .node-status-realtime embed[src="/luci-static/resources/wifirate.svg"] + div + br + table
         // .node-status-realtime embed[src="/luci-static/resources/wireless.svg"] + div + br + table
-        const elements = ["bandwidth", "wifirate", "wireless"];
-        elements.forEach(value => {
-        const target = $(`.node-status-realtime embed[src="/luci-static/resources/${value}.svg"] + div + br + table`);
-        const div = document.createElement("div");
-        div.style.overflowX = "auto";
-        target.length !== 0 ? div.before(target.clone().get(0)) && target.remove() : null;
-      });
+        if ($('.node-status-realtime').length != 0) {
+            const selectorValues = ["bandwidth", "wifirate", "wireless"];
+            selectorValues.forEach(value => {
+              const target = $(`.node-status-realtime embed[src="/luci-static/resources/${value}.svg"] + div + br + table`);
+              if (target.length) {
+                const div = document.createElement("div");
+                div.style.overflowX = "auto";
+                target.before(div);
+                const newTarget = target.clone();
+                target.remove();
+                div.appendChild(newTarget.get(0));
+              }
+            });
+        }
     });
 
     /**
