@@ -356,7 +356,7 @@ label.zonebadge{
     /* background-color: #5bdeae !important; */
     display: inline-block;
     cursor: pointer;
-    color: #fefefe;
+    color: #666666;
 }
 .zonebadge {
     /* background-color: var(--tabmenubgColor) !important; */
@@ -3297,7 +3297,8 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
     color: var(--ifaceboxFontColor);
     padding: 5px;
 }
-.node-network-firewall .zonebadge strong {
+.node-network-firewall .zonebadge strong,
+.node-network-firewall label strong {
     color: var(--ifaceboxFontColor);
 }
 /* fix new version luci-app-openclash style */
