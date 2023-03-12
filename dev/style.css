@@ -2001,7 +2001,7 @@ div > .cbi-value:nth-of-type(2n) {
     align-items: center;
     border-radius: 5px;
     border: var(--badgeBorder);
-    color: rgb(132,119,116);
+    color: #666666
 }
 
 #content_syslog {
@@ -3297,7 +3297,7 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
     color: var(--ifaceboxFontColor);
     padding: 5px;
 }
-.node-network-firewall #cbi-firewall-zone strong {
+.node-network-firewall .zonebadge strong {
     color: var(--ifaceboxFontColor);
 }
 /* fix new version luci-app-openclash style */
