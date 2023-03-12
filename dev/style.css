@@ -3297,7 +3297,9 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
     color: var(--ifaceboxFontColor);
     padding: 5px;
 }
-
+.node-network-firewall #cbi-firewall-zone strong {
+    color: var(--ifaceboxFontColor);
+}
 /* fix new version luci-app-openclash style */
 .node-services-openclash  ul li.selected {
     background-color: var(--liSelectedColor) !important;
