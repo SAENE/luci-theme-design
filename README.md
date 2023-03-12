@@ -45,6 +45,7 @@ luci-theme-design is an OpenWrt LuCI theme for immersive WebApp experience and o
 ### Plugins
 link: https://github.com/gngpp/luci-app-design-config
 - Support changing theme dark/light mode
+- Support display/hide navbar
 - Support for replacing commonly used proxy icons
 
 ### Experience WebApp method
