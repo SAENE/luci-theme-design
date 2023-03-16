@@ -243,11 +243,23 @@
 				<span class="label" id="xhr_poll_status_off" style="display:none"><span id="refresh_off" class="mobile-hide"></span></span>
 			</span>
 		<script>
-		const pollStatus = document.getElementById('xhr_poll_status');
-		const notice = document.querySelector('.notice');
-		if (pollStatus) {
- 			 notice.style.marginRight = pollStatus.style.display === 'none' ? '0' : '30px';
-		}	
+			const mydiv = document.querySelector('#xhr_poll_status');
+			const observer = new MutationObserver(function(mutationsList) {
+    			for(let mutation of mutationsList) {
+     	   			if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+						var poll_status = document.getElementById('xhr_poll_status');
+						var notice = document.querySelector('.notice');
+						if(poll_status.style.display === '') {
+							notice.style.marginRight = '30px';
+						}
+						if(poll_status.style.display === 'none') {
+							notice.style.marginRight = '0';	
+					}
+				}
+			}
+		});
+		const config = { attributes: true, attributeFilter: ['style'] };
+		observer.observe(mydiv, config);
 		</script>
 		<% end %>
 		</div>
