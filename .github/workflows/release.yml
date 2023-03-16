@@ -38,6 +38,7 @@ jobs:
         run: | 
           cd openwrt-sdk
           sed -i -e '/^src-git packages/s#https://git\.openwrt\.org/feed/packages\.git#https://github.com/openwrt/packages.git#' \
+                 -e '/^src-git base/s#https://git\.openwrt\.org/feed/base\.git#https://github.com/openwrt/base.git#' \
                  -e '/^src-git luci/s#https://git\.openwrt\.org/project/luci\.git#https://github.com/openwrt/luci.git#' \
                  -e '/^src-git routing/s#https://git\.openwrt\.org/feed/routing\.git#https://github.com/openwrt-routing/packages.git#' \
                  -e '/^src-git telephony/s#https://git\.openwrt\.org/feed/telephony\.git#https://github.com/openwrt/telephony.git#' \
