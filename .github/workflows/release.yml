@@ -37,12 +37,11 @@ jobs:
         id: build
         run: | 
           cd openwrt-sdk
-          sed -i -e '/^src-git packages/s#https://git\.openwrt\.org/feed/packages\.git#https://github.com/openwrt/packages.git#' \
-                 -e '/^src-git base/s#https://git\.openwrt\.org/feed/base\.git#https://github.com/openwrt/base.git#' \
-                 -e '/^src-git luci/s#https://git\.openwrt\.org/project/luci\.git#https://github.com/openwrt/luci.git#' \
-                 -e '/^src-git routing/s#https://git\.openwrt\.org/feed/routing\.git#https://github.com/openwrt-routing/packages.git#' \
-                 -e '/^src-git telephony/s#https://git\.openwrt\.org/feed/telephony\.git#https://github.com/openwrt/telephony.git#' \
-                feeds.conf.default
+          echo -n > feeds.conf.default
+          echo "src-git packages https://github.com/openwrt/packages.git" >> feeds.conf.default
+          echo "src-git luci https://github.com/openwrt/luci.git" >> feeds.conf.default
+          echo "src-git routing https://github.com/openwrt-routing/packages.git" >> feeds.conf.default
+          echo "src-git telephony https://github.com/openwrt/telephony.git" >> feeds.conf.default
 
           git clone  --depth=1 -b "${{ github.ref_name }}" https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
           sudo apt update && sudo apt install minify
