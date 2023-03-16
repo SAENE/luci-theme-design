@@ -69,24 +69,24 @@
         // Fixed luci-app-passwall menu expand
         if ($(".node-services-passwall").length === 1 && self.location.pathname === "/cgi-bin/luci/admin/services/passwall") {
             var slide = $(".main > .main-left > .nav > .slide");
-            slide.each(function() {
-              var ul = $(this).children("ul");
-              ul.each(function() {
-                var liActive = $(this).children("li.active");
-                liActive.each(function() {
-                  var aTags = $(this).children("a");
-                  aTags.each(function() {
-                    var href = $(this).attr("href");
-                    if (href === "/cgi-bin/luci/admin/services/passwall2") {
-                      $(this).parent("li").removeClass("active");
-                      $(this).closest(".slide").find(".menu").first().click();
-                    }
-                  });
+            slide.each(function () {
+                var ul = $(this).children("ul");
+                ul.each(function () {
+                    var liActive = $(this).children("li.active");
+                    liActive.each(function () {
+                        var aTags = $(this).children("a");
+                        aTags.each(function () {
+                            var href = $(this).attr("href");
+                            if (href === "/cgi-bin/luci/admin/services/passwall2") {
+                                $(this).parent("li").removeClass("active");
+                                $(this).closest(".slide").find(".menu").first().click();
+                            }
+                        });
+                    });
                 });
-              });
             });
-          }
-          
+        }
+
     });
 
     /**
