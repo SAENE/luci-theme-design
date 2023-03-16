@@ -243,20 +243,16 @@
 				<span class="label" id="xhr_poll_status_off" style="display:none"><span id="refresh_off" class="mobile-hide"></span></span>
 			</span>
 		<script>
-			var poll_status = $('#xhr_poll_status')
-        	if (poll_status.length == 1) {
-            if(poll_status.css('display') == "none" ) {
-          	      $(".notice").css("margin-right", "0")
-         	   }
-        	}
+			var poll_status = document.getElementById('xhr_poll_status');
+			if (poll_status.style.display === "none") {
+    			var notice = document.querySelector(".notice")
+				if (notice != null) {
+					notice.style.marginRight = "0";
+				}
+			}
 		</script>
 		<% end %>
 		</div>
-
-
-
-        
- 	
 		</div>
 </header>
 
