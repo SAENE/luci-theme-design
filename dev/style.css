@@ -284,7 +284,7 @@ header, .main {
 header {
     background-color: var(--bgwhite);
     box-shadow: 17rem 2px 4px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.15s;
     height: 55px;
     float: left;
     position: fixed;
@@ -1239,7 +1239,7 @@ p#shadowsocksr_status {
     cursor: pointer;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: all 0.2s;
+    transition: all 0.15s;
 }
 
 /*
@@ -1290,7 +1290,7 @@ p#shadowsocksr_status {
     transition: all 0.15s ease;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    transition: all 0.3s;
+    transition: all 0.15s;
 }
 
 .main .main-left .nav li.slide .menu.active::after {
@@ -1440,7 +1440,7 @@ p#shadowsocksr_status {
 .main > .main-left > .nav > .slide > .slide-menu > li:hover {
     background: var(--activeColor);
     color:white !important;
-    transition: all 0.2s;
+    transition: all 0.15s;
 }
 
 .main > .main-left > .nav > .slide > .slide-menu > .active:hover {
@@ -1751,7 +1751,7 @@ td#__status-ifc-signal {
     text-transform: uppercase;
     color: #fff;
     background-color: #337ab7;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
     display: inline-block;
     border: none;
     cursor: pointer;
