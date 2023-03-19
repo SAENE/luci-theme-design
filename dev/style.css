@@ -335,8 +335,9 @@ text, line {
 .node-services-passwall2 input.cbi-button.cbi-button {
     max-width: unset;
 }
-/* fix luci-app-passwall node_div style */
-.node-services-passwall #set_node_div {
+/* fix luci-app-passwall/luci-app-passwall2 node_div style */
+.node-services-passwall #set_node_div,
+.node-services-passwall2 #set_node_div {
     background: var(--sectionbgColor);
 }
 
