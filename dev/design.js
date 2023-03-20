@@ -37,9 +37,7 @@
 
         // Fixed luci-app-passwall/luci-app-ddns menu expand
         const path = self.location.pathname
-        console.log(path)
         if (($(".node-services-passwall").length === 1 || $(".node-services-ddns").length ===1 ) &&  (path === "/cgi-bin/luci/admin/services/passwall" || path === "/cgi-bin/luci/admin/services/ddns")) {
-            
             var slide = $(".main > .main-left > .nav > .slide");
             slide.each(function () {
                 var ul = $(this).children("ul");
