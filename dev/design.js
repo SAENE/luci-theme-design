@@ -1,7 +1,7 @@
 (function ($) {
 
-          // Fixed openclash plugin causing env(safe-area-inset-bottom) to be 0 under https
-          const appleUserAgentRegex = /(iPhone|iPad|iPod|iOS|Mac|Macintosh)/i;
+          // Fixed openclash plugin causing env(safe-area-inset-bottom) to be 0 under
+          const appleUserAgentRegex = /(iPhone|iPad|iPod|iOS)/i;
           var url = self.location.href;
           if (navigator.userAgent.match(appleUserAgentRegex) && url.indexOf("openclash") != -1) {
               var oMeta = document.createElement('meta');
