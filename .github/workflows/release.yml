@@ -59,8 +59,8 @@ jobs:
           echo "CONFIG_PACKAGE_luci-app-design-config=y" >> .config
 
           make defconfig
-          make package/luci-theme-design/compile V=sc -j$(nproc)
-          make package/luci-app-design-config/compile V=sc -j$(nproc)
+          make package/luci-theme-design/compile -j$(nproc)
+          make package/luci-app-design-config/compile -j$(nproc)
 
           cd ..
           TARGET="$(find openwrt-sdk/bin/ | grep  luci-theme-design)"
