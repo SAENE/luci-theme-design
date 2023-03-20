@@ -6,7 +6,6 @@
 
         if (!isMobile && global.length === 0) {
             const style = document.createElement('style');
-            style.type = 'text/css';
             style.id = 'global-scroll';
             style.textContent = '::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-thumb { background: var(--scrollbarColor); border-radius: 2px; }';
             $('head').append(style);
@@ -36,8 +35,11 @@
             });
         }
 
-        // Fixed luci-app-passwall menu expand
-        if ($(".node-services-passwall").length === 1 && self.location.pathname === "/cgi-bin/luci/admin/services/passwall") {
+        // Fixed luci-app-passwall/luci-app-ddns menu expand
+        const path = self.location.pathname
+        console.log(path)
+        if (($(".node-services-passwall").length === 1 || $(".node-services-ddns").length ===1 ) &&  (path === "/cgi-bin/luci/admin/services/passwall" || path === "/cgi-bin/luci/admin/services/ddns")) {
+            
             var slide = $(".main > .main-left > .nav > .slide");
             slide.each(function () {
                 var ul = $(this).children("ul");
@@ -47,7 +49,7 @@
                         var aTags = $(this).children("a");
                         aTags.each(function () {
                             var href = $(this).attr("href");
-                            if (href === "/cgi-bin/luci/admin/services/passwall2") {
+                            if (href === "/cgi-bin/luci/admin/services/passwall2" || href === "/cgi-bin/luci/admin/services/ddnsto") {
                                 $(this).parent("li").removeClass("active");
                                 $(this).closest(".slide").find(".menu").first().click();
                             }
