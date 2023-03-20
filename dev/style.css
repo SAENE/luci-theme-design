@@ -1372,7 +1372,6 @@ p#shadowsocksr_status {
 .main > .main-left > .nav > .slide > ul {
     display: none;
     list-style:dotted;
-    height: auto !important;
 }
 
 .main > .main-left > .nav > .slide > .menu {
