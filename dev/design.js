@@ -34,35 +34,6 @@
                 }
             });
         }
-
-        // Fixed luci-app-passwall/luci-app-ddns menu expand
-        const path = self.location.pathname
-        if (($(".node-services-passwall").length === 1 || $(".node-services-ddns").length === 1) && (path === "/cgi-bin/luci/admin/services/passwall" || path === "/cgi-bin/luci/admin/services/ddns")) {
-            var slide = $(".main > .main-left > .nav > .slide");
-            slide.each(function () {
-                var ul = $(this).children("ul");
-                ul.each(function () {
-                    var liActive = $(this).children("li.active");
-                    liActive.each(function () {
-                        var aTags = $(this).children("a");
-                        aTags.each(function () {
-                            var href = $(this).attr("href");
-                            if (href === "/cgi-bin/luci/admin/services/passwall2" || href === "/cgi-bin/luci/admin/services/ddnsto") {
-                                $(this).parent("li").removeAttr("class");
-                                const targetElement = $(this).closest(".slide").find(".menu").first()
-                                const targetHeight = targetElement.height();
-                                targetElement.click(() => {
-                                    console.log(targetHeight);
-                                    ul.css("height", '');
-                                });
-                                targetElement.click();
-                            }
-                        });
-                    });
-                });
-            });
-        }
-
     });
 
     // Fixed scrollbar styles for browsers on different platforms

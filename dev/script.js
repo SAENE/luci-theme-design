@@ -72,7 +72,8 @@
                 var that = $(this);
                 var href = that.attr("href");
 
-                if (href.indexOf(nodeUrl) != -1) {
+                if (new RegExp(nodeUrl + "$").test(href)) {
+                    console.log(nodeUrl);
                     ulNode.click();
                     ulNode.next(".slide-menu").stop(true, true);
                     lastNode = that.parent();
