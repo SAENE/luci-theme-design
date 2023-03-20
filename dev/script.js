@@ -73,7 +73,6 @@
                 var href = that.attr("href");
 
                 if (new RegExp(nodeUrl + "$").test(href)) {
-                    console.log(nodeUrl);
                     ulNode.click();
                     ulNode.next(".slide-menu").stop(true, true);
                     lastNode = that.parent();
