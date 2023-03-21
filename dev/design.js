@@ -23,16 +23,19 @@
         // .node-status-realtime embed[src="/luci-static/resources/wifirate.svg"] + div + br + table
         // .node-status-realtime embed[src="/luci-static/resources/wireless.svg"] + div + br + table
         const selectorValues = ['bandwidth', 'wifirate', 'wireless'];
-        selectorValues.forEach(value => {
-          const target = nodeStatusRealtime.find(`embed[src="/luci-static/resources/${value}.svg"] + div + br + table`);
-          if (target.length) {
-            const div = document.createElement('div');
-            div.style.overflowX = 'auto';
-            target.before(div);
-            const newTarget = target.clone();
-            target.remove();
-            div.appendChild(newTarget[0]);
-          }
+        // Use requestAnimationFrame to batch DOM changes
+        requestAnimationFrame(() => {
+          selectorValues.forEach(value => {
+            const target = nodeStatusRealtime.find(`embed[src="/luci-static/resources/${value}.svg"] + div + br + table`);
+            if (target.length) {
+              const div = document.createElement('div');
+              div.style.overflowX = 'auto';
+              target.before(div);
+              const newTarget = target.clone();
+              target.remove();
+              div.appendChild(newTarget[0]);
+            }
+          });
         });
       });
     
