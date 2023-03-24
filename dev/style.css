@@ -1371,14 +1371,14 @@ p#shadowsocksr_status {
 
 .main > .main-left > .nav > .slide > .menu {
     display: block;
-    padding: 0.675rem 0 0.675rem 2.5rem;
+    padding: 0.675rem 0 0.675rem 2rem;
     text-decoration: none;
     cursor: pointer;;
 }
 
 .main > .main-left > .nav > .slide > .menu2 {
     display: block;
-    padding: 0.675rem 0 0.675rem 2.5rem;
+    padding: 0.675rem 0 0.675rem 2rem;
     text-decoration: none;
     cursor: pointer;;
 }
@@ -1419,7 +1419,7 @@ p#shadowsocksr_status {
     text-transform: capitalize;
     font-size: 1rem;
     margin: 0.1rem 0.5rem 0.1rem 0.5rem;
-    padding: 0.675rem 0 0.675rem 2.5rem;
+    padding: 0.675rem 0 0.675rem 2.75rem;
 }
 .main .main-left .nav li.slide .slide-menu .active a {
     color: #000;
