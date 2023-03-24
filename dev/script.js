@@ -172,6 +172,7 @@
      * Sidebar expand
      */
     var showSide = false;
+
     $(".showSide").click(function () {
         if (showSide) {
             $(".darkMask").stop(true).fadeOut("fast");
@@ -210,13 +211,13 @@
 
     $(window).resize(function () {
         if ($(window).width() > 992) {
+            showSide = false;
             $(".showSide").css("display", "");
             $(".main-left").css("width", "");
             $(".darkMask").stop(true);
             $(".darkMask").css("display", "none");
             $("header").css("box-shadow", "17rem 2px 4px rgb(0 0 0 / 8%)")
             $("header>.container>.brand").css("padding", "0 0")
-            showSide = false;
         } else {
             $("header").css("box-shadow", "0 2px 4px rgb(0 0 0 / 8%)")
             $("header>.container>.brand").css("padding", "0 67px")
@@ -226,7 +227,7 @@
             $("header>.container>.brand").css("padding", "0 0")
         }
     });
-
+   
     /**
      * fix legend position
      */
