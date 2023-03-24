@@ -12,9 +12,8 @@ showSide=false;}else{$(".darkMask").stop(true).fadeIn("fast");$(".main-left").st
 $("header>.container>.brand").css("padding","0 0")
 showSide=true;}});$(".darkMask").click(function(){if(showSide){$(".darkMask").stop(true).fadeOut("fast");$(".main-left").stop(true).animate({width:"0"},"fast");$(".main-right").css("overflow-y","auto");$(".showSide").css("display","");$("header").css("box-shadow","0 2px 4px rgb(0 0 0 / 8%)")
 $("header>.container>.brand").css("padding","0 67px")
-showSide=false;}});$(window).resize(function(){if($(window).width()>992){$(".showSide").css("display","");$(".main-left").css("width","");$(".darkMask").stop(true);$(".darkMask").css("display","none");$("header").css("box-shadow","17rem 2px 4px rgb(0 0 0 / 8%)")
-$("header>.container>.brand").css("padding","0 0")
-showSide=false;}else{$("header").css("box-shadow","0 2px 4px rgb(0 0 0 / 8%)")
+showSide=false;}});$(window).resize(function(){if($(window).width()>992){showSide=false;$(".showSide").css("display","");$(".main-left").css("width","");$(".darkMask").stop(true);$(".darkMask").css("display","none");$("header").css("box-shadow","17rem 2px 4px rgb(0 0 0 / 8%)")
+$("header>.container>.brand").css("padding","0 0")}else{$("header").css("box-shadow","0 2px 4px rgb(0 0 0 / 8%)")
 $("header>.container>.brand").css("padding","0 67px")}
 if(showSide){$("header").css("box-shadow","17rem 2px 4px rgb(0 0 0 / 8%)")
 $("header>.container>.brand").css("padding","0 0")}});$("legend").each(function(){var that=$(this);that.after("<span class='panel-title'>"+that.text()+"</span>");});$(".main-right").focus();$(".main-right").blur();$("input").attr("size","0");if(mainNodeName!=undefined){switch(mainNodeName){case "node-status-system_log":case "node-status-kernel_log":$("#syslog").focus(function(){$("#syslog").blur();$(".main-right").focus();$(".main-right").blur();});break;case "node-status-firewall":var button=$(".node-status-firewall > .main fieldset li > a");button.addClass("cbi-button cbi-button-reset a-to-btn");break;case "node-system-reboot":var button=$(".node-system-reboot > .main > .main-right p > a");button.addClass("cbi-button cbi-input-reset a-to-btn");break;}}})(jQuery);
