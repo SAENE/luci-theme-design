@@ -1139,6 +1139,7 @@ header > .container > .brand {
     float:left;
     font-weight:900;
     letter-spacing:1px;
+    padding: 0 67px;
 }
 header > .container > a[class="brand"]:after {
     content:"";
