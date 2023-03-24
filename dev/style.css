@@ -1930,8 +1930,8 @@ form.inline + form.inline,
 }
 
 .cbi-tabmenu > li[class~="cbi-tab"] a {
-    color: var(--activeColor) ;
-    border-bottom: 2px solid var(--activeColor);
+    color: var(--activeColor) !important;
+    border-bottom: 2px solid var(--activeColor) !important;
 }
 
 .cbi-section-node-tabbed {
