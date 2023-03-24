@@ -196,7 +196,6 @@
 
     $(".darkMask").click(function () {
         if (showSide) {
-            showSide = false;
             $(".darkMask").stop(true).fadeOut("fast");
             $(".main-left").stop(true).animate({
                 width: "0"
@@ -205,6 +204,7 @@
             $(".showSide").css("display", "");
             $("header").css("box-shadow", "0 2px 4px rgb(0 0 0 / 8%)")
             $("header>.container>.brand").css("padding", "0 67px")
+            showSide = false;
         }
     });
 
