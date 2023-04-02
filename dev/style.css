@@ -2076,7 +2076,7 @@ div > .cbi-value:nth-of-type(2n) {
     height: 20px;
     line-height: 20px;
     min-width: 60px;
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
 }
 
