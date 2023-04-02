@@ -17,8 +17,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      with:
-        ref: dev
 
     - name: fmt
       run: |
@@ -41,10 +39,6 @@ jobs:
         branch: fmt
         delete-branch: true
         add-paths: |
-          dev/style.css
-          dev/script.js
-          dev/xhr.js
-          dev/design.js
           htdocs/luci-static/design/css/style.css
           htdocs/luci-static/design/js/script.js
           htdocs/luci-static/design/js/xhr.js
