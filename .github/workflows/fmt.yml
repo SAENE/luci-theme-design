@@ -17,6 +17,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        ref: dev
 
     - name: fmt
       run: |
@@ -25,6 +27,11 @@ jobs:
         echo "$(minify dev/script.js)" > htdocs/luci-static/design/js/script.js
         echo "$(minify dev/xhr.js)" > htdocs/luci-static/design/js/xhr.js
         echo "$(minify dev/design.js)" > htdocs/luci-static/design/js/design.js
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        branch: dev
+        commit_message: "style: format and compress js/css"
         
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
@@ -34,9 +41,16 @@ jobs:
         branch: fmt
         delete-branch: true
         add-paths: |
+          dev/style.css
+          dev/script.js
+          dev/xhr.js
+          dev/design.js
           htdocs/luci-static/design/css/style.css
           htdocs/luci-static/design/js/script.js
           htdocs/luci-static/design/js/xhr.js
           htdocs/luci-static/design/js/design.js
-        title: "style: format and compress js and css resources"
-        commit-message: "style: format and compress js and css resources"
+        title: "style: format and compress js/css"
+        commit-message: "style: format and compress js/css"
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4
