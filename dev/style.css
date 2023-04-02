@@ -3339,3 +3339,8 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
 .node-nas-fileassistant .fb-container .cbi-value-perm {
     display: table-cell;
 }
+/* fix luci-app-adguardhome style */
+.node-services-adguardhome input[onclick*="window.open('http://'+window.location.hostname+':"] {
+    line-height: 0;
+}
+
