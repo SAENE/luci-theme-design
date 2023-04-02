@@ -51,6 +51,3 @@ jobs:
           htdocs/luci-static/design/js/design.js
         title: "style: format and compress js/css"
         commit-message: "style: format and compress js/css"
-
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v4
