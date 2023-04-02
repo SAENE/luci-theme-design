@@ -1,10 +1,9 @@
 name: fmt
 
 on:
-  pull_request:
   push:
     branches:
-      - main
+      - dev
   repository_dispatch:
   workflow_dispatch:
 
@@ -19,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        ref: ${{ github.head_ref }}
+        ref: dev
 
     - name: fmt
       run: |
@@ -31,4 +30,24 @@ jobs:
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "style: format and compress js and css resources"
+        branch: dev
+        commit_message: "style: format and compress js/css"
+        
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4
+      with:
+        base: dev
+        token: ${{ secrets.TOKEN }}
+        branch: fmt
+        delete-branch: true
+        add-paths: |
+          dev/style.css
+          dev/script.js
+          dev/xhr.js
+          dev/design.js
+          htdocs/luci-static/design/css/style.css
+          htdocs/luci-static/design/js/script.js
+          htdocs/luci-static/design/js/xhr.js
+          htdocs/luci-static/design/js/design.js
+        title: "style: format and compress js/css"
+        commit-message: "style: format and compress js/css"
