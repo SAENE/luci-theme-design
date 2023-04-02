@@ -3,7 +3,7 @@ name: fmt
 on:
   push:
     branches:
-      - dev
+      - main
   repository_dispatch:
   workflow_dispatch:
 
