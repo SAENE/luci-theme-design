@@ -36,7 +36,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
-        base: dev
+        base: main
         token: ${{ secrets.TOKEN }}
         branch: fmt
         delete-branch: true
