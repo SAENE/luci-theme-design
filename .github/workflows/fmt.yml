@@ -28,10 +28,10 @@ jobs:
         echo "$(minify dev/xhr.js)" > htdocs/luci-static/design/js/xhr.js
         echo "$(minify dev/design.js)" > htdocs/luci-static/design/js/design.js
 
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        branch: dev
-        commit_message: "style: format and compress js/css"
+    # - uses: stefanzweifel/git-auto-commit-action@v4
+    #   with:
+    #     branch: dev
+    #     commit_message: "style: format and compress js/css"
         
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
@@ -49,5 +49,5 @@ jobs:
           htdocs/luci-static/design/js/script.js
           htdocs/luci-static/design/js/xhr.js
           htdocs/luci-static/design/js/design.js
-        title: "style: format and compress js/css"
-        commit-message: "style: format and compress js/css"
+        title: ${{ github.event.head_commit.message }}
+        commit-message: ${{ github.event.head_commit.message }}
