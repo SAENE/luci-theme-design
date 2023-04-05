@@ -110,3 +110,4 @@ make V=s
 <img src="./preview/home1.png"/>
 <img src="./preview/wifi.png"/>
 <img src="./preview/iface.png"/>
+<img src="./preview/firewall.png"/>
