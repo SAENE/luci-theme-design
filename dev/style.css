@@ -3368,4 +3368,11 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
 .node-services-adguardhome input[onclick*="window.open('http://'+window.location.hostname+':"] {
     line-height: 0;
 }
-
+/* adapt to mt798x series closed source wireless driver page */
+.node-network-wifi .cbi-section-table tr .cbi-value-field {
+    width: unset !important;
+    text-align: right;
+}
+.node-network-wifi table, td, th {
+    border-top: unset !important;
+}
