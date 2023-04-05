@@ -3380,5 +3380,4 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
 /* open source wireless style */
 .node-network-wireless .cbi-section-table tr .cbi-value-field {
     width: unset !important;
-    padding: 3px!important;
 }
