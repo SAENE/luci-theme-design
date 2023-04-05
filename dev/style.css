@@ -224,7 +224,7 @@ input[type='file'] {
 input[type='checkbox'] {
     height: 1.2rem;
     width: 1.2rem;
-    
+    box-shadow: var(--bg);
 }
 input[type='radio'] {
     height: 1.2rem;
