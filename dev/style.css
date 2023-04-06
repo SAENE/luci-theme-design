@@ -1721,29 +1721,17 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
     white-space: nowrap;
 }
 
-div [id*="cbi-network-"] [id*="-__status"] table {
-    width: auto;
-}
-
-div [id*="cbi-network-"] [id*="-__status"] table td {
-    width: 0;
-    padding: 0;
-    white-space: normal;
-}
-div [id*="cbi-network-"] [id*="-__status"] table td small {
-    width: auto;
-}
-
+div [id*="cbi-network-"] [id*="-__status"] table,
 div [id*="cbi-wireless"] [id*="-__status"] table {
     width: auto;
 }
 
+div [id*="cbi-network-"] [id*="-__status"] table td,
 div [id*="cbi-wireless"] [id*="-__status"] table td {
     width: 0;
     padding: 0;
-    white-space: normal;
-
 }
+div [id*="cbi-network-"] [id*="-__status"] table td small,
 div [id*="cbi-wireless"] [id*="-__status"] table td small {
     width: auto;
 }
@@ -3059,7 +3047,11 @@ body.lang_pl.node-main-login .cbi-value-title {
     .main-right > #maincontent {
         overflow: auto;
     }
-
+    /* network and wireless table status icon */
+    div [id*="cbi-network-"] [id*="-__status"] table td,
+    div [id*="cbi-wireless"] [id*="-__status"] table td {
+        white-space: normal;
+    }
 }
 
 @media screen and (max-width: 370px) {
