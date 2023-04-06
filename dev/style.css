@@ -1699,6 +1699,13 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
     white-space: nowrap;
 } */
 
+/* node-network-network ul list overflow */
+#cbi-network .cbi-value-field ul,
+#cbi-wireless .cbi-value-field ul {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 div [id*="cbi-network-"] [id*="-__status"] table {
     width: auto;
 }
