@@ -274,9 +274,9 @@ hr{
     opacity: 0.1;
 }
 
-.cbi-section-table-cell br, #cbi-system br, #cbi-dropbear br, .node-status-routes br {
+/* .cbi-section-table-cell br, #cbi-system br, #cbi-dropbear br, .node-status-routes br {
     display: none;
-}
+} */
 
 header, .main {
     width: 100%;
@@ -3331,7 +3331,7 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
     align-items: unset;
     text-align: unset;
 }
-
+/* network */
 .node-network-network .ifacebox strong{
     color: var(--ifaceboxFontColor);
     padding: 5px;
@@ -3340,22 +3340,32 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
 .node-network-firewall label strong {
     color: var(--ifaceboxFontColor);
 }
+/* adapt to mt798x series closed source wireless driver page */
+/* open source wireless style */
+.node-network-wifi .cbi-section-table tr .cbi-value-field,
+.node-network-wireless .cbi-section-table tr .cbi-value-field {
+    width: unset !important;
+    text-align: right;
+}
+.node-network-wifi table, td, th {
+    border-top: unset !important;
+}
+.node-network-wifi .cbi-section-table td[colspan="2"]  {
+    padding-left: unset !important
+}
 /* fix new version luci-app-openclash style */
 .node-services-openclash  ul li.selected {
     background-color: var(--liSelectedColor) !important;
 }
-
 .node-services-openclash .cbi-button-reset, 
 .node-services-openclash .cbi-input-remove {
     max-width: unset !important;
 }
-
 .node-services-openclash #tab-header ul li.selected,
 .node-services-openclash #tab-header ul li {
     color: black !important;
     background-color: unset !important
 }
-
 /* fix qBittorrent status style*/
 .node-nas-qbittorrent p#qBittorrent_status input {
     line-height: unset;
@@ -3378,17 +3388,4 @@ form[action="/cgi-bin/luci/admin/network/wireless_join"] input[class="cbi-button
 /* fix luci-app-adguardhome style */
 .node-services-adguardhome input[onclick*="window.open('http://'+window.location.hostname+':"] {
     line-height: 0;
-}
-/* adapt to mt798x series closed source wireless driver page */
-/* open source wireless style */
-.node-network-wifi .cbi-section-table tr .cbi-value-field,
-.node-network-wireless .cbi-section-table tr .cbi-value-field {
-    width: unset !important;
-    text-align: right;
-}
-.node-network-wifi table, td, th {
-    border-top: unset !important;
-}
-.node-network-wifi .cbi-section-table td[colspan="2"]  {
-    padding-left: unset !important
 }
