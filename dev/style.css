@@ -1706,7 +1706,7 @@ div [id*="cbi-network-"] [id*="-__status"] table {
 div [id*="cbi-network-"] [id*="-__status"] table td {
     width: 0;
     padding: 0;
-
+    white-space: normal;
 }
 div [id*="cbi-network-"] [id*="-__status"] table td small {
     width: auto;
