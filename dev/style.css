@@ -124,13 +124,14 @@
     src : url('../fonts/GenJyuuGothic-Medium.otf') format('opentype');
 }
 
-::-webkit-scrollbar {
-    width: 4px;
-}
-::-webkit-scrollbar-thumb {
-    background: var(--scrollbarColor) ;
-    border-radius: 2px;
-}
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+ }
+ *::-webkit-scrollbar-thumb {
+     background: var(--scrollbarColor) ;
+     border-radius: 2px;
+ }
 
 div{
     font-family: 'HYk2gj';
