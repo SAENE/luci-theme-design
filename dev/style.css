@@ -1541,6 +1541,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     border: 0px solid #eee;
+    margin: 0 !important;
 }
 
 /* fix qwrt network share table style */
@@ -1589,11 +1590,11 @@ table > tbody > tr:last-child {
 }
 
 .cbi-section-table-cell {
-    text-align: center;
+    text-align: center !important;
 }
 
 .cbi-section-table-row {
-    text-align: center;
+    text-align: center !important;
 }
 
 .cbi-section-remove{
