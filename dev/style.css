@@ -171,7 +171,8 @@ em {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+    -webkit-tap-highlight-color: transparent;
+}
 
 select {
     overflow: hidden !important;
@@ -1301,7 +1302,6 @@ p#shadowsocksr_status {
     transition: all 0.1s ease;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    transition: all 0.1s;
 }
 
 .main .main-left .nav li.slide .menu.active::after {
