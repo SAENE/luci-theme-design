@@ -3141,7 +3141,7 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
     
     .node-system-leds .cbi-section em,
-    .node-network-network #cbi-network .cbi-map .cbi-section-table tr,
+    .node-network-network #cbi-network .cbi-map .cbi-section-table cbi-section-table-row,
     .node-network-network #cbi-network .cbi-map .cbi-section-table td {
         display: block;
     }
