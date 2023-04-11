@@ -3167,6 +3167,9 @@ body.lang_pl.node-main-login .cbi-value-title {
     .node-network-network .cbi-button {
         min-width: 60px !important;
     }
+    .node-network-wireless fieldset:nth-child(1) table > tbody > tr > td {
+        white-space: normal;
+    }
 }
 
 @media screen and (max-width: 370px) {
