@@ -3141,11 +3141,11 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
     
     .node-system-leds .cbi-section em,
-    .node-network-network .cbi-section-table tr,
-    .node-network-network .cbi-section-table td {
+    .node-network-network #cbi-network .cbi-map .cbi-section-table tr,
+    .node-network-network #cbi-network .cbi-map .cbi-section-table td {
         display: block;
     }
-    .node-network-network .cbi-section-table td {
+    .node-network-network #cbi-network .cbi-map .cbi-section-table td {
         width: 100%!important;
         text-align: center!important;
         white-space: normal;
