@@ -3150,6 +3150,9 @@ body.lang_pl.node-main-login .cbi-value-title {
         text-align: center!important;
         white-space: normal;
     }
+    .node-network-network #cbi-network .cbi-map .cbi-button {
+        min-width: 60px !important;
+    }
     .node-network-network .cbi-section-table .cbi-section-table-titles .cbi-section-table-cell {
         flex: 1!important
     }
@@ -3158,9 +3161,6 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
     .node-network-network .cbi-section-table .cbi-section-table-titles {
         display: flex
-    }
-    .node-network-network .cbi-button {
-        min-width: 60px !important;
     }
     .node-network-wireless fieldset:nth-child(1) table > tbody > tr > td,
     .node-network-wireless fieldset:nth-child(2) table > tbody > tr > td {
