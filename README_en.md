@@ -41,10 +41,10 @@ luci-theme-design is an OpenWrt LuCI theme for immersive WebApp experience and o
 
 ### Features
 
-- Optimized for the mobile terminal, especially suitable for the mobile terminal as a WebApp
+- Responsive optimization for mobile terminal, especially suitable for mobile terminal as WebApp
 - Modified and optimized the display of many plug-ins, improved icon icons, and unified visuals as much as possible
-- Simple login interface, bottom navigation bar, immersive app-like experience;
-- Adapt to dark mode, adapt to automatic switching of the system;
+- Simple login interface, bottom navigation bar, immersive app-like experience
+- Adapt to dark mode, adapt to system automatic switching, support custom mode
 - Adapt to openwrt 21/22, lede
 
 ### Experience WebApp method
