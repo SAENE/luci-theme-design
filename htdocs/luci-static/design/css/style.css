@@ -2076,7 +2076,6 @@ body.modal-overlay-active #modal_overlay {
 	gap: .2rem;
 	padding: .5rem .8rem;
 	border-bottom: thin solid #ccc;
-	background: #eee;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
 }
 
@@ -2126,7 +2125,6 @@ td > .ifacebadge,
 	min-width: 220px;
 	margin: .5em .25em 0 .25em;
 	padding: .5em;
-	background-color: #fff;
 }
 
 /* textarea */
@@ -2279,7 +2277,6 @@ td > .ifacebadge,
 	flex-direction: column;
 	min-width: 100px;
 	border-bottom: thin solid #ccc;
-	background-color: #f9f9f9;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), 0 1px 2px rgba(0, 0, 0, .2);
 }
 
