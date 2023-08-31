@@ -1579,7 +1579,7 @@ form.inline + form.inline,
 }
 
 .td.cbi-section-actions > * {
-	display: inline-flex;
+	/* display: inline-flex; */
 }
 
 .td.cbi-section-actions > * > *,
