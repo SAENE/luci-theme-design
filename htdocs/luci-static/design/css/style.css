@@ -520,6 +520,7 @@ header > .fill > .container > .brand {
     float:left;
     font-weight:900;
     letter-spacing:1px;
+    margin-left: 10px;
 }
 
 header > .fill > .container > a[class="brand"]:after {
