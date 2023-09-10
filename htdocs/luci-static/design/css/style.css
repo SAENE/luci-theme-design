@@ -2083,7 +2083,7 @@ td > .ifacebadge,
 .td > .ifacebadge {
 	font-size: .8rem;
 	background-color: var(--activeColor);
-	color: black;
+	color: white;
 	border-radius: 8px;
 }
 
