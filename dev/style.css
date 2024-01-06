@@ -1395,6 +1395,10 @@ p#shadowsocksr_status {
     content: "\e645";
 }
 
+.main>.main-left>.nav>.slide>a[data-title=Modem]:before {
+    content: "\e6bf"
+}
+
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
     content: "\e6cb";
 }
